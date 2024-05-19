@@ -9,13 +9,156 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="508f2301-d789-4e0b-83e8-a3227ec7eafe" name="Changes" comment="阿里云OSS图片上传和下载功能的初步实现、SqlServer的连接实现" />
+    <list default="true" id="508f2301-d789-4e0b-83e8-a3227ec7eafe" name="Changes" comment="阿里云OSS图片上传和下载功能的初步实现、SqlServer的连接实现">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.en.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/build.gradle.kts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/libs/jtds-1.2.7.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/libs/sqljdbc_11.2/chs/auth/x64/mssql-jdbc_auth-11.2.0.x64.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/libs/sqljdbc_11.2/chs/auth/x86/mssql-jdbc_auth-11.2.0.x86.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/libs/sqljdbc_11.2/chs/install.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/libs/sqljdbc_11.2/chs/license.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/libs/sqljdbc_11.2/chs/mssql-jdbc-11.2.0.jre11.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/libs/sqljdbc_11.2/chs/mssql-jdbc-11.2.0.jre17.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/libs/sqljdbc_11.2/chs/mssql-jdbc-11.2.0.jre18.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/libs/sqljdbc_11.2/chs/mssql-jdbc-11.2.0.jre8.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/libs/sqljdbc_11.2/chs/redist.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/libs/sqljdbc_11.2/chs/release.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/libs/sqljdbc_11.2/chs/samples/adaptive/ExecuteStoredProcedures.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/libs/sqljdbc_11.2/chs/samples/adaptive/readLargeData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/libs/sqljdbc_11.2/chs/samples/adaptive/updateLargeData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/libs/sqljdbc_11.2/chs/samples/alwaysencrypted/AlwaysEncrypted.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/libs/sqljdbc_11.2/chs/samples/azureactivedirectoryauthentication/AzureActiveDirectoryAuthentication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/libs/sqljdbc_11.2/chs/samples/connections/ConnectDataSource.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/libs/sqljdbc_11.2/chs/samples/connections/ConnectURL.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/libs/sqljdbc_11.2/chs/samples/constrained/ConstrainedDelegation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/libs/sqljdbc_11.2/chs/samples/dataclassification/DataDiscoveryAndClassification.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/libs/sqljdbc_11.2/chs/samples/datatypes/BasicDataTypes.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/libs/sqljdbc_11.2/chs/samples/datatypes/SpatialDataTypes.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/libs/sqljdbc_11.2/chs/samples/datatypes/SqlXmlDataType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/libs/sqljdbc_11.2/chs/samples/resultsets/CacheResultSet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/libs/sqljdbc_11.2/chs/samples/resultsets/RetrieveResultSet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/libs/sqljdbc_11.2/chs/samples/resultsets/UpdateResultSet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/libs/sqljdbc_11.2/chs/samples/sparse/SparseColumns.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/libs/sqljdbc_11.2/chs/thirdpartynotices.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/libs/sqljdbc_11.2/chs/xa/x64/sqljdbc_xa.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/libs/sqljdbc_11.2/chs/xa/x86/sqljdbc_xa.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/libs/sqljdbc_11.2/chs/xa/xa_install.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/proguard-rules.pro" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/androidTest/java/com/example/booksalesmanagement/ExampleInstrumentedTest.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/booksalesmanagement/BottomNavigationViewActivity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/booksalesmanagement/MainActivity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/booksalesmanagement/activity/BookProductDetailsActivity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/booksalesmanagement/adapter/BookCoverItemBean.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/booksalesmanagement/adapter/bookcover/BookCoverAdapter.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/booksalesmanagement/bean/Book.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/booksalesmanagement/bean/SC.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/booksalesmanagement/dao/BookDao.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/booksalesmanagement/database/ConnectionSqlServer.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/booksalesmanagement/fragment/dashboard/DashboardFragment.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/booksalesmanagement/fragment/dashboard/DashboardViewModel.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/booksalesmanagement/fragment/home/HomeFragment.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/booksalesmanagement/fragment/home/HomeViewModel.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/booksalesmanagement/fragment/notifications/NotificationsFragment.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/booksalesmanagement/fragment/notifications/NotificationsViewModel.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/booksalesmanagement/imagetext/ConnectAlibabaBucket.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/booksalesmanagement/imagetext/ConnectAlibabaBucketActivity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/booksalesmanagement/imagetext/ConnectAlibabaOssToImage.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/booksalesmanagement/imagetext/FileUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/booksalesmanagement/imagetext/ImageUtils.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/booksalesmanagement/imagetext/OssManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/booksalesmanagement/utils/LogUtil.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/_pear.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/apple.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/banana.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/cherry.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/grape.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/ic_backup.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/ic_comment.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/ic_delete.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/ic_done.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/ic_menu.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/ic_settings.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/mango.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/nav_call.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/nav_friends.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/nav_icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/nav_location.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/nav_mail.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/nav_task.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/orange.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/pear.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/pineapple.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/strawberry.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/watermelon.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_dashboard_black_24dp.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_home_black_24dp.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_launcher_background.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_launcher_foreground.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_notifications_black_24dp.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_book_product_details.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_bottom_navigation_view.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_connect_alibaba_bucket.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/book_cover_item.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_dashboard.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_notifications.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/nav_header.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/menu/bottom_nav_menu.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/menu/nav_menu.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/menu/toolbar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-anydpi/ic_launcher.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-anydpi/ic_launcher_round.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/ic_launcher.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/ic_launcher_round.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/ic_launcher.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/ic_launcher_round.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/ic_launcher.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/ic_launcher_round.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_launcher.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/ic_launcher.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/navigation/mobile_navigation.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/values-night/themes.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/values/themes.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/xml/backup_rules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/xml/data_extraction_rules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/test/java/com/example/booksalesmanagement/ExampleUnitTest.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/BookSalesManagement.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/app/BookSalesManagement.app.androidTest.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/app/BookSalesManagement.app.androidTest.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/app/BookSalesManagement.app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/app/BookSalesManagement.app.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/app/BookSalesManagement.app.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/app/BookSalesManagement.app.main.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/app/BookSalesManagement.app.unitTest.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/app/BookSalesManagement.app.unitTest.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[127.0.0.1:7555]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[C:\Users\小鹏\.android\avd\Pixel_7_Pro_API_29.avd]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -39,6 +182,9 @@
   <component name="GiteeDefaultAccount">
     <option name="defaultAccountId" value="15216ce6-d879-485a-ac06-005d98aaf66e" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="vcs://local.properties" root0="SKIP_INSPECTION" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -55,7 +201,7 @@
     "RunOnceActivity.cidr.known.project.marker": "true",
     "android-custom-viewC:/Users/小鹏/.gradle/caches/modules-2/files-2.1/androidx.recyclerview/recyclerview/1.1.0/f2bdf79e1977939817f54a9d3e2f6bc52b63bdd0/recyclerview-1.1.0-sources.jar!/androidx/recyclerview/widget/RecyclerView.java_SELECTED": "RecyclerView",
     "cidr.known.project.marker": "true",
-    "last_opened_file_path": "E:/Android_Develop/BookSalesManagement/app/src/main/res/drawable-xxhdpi",
+    "last_opened_file_path": "E:/Android_Develop/BookSalesManagement/Changes.patch",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.17",
     "project.structure.side.proportion": "0.2",
@@ -168,7 +314,14 @@
       <option name="project" value="LOCAL" />
       <updated>1716040414701</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="阿里云OSS图片上传和下载功能的初步实现、SqlServer的连接实现">
+      <created>1716105237004</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1716105237004</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -176,7 +329,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
