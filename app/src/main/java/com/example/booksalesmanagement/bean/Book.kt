@@ -16,6 +16,8 @@ import java.time.LocalDateTime
  * @param bookType 书籍类型
  * @param inventory 库存
  * @param publicationDate 出版日期
+ * @param bookInfo 书籍简介
+ * @param isbn 书籍ISBN,ISBN代表国际标准书号，是一种13位代码,用于唯一标识图书或独立的出版物
  */
 
 data class Book(
@@ -26,5 +28,7 @@ data class Book(
     var author: String,
     // var bookType: String,
     var inventory: Int,
-    var publicationDate: Timestamp
+    var publicationDate: Timestamp,
+    var bookInfo:String,
+    var isbn:String
 )

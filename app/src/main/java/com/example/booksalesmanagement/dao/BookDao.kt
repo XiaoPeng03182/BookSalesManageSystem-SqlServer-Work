@@ -12,39 +12,42 @@ import java.sql.Timestamp
 import java.time.LocalDateTime
 
 object BookDao {
-    fun insertBook(book: Book) :Boolean{
+    fun insertBook(book: Book): Boolean {
         val insertSQL = "insert into Book(book_id, bookname, " +
                 "publisher_id, author, price, " +
-                "inventory, publication_date) " +
-                "values(?, ?, ?, ?, ?, ?, ?)"
-               /* "values(${book.bookId}, '${book.bookName}', ${book.publisherId}, '${book.author}'," +
-                " ${book.price}, ${book.inventory}, '${book.publicationDate}')"*/
+                "inventory, publication_date,bookinfo,isbn) " +
+                "values(?, ?, ?, ?, ?, ?, ?, ?, ?)"
+        /* "values(${book.bookId}, '${book.bookName}', ${book.publisherId}, '${book.author}'," +
+         " ${book.price}, ${book.inventory}, '${book.publicationDate}')"*/
 
         val insertSQL2 = "insert into Book(book_id, bookname, " +
                 "publisher_id, author, price) " +
                 "values(?, ?, ?, ?, ?, ?)"
 
-        try{
+        try {
             val conn = ConnectionSqlServer.getConnection("BookSalesdb")
-            conn?.prepareStatement(insertSQL).use { stmt->
+            conn?.prepareStatement(insertSQL).use { stmt ->
                 stmt?.setInt(1, book.bookId)
                 stmt?.setString(2, book.bookName)
                 stmt?.setInt(3, book.publisherId)
                 stmt?.setString(4, book.author)
-                stmt?.setBigDecimal(5,book.price)
-                stmt?.setInt(6,book.inventory)
-                stmt?.setTimestamp(7,book.publicationDate)
+                stmt?.setBigDecimal(5, book.price)
+                stmt?.setInt(6, book.inventory)
+                stmt?.setTimestamp(7, book.publicationDate)
+                stmt?.setString(8, book.bookInfo)
+                stmt?.setString(9, book.isbn)
 
                 val rowsInserted = stmt?.executeUpdate() // 执行插入操作并获取受影响的行数
-                return rowsInserted?.let { it > 0 } ?: false // 如果受影响的行数大于 0，则表示插入成功，返回 true，否则返回 false
+                return rowsInserted?.let { it > 0 }
+                    ?: false // 如果受影响的行数大于 0，则表示插入成功，返回 true，否则返回 false
             }
-        }catch (e:SQLException) {
+        } catch (e: SQLException) {
             e.printStackTrace()
         }
         return false // 出现异常时返回 false
     }
 
-    fun queryAll():ArrayList<Book> {
+    fun queryAll(): ArrayList<Book> {
         var bookList = ArrayList<Book>()
         var conn: Connection? = null
         var stmt: Statement? = null
@@ -64,9 +67,12 @@ object BookDao {
                 val price = resultSet.getBigDecimal("price")
                 val author = resultSet.getString("author")
                 val inventory = resultSet.getInt("inventory")
-                val publicationDate =resultSet.getTimestamp("publication_date")
+                val publicationDate = resultSet.getTimestamp("publication_date")
+                val bookInfo = resultSet.getString("bookinfo")
+                val isbn = resultSet.getString("isbn")
 
-                val book = Book(bookId, bookName, publisherId, price, author, inventory, publicationDate)
+                val book =
+                    Book(bookId, bookName, publisherId, price, author, inventory, publicationDate,bookInfo,isbn)
                 //val sc = SC(Sno, Cno, Score)
                 //SC.add(sc)
                 bookList.add(book)
@@ -80,6 +86,8 @@ object BookDao {
                 sb.append("价格：" + book.price)
                 sb.append("库存：" + book.inventory)
                 sb.append("出版日期：" + book.publicationDate)
+                sb.append("图书信息：" + book.bookInfo)
+                sb.append("图书ISBN：" + book.isbn)
                 sb.append("\n")
             }
             Log.e("Dao", sb.toString())

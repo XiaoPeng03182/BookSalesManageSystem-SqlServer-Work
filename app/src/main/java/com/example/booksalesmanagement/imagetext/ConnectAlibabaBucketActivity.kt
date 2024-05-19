@@ -73,7 +73,8 @@ class ConnectAlibabaBucketActivity : AppCompatActivity() {
                 object : ConnectAlibabaOssToImage.UploadCallback {
                     override fun onUploadSuccess() {
                         val book = Book(6, "百年孤独",112, BigDecimal("857.99"),
-                            "马尔克斯",211, Timestamp(System.currentTimeMillis())
+                            "马尔克斯",211, Timestamp(System.currentTimeMillis()),"这个百年孤独的简洁！",
+                            "1234567890123"
                         )
                        if (BookDao.insertBook(book)) {
                            runOnUiThread {

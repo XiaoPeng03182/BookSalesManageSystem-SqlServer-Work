@@ -33,6 +33,9 @@
         android:theme="@style/BookSalesManagementTheme"
         android:usesCleartextTraffic="true" >
         <activity
+            android:name="com.example.booksalesmanagement.activity.insertbook.InsertBookMsgActivity"
+            android:exported="false" />
+        <activity
             android:name="com.example.booksalesmanagement.imagetext.ConnectAlibabaBucketActivity"
             android:exported="false" />
         <activity
