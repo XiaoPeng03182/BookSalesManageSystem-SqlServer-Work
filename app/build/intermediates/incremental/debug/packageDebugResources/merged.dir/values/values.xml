@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="colorAccent">#53bbd9</color>
+    <color name="colorPrimary">#cd97fa</color>
+    <color name="colorPrimaryDark">#56d760</color>
+    <color name="white">#FFFFFFFF</color>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <string name="app_name">BookSalesManagement</string>
+    <string name="title_activity_bottom_navigation_view">BottomNavigationViewActivity</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_home">Home</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="tony_green">Tony Green</string>
+    <string name="tonygreendev_gmail_com">tonygreendev@gmail.com</string>
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="android:colorAccent">@color/colorAccent</item>
+    </style>
+    <style name="BookSalesManagementTheme" parent="AppTheme">
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        
+    </style>
+</resources>

@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Gradle: E">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/app/libs/sqljdbc_11.2/chs/mssql-jdbc-11.2.0.jre8.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
