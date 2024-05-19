@@ -3284,6 +3284,7 @@ int id bounceEnd 0x7f080067
 int id bounceStart 0x7f080068
 int id btn_GetMsg 0x7f080069
 int id btn_get 0x7f08006a
+int id btn_insertBook 0x7f080223
 int id btn_send 0x7f08006b
 int id button 0x7f08006c
 int id buttonPanel 0x7f08006d

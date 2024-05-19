@@ -12,12 +12,36 @@ import java.sql.Timestamp
 import java.time.LocalDateTime
 
 object BookDao {
-    fun insert(book: Book) {
+    fun insertBook(book: Book) :Boolean{
+        val insertSQL = "insert into Book(book_id, bookname, " +
+                "publisher_id, author, price, " +
+                "inventory, publication_date) " +
+                "values(?, ?, ?, ?, ?, ?, ?)"
+               /* "values(${book.bookId}, '${book.bookName}', ${book.publisherId}, '${book.author}'," +
+                " ${book.price}, ${book.inventory}, '${book.publicationDate}')"*/
 
-    }
+        val insertSQL2 = "insert into Book(book_id, bookname, " +
+                "publisher_id, author, price) " +
+                "values(?, ?, ?, ?, ?, ?)"
 
-    private fun Timestamp.toLocalDateTime(): LocalDateTime {
-        return this.toLocalDateTime()
+        try{
+            val conn = ConnectionSqlServer.getConnection("BookSalesdb")
+            conn?.prepareStatement(insertSQL).use { stmt->
+                stmt?.setInt(1, book.bookId)
+                stmt?.setString(2, book.bookName)
+                stmt?.setInt(3, book.publisherId)
+                stmt?.setString(4, book.author)
+                stmt?.setBigDecimal(5,book.price)
+                stmt?.setInt(6,book.inventory)
+                stmt?.setTimestamp(7,book.publicationDate)
+
+                val rowsInserted = stmt?.executeUpdate() // 执行插入操作并获取受影响的行数
+                return rowsInserted?.let { it > 0 } ?: false // 如果受影响的行数大于 0，则表示插入成功，返回 true，否则返回 false
+            }
+        }catch (e:SQLException) {
+            e.printStackTrace()
+        }
+        return false // 出现异常时返回 false
     }
 
     fun queryAll():ArrayList<Book> {
@@ -67,7 +91,6 @@ object BookDao {
             stmt?.close()
             conn?.close()
         }
-
         //Log.e("queryCourseMsg", resultCno)
         return bookList
     }

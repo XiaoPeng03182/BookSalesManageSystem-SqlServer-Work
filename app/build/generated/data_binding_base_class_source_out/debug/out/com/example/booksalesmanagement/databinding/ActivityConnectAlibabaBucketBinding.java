@@ -25,6 +25,9 @@ public final class ActivityConnectAlibabaBucketBinding implements ViewBinding {
   public final Button btnGet;
 
   @NonNull
+  public final Button btnInsertBook;
+
+  @NonNull
   public final Button btnSend;
 
   @NonNull
@@ -37,10 +40,11 @@ public final class ActivityConnectAlibabaBucketBinding implements ViewBinding {
   public final TextView textView;
 
   private ActivityConnectAlibabaBucketBinding(@NonNull ConstraintLayout rootView,
-      @NonNull Button btnGet, @NonNull Button btnSend, @NonNull Button button,
-      @NonNull ImageView imageView, @NonNull TextView textView) {
+      @NonNull Button btnGet, @NonNull Button btnInsertBook, @NonNull Button btnSend,
+      @NonNull Button button, @NonNull ImageView imageView, @NonNull TextView textView) {
     this.rootView = rootView;
     this.btnGet = btnGet;
+    this.btnInsertBook = btnInsertBook;
     this.btnSend = btnSend;
     this.button = button;
     this.imageView = imageView;
@@ -80,6 +84,12 @@ public final class ActivityConnectAlibabaBucketBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.btn_insertBook;
+      Button btnInsertBook = ViewBindings.findChildViewById(rootView, id);
+      if (btnInsertBook == null) {
+        break missingId;
+      }
+
       id = R.id.btn_send;
       Button btnSend = ViewBindings.findChildViewById(rootView, id);
       if (btnSend == null) {
@@ -104,8 +114,8 @@ public final class ActivityConnectAlibabaBucketBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityConnectAlibabaBucketBinding((ConstraintLayout) rootView, btnGet, btnSend,
-          button, imageView, textView);
+      return new ActivityConnectAlibabaBucketBinding((ConstraintLayout) rootView, btnGet,
+          btnInsertBook, btnSend, button, imageView, textView);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

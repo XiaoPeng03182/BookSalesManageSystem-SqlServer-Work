@@ -27,6 +27,8 @@ import com.example.booksalesmanagement.dao.BookDao
 import com.example.booksalesmanagement.database.ConnectionSqlServer
 import com.example.booksalesmanagement.databinding.ActivityConnectAlibabaBucketBinding
 import java.lang.StringBuilder
+import java.math.BigDecimal
+import java.sql.Timestamp
 import kotlin.concurrent.thread
 
 class ConnectAlibabaBucketActivity : AppCompatActivity() {
@@ -52,6 +54,43 @@ class ConnectAlibabaBucketActivity : AppCompatActivity() {
 
         // 初始化ActivityResultLauncher来启动裁剪应用
         initCropImageLauncher()
+
+        binding.btnInsertBook.setOnClickListener {
+            // 将Uri转换为文件路径
+  //val imageFilePath = ImageUtils.getPathFromUri(this, imageUri)
+
+           val imageFilePath =
+                FileUtils.saveDrawableToInternalStorage(this, R.drawable.banana, "pear.jpg")
+            if (imageFilePath != null) {
+                // 图片保存成功，filePath 是保存的文件路径
+            } else {
+                // 图片保存失败
+            }
+            ConnectAlibabaOssToImage.sendImage(
+                this,
+                "6百年孤独",
+                imageFilePath,
+                object : ConnectAlibabaOssToImage.UploadCallback {
+                    override fun onUploadSuccess() {
+                        val book = Book(6, "百年孤独",112, BigDecimal("857.99"),
+                            "马尔克斯",211, Timestamp(System.currentTimeMillis())
+                        )
+                       if (BookDao.insertBook(book)) {
+                           runOnUiThread {
+                               Toast.makeText(
+                                   this@ConnectAlibabaBucketActivity,
+                                   "图书上传并插入成功",
+                                   Toast.LENGTH_SHORT
+                               ).show()
+                           }
+                       }
+                    }
+
+                    override fun onUploadFailure() {
+                        TODO("Not yet implemented")
+                    }
+                })
+        }
 
         binding.button.setOnClickListener {
             getBookAllMsg()

@@ -22,8 +22,8 @@ class MainActivity : AppCompatActivity() {
 
             binding.btnGetMsg.setOnClickListener {
                // getMsgFromSqlServer()
-               // startActivity(Intent(this,BottomNavigationViewActivity::class.java))
-                startActivity(Intent(this, ConnectAlibabaBucketActivity::class.java))
+                startActivity(Intent(this,BottomNavigationViewActivity::class.java))
+               // startActivity(Intent(this, ConnectAlibabaBucketActivity::class.java))
             }
         }
 

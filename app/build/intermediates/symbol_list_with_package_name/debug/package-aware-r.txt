@@ -3285,6 +3285,7 @@ id bounceEnd
 id bounceStart
 id btn_GetMsg
 id btn_get
+id btn_insertBook
 id btn_send
 id button
 id buttonPanel

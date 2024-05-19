@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> adaa70df7688ed806460ed408f7d0966b5fa1779
 # Built application files
 *.apk
 *.aar
@@ -87,6 +90,7 @@ lint/tmp/
 
 # Android Profiling
 *.hprof
+<<<<<<< HEAD
 =======
 *.iml
 .gradle
@@ -104,3 +108,5 @@ lint/tmp/
 .cxx
 local.properties
 >>>>>>> eb692a6 (text)
+=======
+>>>>>>> adaa70df7688ed806460ed408f7d0966b5fa1779
