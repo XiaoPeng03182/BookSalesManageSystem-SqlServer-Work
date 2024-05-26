@@ -18,14 +18,33 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".activity.comment.BookCommentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.SelectUserOrAdminActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.register_login.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.register_login.RegistrationActivity"
+            android:exported="false" />
+        <activity
             android:name=".activity.insertbook.InsertBookMsgActivity"
             android:exported="false" />
         <activity
             android:name=".imagetext.ConnectAlibabaBucketActivity"
             android:exported="false" />
         <activity
-            android:name=".activity.BookProductDetailsActivity"
-            android:exported="false" />
+            android:name=".activity.book_details.BookProductDetailsActivity"
+            android:exported="false"
+            android:theme="@style/BookSalesManagementTheme" />
         <activity
             android:name=".BottomNavigationViewActivity"
             android:exported="false"
@@ -33,14 +52,8 @@
             android:theme="@style/BookSalesManagementTheme" />
         <activity
             android:name=".MainActivity"
-            android:exported="true"
-            android:theme="@style/BookSalesManagementTheme">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:exported="false"
+            android:theme="@style/BookSalesManagementTheme" />
     </application>
 
 </manifest>

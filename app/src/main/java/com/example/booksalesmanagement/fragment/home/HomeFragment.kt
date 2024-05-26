@@ -1,6 +1,8 @@
 package com.example.booksalesmanagement.fragment.home
 
 import android.annotation.SuppressLint
+import android.graphics.Bitmap
+import android.opengl.Visibility
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -15,12 +17,16 @@ import androidx.core.view.GravityCompat
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.example.booksalesmanagement.R
-import com.example.booksalesmanagement.adapter.BookCoverItemBean
-import com.example.booksalesmanagement.adapter.bookcover.BookCoverAdapter
+import com.example.booksalesmanagement.fragment.home.adapter.BookCoverAdapter
+import com.example.booksalesmanagement.bean.Book
 import com.example.booksalesmanagement.bean.SC
+import com.example.booksalesmanagement.dao.BookDao
 import com.example.booksalesmanagement.database.ConnectionSqlServer
 import com.example.booksalesmanagement.databinding.FragmentHomeBinding
+import com.example.booksalesmanagement.fragment.home.adapter.BookListImageBitmap
+import com.example.booksalesmanagement.utils.ConnectAlibabaOssToImage
 import com.google.android.material.snackbar.Snackbar
 import java.lang.StringBuilder
 import kotlin.concurrent.thread
@@ -31,26 +37,28 @@ class HomeFragment : Fragment() {
 
     private val binding get() = _binding!!
 
-    val books = mutableListOf(
-        BookCoverItemBean("Apple", R.drawable.apple, 90.0), BookCoverItemBean(
-            "Banana",
-            R.drawable.banana, 99.9
-        ), BookCoverItemBean("Orange", R.drawable.orange, 85.1), BookCoverItemBean(
-            "Watermelon",
-            R.drawable.watermelon, 122.1
-        ), BookCoverItemBean("Pear", R.drawable.pear, 85.1), BookCoverItemBean(
-            "Grape",
-            R.drawable.grape, 122.1
-        ), BookCoverItemBean("Pineapple", R.drawable.pineapple, 85.1), BookCoverItemBean(
-            "Strawberry",
-            R.drawable.strawberry, 122.1
-        ), BookCoverItemBean("Cherry", R.drawable.cherry, 85.1), BookCoverItemBean(
-            "Mango",
-            R.drawable.mango, 122.1
-        )
-    )
+    private var bookList = ArrayList<Book>()
 
-    val bookList = ArrayList<BookCoverItemBean>()
+    private var adapter: BookCoverAdapter? = null
+
+    /*    val books = mutableListOf(
+            Book("Apple", R.drawable.apple, 90.0), Book(
+                "Banana",
+                R.drawable.banana, 99.9
+            ), Book("Orange", R.drawable.orange, 85.1), Book(
+                "Watermelon",
+                R.drawable.watermelon, 122.1
+            ), Book("Pear", R.drawable.pear, 85.1), Book(
+                "Grape",
+                R.drawable.grape, 122.1
+            ), Book("Pineapple", R.drawable.pineapple, 85.1), Book(
+                "Strawberry",
+                R.drawable.strawberry, 122.1
+            ), Book("Cherry", R.drawable.cherry, 85.1), Book(
+                "Mango",
+                R.drawable.mango, 122.1
+            )
+        )*/
 
     @SuppressLint("ResourceAsColor")
     override fun onCreateView(
@@ -62,6 +70,19 @@ class HomeFragment : Fragment() {
             ViewModelProvider(this).get(HomeViewModel::class.java)
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
+
+        Log.e("HomeFragment", "setAdapter")
+
+        //val layoutManager = GridLayoutManager(requireContext(), 2)
+        val layoutManager = StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
+        binding.recyclerView.layoutManager = layoutManager
+        adapter = BookCoverAdapter(requireContext(), bookList)
+        binding.recyclerView.adapter = adapter
+
+        //从SqlServer数据库中获取数据，并获取阿里云OSS云存储中的图片
+        if (bookList.size == 0) {
+            initBookMsgFromSqlServer()
+        }
 
         //如果VieModel中变量的值发生变化，会触发观察者中的方法，从而更新UI界面
         homeViewModel.msgLiveData.observe(viewLifecycleOwner) {
@@ -84,12 +105,7 @@ class HomeFragment : Fragment() {
                 }*/
 
         //初始化图书信息
-        initBooks()
-
-        val layoutManager = GridLayoutManager(requireContext(), 2)
-        binding.recyclerView.layoutManager = layoutManager
-        val adapter = BookCoverAdapter(requireContext(), bookList)
-        binding.recyclerView.adapter = adapter
+        //initBooks()
 
         //设置toolbar上的呼出左侧drawerLayout的导航图标
         (activity as? AppCompatActivity)?.supportActionBar?.let {
@@ -99,7 +115,7 @@ class HomeFragment : Fragment() {
 
         //设置drawerLayout的副页的菜单选项监听
         binding.navView.setCheckedItem(R.id.navCall)  //设置默认选中
-        binding.navView.setNavigationItemSelectedListener {item->
+        binding.navView.setNavigationItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.navCall -> {
                     Toast.makeText(requireContext(), "navCall", Toast.LENGTH_SHORT).show()
@@ -136,6 +152,11 @@ class HomeFragment : Fragment() {
             true
         }
 
+        //查询按钮监听
+        binding.btnSearchBookByName.setOnClickListener {
+            binding.SearchBookLineLayout.visibility = View.GONE
+        }
+
         binding.fab.setOnClickListener { view ->
             //Toast.makeText(this,"FAB clicked",Toast.LENGTH_SHORT).show()
             Snackbar.make(view, "Data deleted", Snackbar.LENGTH_SHORT)
@@ -147,10 +168,142 @@ class HomeFragment : Fragment() {
 
         binding.swipeRefreshLayout.setColorSchemeColors(R.color.colorAccent)
         binding.swipeRefreshLayout.setOnRefreshListener {
-            refreshBooks(adapter)
+            refreshBooks(adapter!!)
+            //initBookMsgFromSqlServer()
         }
 
         return root
+    }
+
+    //从SqlServer数据库中获取数据，并获取阿里云OSS云存储中的图片
+    private fun initBookMsgFromSqlServer() {
+        getBookAllMsg(object : BookQueryCallback {
+            override fun onSuccess(bookList: ArrayList<Book>) {
+                this@HomeFragment.bookList = bookList
+
+                Log.e("HomeFragment", "bookList.size before for : =${bookList.size}")
+
+                // 用于跟踪已下载图片的计数器
+                val totalBooks = this@HomeFragment.bookList.size
+                var downloadedImages = 0
+
+                for (book in this@HomeFragment.bookList) {
+                    val bookImageFileName = "${book.bookId}_${book.bookName}.jpg"
+                    ConnectAlibabaOssToImage.getImage(
+                        context!!,
+                        bookImageFileName,
+                        object : ConnectAlibabaOssToImage.ImageCallback {
+                            @SuppressLint("NotifyDataSetChanged")
+                            override fun onImageLoaded(bitmap: Bitmap?) {
+                                BookListImageBitmap.addBookImage(bookImageFileName, bitmap!!)
+                                Log.e("HomeFragment","BookListImageBitmap size" +
+                                        "${BookListImageBitmap.getBookListImageBitmap().size}")
+                                downloadedImages++
+                                checkAllImagesDownloaded(totalBooks, downloadedImages)
+                                /*                            runOnUiThread {
+                            Toast.makeText(
+                                context,
+                                "下载成功",
+                                Toast.LENGTH_SHORT
+                            ).show()
+                           // binding.imageView.setImageBitmap(bitmap)
+                        }*/
+                            }
+
+                            override fun onError() {
+                                TODO("Not yet implemented")
+                            }
+
+                        })
+                }
+
+                Log.e("HomeFragment", "bookList.size after for : =${bookList.size}")
+
+            }
+
+            override fun onFailure(exception: Exception) {
+                exception.printStackTrace()
+                Toast.makeText(context,"更新图书数据失败！",Toast.LENGTH_SHORT).show()
+            }
+
+        })
+    }
+
+    // 检查是否所有图片都已下载完成
+    private fun checkAllImagesDownloaded(totalBooks: Int, downloadedImages: Int) {
+        if (downloadedImages == totalBooks) {
+            //requireActivity().runOnUiThread {
+                updateBookList(this@HomeFragment.bookList)
+                Log.e("HomeFragment", "onImageLoaded: 所有图片加载完成")
+            //}
+        }
+    }
+
+    @SuppressLint("NotifyDataSetChanged")
+    private fun updateBookList(newBookList: ArrayList<Book>) {
+        activity?.runOnUiThread {
+            Log.e("HomeFragment", "updateBookList: ${newBookList.size}")
+            //bookList.clear()
+            for (book in bookList) {
+                Log.e("HomeFragment update before", book.toString())
+            }
+
+            Toast.makeText(context,"获取图书数据成功！",Toast.LENGTH_SHORT).show()
+            //bookList.addAll(newBookList)
+            //bookList = newBookList
+
+            for (book in bookList) {
+                Log.e("HomeFragment update after", book.toString())
+            }
+
+            if (adapter == null) {
+                Log.e("HomeFragment","adapter is null")
+            }else {
+                Log.e("HomeFragment","updateBookList: notifyDataSetChanged")
+                adapter!!.updateData(bookList)
+                adapter!!.notifyDataSetChanged()
+            }
+           // adapter?.notifyItemChanged(lastMsgIndex)
+
+            //adapter?.notifyDataSetChanged()
+            Log.e("HomeFragment", "updateBookList02: ${bookList.size}")
+        }
+    }
+
+
+    private fun getBookAllMsg(callback: BookQueryCallback) {
+        // 调用SQL Server数据库的代码
+        val sb = StringBuilder()
+        var bookList = ArrayList<Book>()
+        thread {
+            try {
+                bookList.addAll(BookDao.queryAll())
+                //获取数据库数据后执行->成功回调
+                callback.onSuccess(bookList)
+            } catch (e: Exception) {
+                e.printStackTrace()
+                callback.onFailure(e)
+            }
+
+            for (book in bookList) {
+                sb.append("图书编号：" + book.bookId)
+                sb.append("图书名称：" + book.bookName)
+                sb.append("类别：" + book.category)
+                sb.append("出版社：" + book.publisher)
+                sb.append("作者：" + book.author)
+                sb.append("价格：" + book.price)
+                sb.append("库存：" + book.stock)
+                sb.append("出版日期：" + book.publicationDate)
+                sb.append("图书信息：" + book.bookInfo)
+                sb.append("图书ISBN：" + book.isbn)
+                sb.append("创建时间：" + book.creationTime)
+                sb.append("\n")
+            }
+
+            //binding.tvShowMsg.text = Cno
+            Log.e("TAG", "getMsgFromSqlServer: $sb")
+        }
+
     }
 
 
@@ -159,11 +312,14 @@ class HomeFragment : Fragment() {
         _binding = null
     }
 
+    @SuppressLint("NotifyDataSetChanged")
     private fun refreshBooks(adapter: BookCoverAdapter) {
         thread {
             Thread.sleep(500)
             activity?.runOnUiThread { //进入主线程修改视图；
-                initBooks()
+                //initBooks()
+                initBookMsgFromSqlServer()
+                Log.e("HomeFragment", "refreshBooks")
                 adapter.notifyDataSetChanged()
                 binding.swipeRefreshLayout.isRefreshing = false
             }
@@ -172,10 +328,10 @@ class HomeFragment : Fragment() {
 
     private fun initBooks() {
         bookList.clear()
-        repeat(50) {
-            val index = (0 until books.size).random()
-            bookList.add(books[index])
-        }
+        /*        repeat(50) {
+                    val index = (0 until books.size).random()
+                    bookList.add(books[index])
+                }*/
     }
 
     //onCreateOptionsMenu()方法中加载了toolbar.xml这个菜单文件
@@ -200,6 +356,7 @@ class HomeFragment : Fragment() {
 
             R.id.delete -> {
                 Toast.makeText(requireContext(), "You clicked Delete", Toast.LENGTH_SHORT).show()
+                binding.SearchBookLineLayout.visibility = View.VISIBLE
                 return true
             }
 
@@ -241,5 +398,10 @@ class HomeFragment : Fragment() {
             Log.e("TAG", "getMsgFromSqlServer: " + sb.toString())
             Log.e("TAG", "getMsgFromSqlServer: " + Cno)
         }
+    }
+
+    interface BookQueryCallback {
+        fun onSuccess(bookList: ArrayList<Book>)
+        fun onFailure(exception: Exception)
     }
 }

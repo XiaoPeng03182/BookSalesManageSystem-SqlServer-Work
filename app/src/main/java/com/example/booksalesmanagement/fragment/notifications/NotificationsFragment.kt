@@ -8,6 +8,7 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.example.booksalesmanagement.databinding.FragmentNotificationsBinding
+import com.example.booksalesmanagement.fragment.home.adapter.BookListImageBitmap
 
 class NotificationsFragment : Fragment() {
 
@@ -28,10 +29,13 @@ class NotificationsFragment : Fragment() {
         _binding = FragmentNotificationsBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.textNotifications
+        binding.button2.setOnClickListener {
+            binding.ivText.setImageBitmap(BookListImageBitmap.getBookImage("111_等你到家.jpg"))
+        }
+/*        val textView: TextView = binding.textNotifications
         notificationsViewModel.text.observe(viewLifecycleOwner) {
             textView.text = it
-        }
+        }*/
         return root
     }
 

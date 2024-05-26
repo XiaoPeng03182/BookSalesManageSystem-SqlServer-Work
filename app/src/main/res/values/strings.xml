@@ -7,4 +7,19 @@
 
     <string name="tony_green">Tony Green</string>
     <string name="tonygreendev_gmail_com">tonygreendev@gmail.com</string>
+    <string name="register_activity">注册</string>
+    <string name="username">用户名</string>
+    <string name="input_username">请输入用户名</string>
+    <string name="register">注册</string>
+    <string name="userpassword">密码</string>
+    <string name="input_userpassword">请输入密码</string>
+    <string name="register_userpwdagain">确认密码</string>
+    <string name="input_userpwdagain">请再次输入密码</string>
+    <string name="input_verificationcode">请输入验证码</string>
+    <string name="VerificationCode">获取验证码</string>
+    <string name="login_activity">登录</string>
+    <string name="input_password">请输入密码</string>
+    <string name="login">登录</string>
+    <string name="register_managerVerifyCode">权限密码</string>
+    <string name="input_managerVerifyCode">请输入注册管理员权限密码</string>
 </resources>

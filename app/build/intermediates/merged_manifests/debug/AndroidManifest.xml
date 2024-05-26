@@ -33,6 +33,21 @@
         android:theme="@style/BookSalesManagementTheme"
         android:usesCleartextTraffic="true" >
         <activity
+            android:name="com.example.booksalesmanagement.activity.SelectUserOrAdminActivity"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.booksalesmanagement.activity.register_login.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.booksalesmanagement.activity.register_login.RegistrationActivity"
+            android:exported="false" />
+        <activity
             android:name="com.example.booksalesmanagement.activity.insertbook.InsertBookMsgActivity"
             android:exported="false" />
         <activity
@@ -40,7 +55,8 @@
             android:exported="false" />
         <activity
             android:name="com.example.booksalesmanagement.activity.BookProductDetailsActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/BookSalesManagementTheme" />
         <activity
             android:name="com.example.booksalesmanagement.BottomNavigationViewActivity"
             android:exported="false"
@@ -48,14 +64,8 @@
             android:theme="@style/BookSalesManagementTheme" />
         <activity
             android:name="com.example.booksalesmanagement.MainActivity"
-            android:exported="true"
-            android:theme="@style/BookSalesManagementTheme" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:exported="false"
+            android:theme="@style/BookSalesManagementTheme" />
 
         <provider
             android:name="androidx.startup.InitializationProvider"

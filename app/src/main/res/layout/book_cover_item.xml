@@ -14,7 +14,7 @@
         <ImageView
             android:id="@+id/bookImage"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
+            android:layout_height="200dp"
             android:scaleType="centerCrop" />
         <!--这个属性可以指定图片的缩放模式。由于各张 水果图片的长宽比例可能会不一致，
         为了让所有的图片都能填充满整个ImageView，这里使用 了centerCrop模式，

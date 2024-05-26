@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    tools:ignore="Instantiatable"
+    android:background="@color/white"
+    tools:context=".activity.register_login.RegistrationActivity"
+    android:padding="5dp">
+
+
+    <ImageButton
+        android:id="@+id/ib_rigister_back"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/btn_round_black" />
+
+    <TextView
+        android:id="@+id/conn"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:text="网络未连接" />
+
+    <TextView
+        android:textStyle="bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/register_activity"
+        android:textColor="@color/colorPrimary"
+        android:layout_marginBottom="30dp"
+        android:textSize="35sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_layout_height"
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp">
+
+        <TextView
+            android:id="@+id/tv_username"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/username"
+            android:textColor="@color/black"
+            android:textSize="@dimen/common_font_size" />
+
+
+        <EditText
+            android:id="@+id/et_username"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_weight="4"
+            android:background="@drawable/selector_edittext"
+            android:hint="@string/input_username"
+            android:inputType="text"
+            android:maxLength="20"
+            android:textColor="@color/black"
+            android:textColorHint="@color/grey"
+            android:textSize="@dimen/common_font_size" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_layout_height"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/tv_userpassword"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/userpassword"
+            android:textColor="@color/black"
+            android:textSize="@dimen/common_font_size" />
+
+
+        <EditText
+            android:id="@+id/et_userpassword"
+            android:layout_width="0dp"
+            android:layout_weight="4"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/selector_edittext"
+            android:hint="@string/input_userpassword"
+            android:digits="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ@.!#$%^*_+="
+            android:inputType="text"
+            android:maxLength="20"
+            android:textColor="@color/black"
+            android:textColorHint="@color/grey"
+            android:textSize="@dimen/common_font_size" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_layout_height"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/tv_userpwdagain"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/register_userpwdagain"
+            android:textColor="@color/black"
+            android:textSize="@dimen/common_font_size" />
+
+
+        <EditText
+            android:id="@+id/et_userpwdagain"
+            android:layout_width="0dp"
+            android:layout_weight="4"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/selector_edittext"
+            android:hint="@string/input_userpwdagain"
+            android:digits="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ@.!#$%^*_+="
+            android:inputType="text"
+            android:maxLength="20"
+            android:textColor="@color/black"
+            android:textColorHint="@color/grey"
+            android:textSize="@dimen/common_font_size" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_managerVerifyCode"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_layout_height"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/tv_managerVerifyCode"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/register_managerVerifyCode"
+            android:textColor="@color/black"
+            android:textSize="@dimen/common_font_size" />
+
+
+        <EditText
+            android:id="@+id/et_managerVerifyCode"
+            android:layout_width="0dp"
+            android:layout_weight="4"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/selector_edittext"
+            android:hint="@string/input_managerVerifyCode"
+            android:digits="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ@.!#$%^*_+="
+            android:inputType="text"
+            android:maxLength="20"
+            android:textColor="@color/black"
+            android:textColorHint="@color/grey"
+            android:textSize="@dimen/common_font_size" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_layout_height"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+
+
+        <EditText
+            android:id="@+id/et_verificationcode"
+            android:layout_width="0dp"
+            android:layout_weight="4"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/selector_edittext"
+            android:hint="@string/input_verificationcode"
+            android:digits="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ@.!#$%^*_+="
+            android:inputType="text"
+            android:maxLength="20"
+            android:textColor="@color/black"
+            android:textColorHint="@color/grey"
+            android:textSize="@dimen/common_font_size" />
+
+        <Button
+            android:textColor="@color/whitesmoke"
+            android:background="@drawable/shape_button_background"
+            android:id="@+id/btn_getverificationcode"
+            android:layout_width="0dp"
+            android:layout_margin="3dp"
+            android:layout_weight="2"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/VerificationCode"
+            android:textSize="18sp" />
+
+
+    </LinearLayout>
+
+    <Button
+        android:textColor="@color/whitesmoke"
+        android:background="@drawable/shape_button_background"
+        android:id="@+id/btn_register"
+        android:layout_width="300dp"
+
+        android:layout_gravity="center"
+        android:layout_height="100dp"
+        android:layout_marginTop="50dp"
+        android:text="@string/register"
+        android:textSize="@dimen/button_font_size" />
+
+</LinearLayout>

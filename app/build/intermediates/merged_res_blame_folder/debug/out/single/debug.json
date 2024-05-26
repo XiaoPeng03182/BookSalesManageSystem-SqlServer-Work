@@ -20,6 +20,10 @@
         "source": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-main-54:\\layout\\fragment_dashboard.xml"
     },
     {
+        "merged": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-merged_res-52:\\layout_activity_login.xml.flat",
+        "source": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-main-54:\\layout\\activity_login.xml"
+    },
+    {
         "merged": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-merged_res-52:\\layout_nav_header.xml.flat",
         "source": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-main-54:\\layout\\nav_header.xml"
     },
@@ -36,16 +40,20 @@
         "source": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-main-54:\\drawable-xxhdpi\\nav_icon.png"
     },
     {
+        "merged": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-merged_res-52:\\drawable_shape_button_background.xml.flat",
+        "source": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-main-54:\\drawable\\shape_button_background.xml"
+    },
+    {
         "merged": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-merged_res-52:\\mipmap-anydpi_ic_launcher.xml.flat",
         "source": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-main-54:\\mipmap-anydpi\\ic_launcher.xml"
     },
     {
-        "merged": "com.example.booksalesmanagement.app-merged_res-52:/layout_activity_insert_book_msg.xml.flat",
-        "source": "com.example.booksalesmanagement.app-main-54:/layout/activity_insert_book_msg.xml"
-    },
-    {
         "merged": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-merged_res-52:\\drawable_selector_button_circle_bacground.xml.flat",
         "source": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-main-54:\\drawable\\selector_button_circle_bacground.xml"
+    },
+    {
+        "merged": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-merged_res-52:\\drawable_shape_edit_focus.xml.flat",
+        "source": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-main-54:\\drawable\\shape_edit_focus.xml"
     },
     {
         "merged": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-merged_res-52:\\drawable-xxhdpi_grape.jpg.flat",
@@ -66,6 +74,10 @@
     {
         "merged": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-merged_res-52:\\mipmap-xhdpi_ic_launcher.webp.flat",
         "source": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-main-54:\\mipmap-xhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-merged_res-52:\\drawable_shape_edit_nomal.xml.flat",
+        "source": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-main-54:\\drawable\\shape_edit_nomal.xml"
     },
     {
         "merged": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-merged_res-52:\\drawable-xxhdpi_ic_delete.png.flat",
@@ -124,12 +136,20 @@
         "source": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-main-54:\\xml\\data_extraction_rules.xml"
     },
     {
+        "merged": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-merged_res-52:\\drawable-xxhdpi_btn_round_black.png.flat",
+        "source": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-main-54:\\drawable-xxhdpi\\btn_round_black.png"
+    },
+    {
         "merged": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-merged_res-52:\\mipmap-xxhdpi_ic_launcher.webp.flat",
         "source": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-main-54:\\mipmap-xxhdpi\\ic_launcher.webp"
     },
     {
         "merged": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-merged_res-52:\\drawable-xxhdpi_ic_done.png.flat",
         "source": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-main-54:\\drawable-xxhdpi\\ic_done.png"
+    },
+    {
+        "merged": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-merged_res-52:\\layout_activity_select_user_or_admin.xml.flat",
+        "source": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-main-54:\\layout\\activity_select_user_or_admin.xml"
     },
     {
         "merged": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-merged_res-52:\\drawable-xxhdpi_pear.jpg.flat",
@@ -148,12 +168,12 @@
         "source": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-main-54:\\menu\\nav_menu.xml"
     },
     {
-        "merged": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-merged_res-52:\\layout_activity_main.xml.flat",
-        "source": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-main-54:\\layout\\activity_main.xml"
-    },
-    {
         "merged": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-merged_res-52:\\layout_activity_bottom_navigation_view.xml.flat",
         "source": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-main-54:\\layout\\activity_bottom_navigation_view.xml"
+    },
+    {
+        "merged": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-merged_res-52:\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-main-54:\\layout\\activity_main.xml"
     },
     {
         "merged": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-merged_res-52:\\layout_activity_connect_alibaba_bucket.xml.flat",
@@ -174,6 +194,10 @@
     {
         "merged": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-merged_res-52:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
         "source": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-main-54:\\mipmap-xxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-merged_res-52:\\layout_activity_registration.xml.flat",
+        "source": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-main-54:\\layout\\activity_registration.xml"
     },
     {
         "merged": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-merged_res-52:\\drawable-xxhdpi_nav_mail.png.flat",
@@ -216,8 +240,16 @@
         "source": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-main-54:\\drawable-xxhdpi\\cherry.jpg"
     },
     {
+        "merged": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-merged_res-52:\\drawable_selector_edittext.xml.flat",
+        "source": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-main-54:\\drawable\\selector_edittext.xml"
+    },
+    {
         "merged": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-merged_res-52:\\drawable_ic_launcher_background.xml.flat",
         "source": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-main-54:\\drawable\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-merged_res-52:\\layout_activity_select_user_or_manager.xml.flat",
+        "source": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-main-54:\\layout\\activity_select_user_or_manager.xml"
     },
     {
         "merged": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-merged_res-52:\\layout_activity_insert_book_msg.xml.flat",
@@ -228,12 +260,12 @@
         "source": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-main-54:\\drawable-xxhdpi\\nav_call.png"
     },
     {
-        "merged": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-merged_res-52:\\mipmap-mdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-main-54:\\mipmap-mdpi\\ic_launcher_round.webp"
-    },
-    {
         "merged": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-merged_res-52:\\layout_fragment_notifications.xml.flat",
         "source": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-main-54:\\layout\\fragment_notifications.xml"
+    },
+    {
+        "merged": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-merged_res-52:\\mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-main-54:\\mipmap-mdpi\\ic_launcher_round.webp"
     },
     {
         "merged": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-merged_res-52:\\layout_activity_book_product_details.xml.flat",
@@ -242,5 +274,9 @@
     {
         "merged": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-merged_res-52:\\drawable-xxhdpi__pear.jpg.flat",
         "source": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-main-54:\\drawable-xxhdpi\\_pear.jpg"
+    },
+    {
+        "merged": "com.example.booksalesmanagement.app-merged_res-52:/layout_activity_book_product_details.xml.flat",
+        "source": "com.example.booksalesmanagement.app-main-54:/layout/activity_book_product_details.xml"
     }
 ]

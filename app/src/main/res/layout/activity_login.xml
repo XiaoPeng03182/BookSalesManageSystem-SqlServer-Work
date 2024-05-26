@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="Instantiatable"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".activity.register_login.LoginActivity">
+
+    <Button
+        android:id="@+id/ib_login_back"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/btn_round_black" />
+
+    <TextView
+        android:textStyle="bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/login_activity"
+        android:textColor="@color/colorPrimary"
+        android:textSize="35sp" />
+
+    <LinearLayout
+        android:layout_marginTop="60dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_layout_height"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/username"
+
+            android:textColor="@color/black"
+            android:textSize="@dimen/common_font_size" />
+
+        <EditText
+            android:id="@+id/et_username"
+            android:layout_width="0dp"
+            android:layout_weight="4"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/selector_edittext"
+            android:hint="@string/input_username"
+            android:inputType="text"
+            android:maxLength="20"
+            android:layout_marginEnd="5dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/grey"
+            android:textSize="@dimen/common_font_size" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_layout_height"
+        android:layout_marginTop="10dp"
+        android:layout_margin="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_password"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/userpassword"
+            android:textColor="@color/black"
+            android:textSize="@dimen/common_font_size" />
+
+
+        <EditText
+            android:id="@+id/et_password"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_weight="4"
+            android:background="@drawable/selector_edittext"
+            android:digits="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ@.!#$%^*_+="
+            android:hint="@string/input_password"
+            android:inputType="text"
+            android:maxLength="20"
+            android:textColor="@color/black"
+            android:textColorHint="@color/grey"
+            android:textSize="@dimen/common_font_size" />
+        <!-- android:inputType="textVisiblePassword"：用于输入密码，但允许用户查看输入的内容。-->
+
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="350dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="90dp"
+        android:layout_gravity="center"
+        android:textColor="@color/whitesmoke"
+        android:background="@drawable/shape_button_background"
+        android:text="@string/login"
+        android:textSize="30sp" />
+
+    <Button
+        android:id="@+id/btn_register"
+        android:layout_width="350dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:textColor="@color/whitesmoke"
+        android:background="@drawable/shape_button_background"
+        android:text="注      册"
+        android:textSize="@dimen/button_font_size" />
+
+</LinearLayout>

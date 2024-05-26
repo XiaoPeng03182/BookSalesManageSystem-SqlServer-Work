@@ -8,7 +8,7 @@ import com.example.booksalesmanagement.activity.insertbook.InsertBookMsgActivity
 import com.example.booksalesmanagement.database.ConnectionSqlServer
 import com.example.booksalesmanagement.bean.SC
 import com.example.booksalesmanagement.databinding.ActivityMainBinding
-import com.example.booksalesmanagement.imagetext.ConnectAlibabaBucketActivity
+
 import java.lang.StringBuilder
 import kotlin.concurrent.thread
 
@@ -23,9 +23,9 @@ class MainActivity : AppCompatActivity() {
 
             binding.btnGetMsg.setOnClickListener {
                // getMsgFromSqlServer()
-                //startActivity(Intent(this,BottomNavigationViewActivity::class.java))
+                startActivity(Intent(this,BottomNavigationViewActivity::class.java))
                 //startActivity(Intent(this, ConnectAlibabaBucketActivity::class.java))
-                startActivity(Intent(this, InsertBookMsgActivity::class.java))
+                //startActivity(Intent(this, InsertBookMsgActivity::class.java))
             }
         }
 

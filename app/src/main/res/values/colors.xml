@@ -4,7 +4,8 @@
     <color name="white">#FFFFFFFF</color>
 
     <color name="colorPrimary">#cd97fa</color>
-    <color name="colorPrimaryDark">#56d760</color>
+  <!--  <color name="colorPrimaryDark">#56d760</color>-->
+    <color name="colorPrimaryDark">#FFFFFFFF</color>
     <color name="colorAccent">#53bbd9</color>
 
     <!--Colors-->

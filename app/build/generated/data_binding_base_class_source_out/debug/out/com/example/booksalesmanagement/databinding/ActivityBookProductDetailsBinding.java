@@ -15,6 +15,8 @@ import androidx.viewbinding.ViewBindings;
 import com.example.booksalesmanagement.R;
 import com.google.android.material.appbar.AppBarLayout;
 import com.google.android.material.appbar.CollapsingToolbarLayout;
+import com.google.android.material.bottomappbar.BottomAppBar;
+import com.google.android.material.button.MaterialButton;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
@@ -27,10 +29,16 @@ public final class ActivityBookProductDetailsBinding implements ViewBinding {
   public final AppBarLayout appBar;
 
   @NonNull
-  public final TextView bookContentText;
+  public final ImageView bookImageView;
 
   @NonNull
-  public final ImageView bookImageView;
+  public final BottomAppBar bottomAppBar;
+
+  @NonNull
+  public final MaterialButton btnAddToCart;
+
+  @NonNull
+  public final MaterialButton btnBuyNow;
 
   @NonNull
   public final CollapsingToolbarLayout collapsingToolbarLayout;
@@ -38,16 +46,54 @@ public final class ActivityBookProductDetailsBinding implements ViewBinding {
   @NonNull
   public final Toolbar toolbar;
 
+  @NonNull
+  public final TextView tvBookAuthor;
+
+  @NonNull
+  public final TextView tvBookCategory;
+
+  @NonNull
+  public final TextView tvBookISBN;
+
+  @NonNull
+  public final TextView tvBookInfo;
+
+  @NonNull
+  public final TextView tvBookPrice;
+
+  @NonNull
+  public final TextView tvBookPublicationDate;
+
+  @NonNull
+  public final TextView tvBookPublisher;
+
+  @NonNull
+  public final TextView tvBookStock;
+
   private ActivityBookProductDetailsBinding(@NonNull CoordinatorLayout rootView,
-      @NonNull AppBarLayout appBar, @NonNull TextView bookContentText,
-      @NonNull ImageView bookImageView, @NonNull CollapsingToolbarLayout collapsingToolbarLayout,
-      @NonNull Toolbar toolbar) {
+      @NonNull AppBarLayout appBar, @NonNull ImageView bookImageView,
+      @NonNull BottomAppBar bottomAppBar, @NonNull MaterialButton btnAddToCart,
+      @NonNull MaterialButton btnBuyNow, @NonNull CollapsingToolbarLayout collapsingToolbarLayout,
+      @NonNull Toolbar toolbar, @NonNull TextView tvBookAuthor, @NonNull TextView tvBookCategory,
+      @NonNull TextView tvBookISBN, @NonNull TextView tvBookInfo, @NonNull TextView tvBookPrice,
+      @NonNull TextView tvBookPublicationDate, @NonNull TextView tvBookPublisher,
+      @NonNull TextView tvBookStock) {
     this.rootView = rootView;
     this.appBar = appBar;
-    this.bookContentText = bookContentText;
     this.bookImageView = bookImageView;
+    this.bottomAppBar = bottomAppBar;
+    this.btnAddToCart = btnAddToCart;
+    this.btnBuyNow = btnBuyNow;
     this.collapsingToolbarLayout = collapsingToolbarLayout;
     this.toolbar = toolbar;
+    this.tvBookAuthor = tvBookAuthor;
+    this.tvBookCategory = tvBookCategory;
+    this.tvBookISBN = tvBookISBN;
+    this.tvBookInfo = tvBookInfo;
+    this.tvBookPrice = tvBookPrice;
+    this.tvBookPublicationDate = tvBookPublicationDate;
+    this.tvBookPublisher = tvBookPublisher;
+    this.tvBookStock = tvBookStock;
   }
 
   @Override
@@ -83,15 +129,27 @@ public final class ActivityBookProductDetailsBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.bookContentText;
-      TextView bookContentText = ViewBindings.findChildViewById(rootView, id);
-      if (bookContentText == null) {
-        break missingId;
-      }
-
       id = R.id.bookImageView;
       ImageView bookImageView = ViewBindings.findChildViewById(rootView, id);
       if (bookImageView == null) {
+        break missingId;
+      }
+
+      id = R.id.bottomAppBar;
+      BottomAppBar bottomAppBar = ViewBindings.findChildViewById(rootView, id);
+      if (bottomAppBar == null) {
+        break missingId;
+      }
+
+      id = R.id.btn_add_to_cart;
+      MaterialButton btnAddToCart = ViewBindings.findChildViewById(rootView, id);
+      if (btnAddToCart == null) {
+        break missingId;
+      }
+
+      id = R.id.btn_buy_now;
+      MaterialButton btnBuyNow = ViewBindings.findChildViewById(rootView, id);
+      if (btnBuyNow == null) {
         break missingId;
       }
 
@@ -107,8 +165,58 @@ public final class ActivityBookProductDetailsBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.tv_bookAuthor;
+      TextView tvBookAuthor = ViewBindings.findChildViewById(rootView, id);
+      if (tvBookAuthor == null) {
+        break missingId;
+      }
+
+      id = R.id.tv_bookCategory;
+      TextView tvBookCategory = ViewBindings.findChildViewById(rootView, id);
+      if (tvBookCategory == null) {
+        break missingId;
+      }
+
+      id = R.id.tv_bookISBN;
+      TextView tvBookISBN = ViewBindings.findChildViewById(rootView, id);
+      if (tvBookISBN == null) {
+        break missingId;
+      }
+
+      id = R.id.tv_bookInfo;
+      TextView tvBookInfo = ViewBindings.findChildViewById(rootView, id);
+      if (tvBookInfo == null) {
+        break missingId;
+      }
+
+      id = R.id.tv_bookPrice;
+      TextView tvBookPrice = ViewBindings.findChildViewById(rootView, id);
+      if (tvBookPrice == null) {
+        break missingId;
+      }
+
+      id = R.id.tv_bookPublicationDate;
+      TextView tvBookPublicationDate = ViewBindings.findChildViewById(rootView, id);
+      if (tvBookPublicationDate == null) {
+        break missingId;
+      }
+
+      id = R.id.tv_bookPublisher;
+      TextView tvBookPublisher = ViewBindings.findChildViewById(rootView, id);
+      if (tvBookPublisher == null) {
+        break missingId;
+      }
+
+      id = R.id.tv_bookStock;
+      TextView tvBookStock = ViewBindings.findChildViewById(rootView, id);
+      if (tvBookStock == null) {
+        break missingId;
+      }
+
       return new ActivityBookProductDetailsBinding((CoordinatorLayout) rootView, appBar,
-          bookContentText, bookImageView, collapsingToolbarLayout, toolbar);
+          bookImageView, bottomAppBar, btnAddToCart, btnBuyNow, collapsingToolbarLayout, toolbar,
+          tvBookAuthor, tvBookCategory, tvBookISBN, tvBookInfo, tvBookPrice, tvBookPublicationDate,
+          tvBookPublisher, tvBookStock);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

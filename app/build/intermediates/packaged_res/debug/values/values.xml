@@ -18,7 +18,7 @@
     <color name="chocolate">#D2691E</color>
     <color name="colorAccent">#53bbd9</color>
     <color name="colorPrimary">#cd97fa</color>
-    <color name="colorPrimaryDark">#56d760</color>
+    <color name="colorPrimaryDark">#FFFFFFFF</color>
     <color name="coral">#FF7F50</color>
     <color name="cornflowerblue">#6495ED</color>
     <color name="cornsilk">#FFF8DC</color>
@@ -151,13 +151,31 @@
     <color name="yellow">#FFFF00</color>
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="button_font_size">35sp</dimen>
+    <dimen name="common_font_size">20sp</dimen>
+    <dimen name="item_layout_height">70dp</dimen>
+    <string name="VerificationCode">获取验证码</string>
     <string name="app_name">BookSalesManagement</string>
+    <string name="input_managerVerifyCode">请输入注册管理员权限密码</string>
+    <string name="input_password">请输入密码</string>
+    <string name="input_username">请输入用户名</string>
+    <string name="input_userpassword">请输入密码</string>
+    <string name="input_userpwdagain">请再次输入密码</string>
+    <string name="input_verificationcode">请输入验证码</string>
+    <string name="login">登录</string>
+    <string name="login_activity">登录</string>
+    <string name="register">注册</string>
+    <string name="register_activity">注册</string>
+    <string name="register_managerVerifyCode">权限密码</string>
+    <string name="register_userpwdagain">确认密码</string>
     <string name="title_activity_bottom_navigation_view">BottomNavigationViewActivity</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_home">Home</string>
     <string name="title_notifications">Notifications</string>
     <string name="tony_green">Tony Green</string>
     <string name="tonygreendev_gmail_com">tonygreendev@gmail.com</string>
+    <string name="username">用户名</string>
+    <string name="userpassword">密码</string>
     <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
         
         <item name="colorPrimary">@color/colorPrimary</item>
@@ -166,6 +184,7 @@
     </style>
     <style name="BookSalesManagementTheme" parent="AppTheme">
         <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowLightStatusBar">true</item>
         
     </style>
 </resources>

@@ -12,15 +12,15 @@ import android.provider.MediaStore
 import android.widget.Toast
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
-import com.example.booksalesmanagement.R
 import com.example.booksalesmanagement.bean.Book
 import com.example.booksalesmanagement.dao.BookDao
 import com.example.booksalesmanagement.databinding.ActivityInsertBookMsgBinding
-import com.example.booksalesmanagement.imagetext.ConnectAlibabaOssToImage
-import com.example.booksalesmanagement.imagetext.FileUtils
-import com.example.booksalesmanagement.imagetext.ImageUtils
+import com.example.booksalesmanagement.utils.ConnectAlibabaOssToImage
+import com.example.booksalesmanagement.utils.ImageUtils
 import java.math.BigDecimal
-import java.sql.Timestamp
+import java.text.SimpleDateFormat
+import java.util.Date
+import java.util.Locale
 
 class InsertBookMsgActivity : AppCompatActivity() {
     private var _binding: ActivityInsertBookMsgBinding? = null
@@ -48,83 +48,91 @@ class InsertBookMsgActivity : AppCompatActivity() {
         }
 
         binding.btnCommitInsertBook.setOnClickListener {
-
-            //如果未给图书添加图片信息
-            if (!(::imageUri.isInitialized)) {
-                Toast.makeText(this,"请选择图片",Toast.LENGTH_SHORT).show()
-                return@setOnClickListener
-            }
-
-            // 从输入框中获取数据
-            val bookId = binding.etBookId.text.toString().toInt()
-            val bookName = binding.etBookName.text.toString()
-            val author = binding.etBookAuthor.text.toString()
-            val price = BigDecimal(binding.etBookPrice.text.toString())
-            val publisherId = binding.etPublisherId.text.toString().toInt()
-            // 获取出版时间的字符串，并转换为 Timestamp 对象
-            val publicationDateStr = binding.etPublisherTime.text.toString()
-           // val publicationDate = Timestamp.valueOf(publicationDateStr)
-            val publicationDate = Timestamp(System.currentTimeMillis())
-            val inventory = binding.etInventory.text.toString().toInt()
-            val bookInfo = binding.etBookInfo.text.toString()
-            val isbn = binding.etIsbn.text.toString()
-
-            // 创建 Book 对象并赋值
-            val book = Book(
-                bookId = bookId,
-                bookName = bookName,
-                publisherId = publisherId,
-                price = price,
-                author = author,
-                inventory = inventory,
-                publicationDate = publicationDate,
-                bookInfo = bookInfo,
-                isbn = isbn
-            )
-
-/*            val imageFilePath =
-                FileUtils.saveDrawableToInternalStorage(this, R.drawable.banana, "pear.jpg")
-            if (imageFilePath != null) {
-                // 图片保存成功，filePath 是保存的文件路径
-            } else {
-                // 图片保存失败
-            }*/
-            //将Uri转换为文件路径
-            val imageFilePath = ImageUtils.getPathFromUri(this, imageUri)
-
-            val bookImageName =
-                "${book.bookId}_${book.bookName}.jpg"
-
-            // 调用上传图片的方法
-            ConnectAlibabaOssToImage.sendImage(
-                this,
-                bookImageName,
-                imageFilePath,
-                object : ConnectAlibabaOssToImage.UploadCallback {
-                    override fun onUploadSuccess() {
-                        if (BookDao.insertBook(book)) {
-                            runOnUiThread {
-                                Toast.makeText(
-                                    this@InsertBookMsgActivity,
-                                    "图书上传并插入成功",
-                                    Toast.LENGTH_SHORT
-                                ).show()
-                            }
-                        }
-                    }
-
-                    override fun onUploadFailure() {
-                        TODO("Not yet implemented")
-                    }
-                })
+            //添加图书信息
+            commitInsertBook()
         }
     }
+
 
 
     override fun onDestroy() {
         super.onDestroy()
         _binding = null
     }
+
+    private fun commitInsertBook() {
+        //如果未给图书添加图片信息
+        if (!(::imageUri.isInitialized)) {
+            Toast.makeText(this,"请选择图片",Toast.LENGTH_SHORT).show()
+            return
+        }
+
+        // 从输入框中获取数据
+        val bookId = binding.etBookId.text.toString().toInt()
+        val bookName = binding.etBookName.text.toString()
+        val author = binding.etBookAuthor.text.toString()
+        val price = BigDecimal(binding.etBookPrice.text.toString())
+        val publisher = binding.etPublisher.text.toString()
+        // 获取出版时间的字符串，并转换为 Timestamp 对象
+        val publicationDateStr = binding.etPublisherTime.text.toString()
+        val publicationDate = BookDao.parseDate(publicationDateStr)!!
+        //val publicationDate = Timestamp(System.currentTimeMillis())
+        val stock = binding.etInventory.text.toString().toInt()
+        val bookInfo = binding.etBookInfo.text.toString()
+        val isbn = binding.etIsbn.text.toString()
+        val category = binding.etBookCategory.text.toString()
+
+        // 创建 Book 对象并赋值
+        val book = Book(
+            bookId = bookId,
+            bookName = bookName,
+            publisher = publisher,
+            price = price,
+            author = author,
+            stock = stock,
+            publicationDate = publicationDate,
+            bookInfo = bookInfo,
+            isbn = isbn,
+            category = category
+        )
+
+        /*            val imageFilePath =
+                        FileUtils.saveDrawableToInternalStorage(this, R.drawable.banana, "pear.jpg")
+                    if (imageFilePath != null) {
+                        // 图片保存成功，filePath 是保存的文件路径
+                    } else {
+                        // 图片保存失败
+                    }*/
+        //将Uri转换为文件路径
+        val imageFilePath = ImageUtils.getPathFromUri(this, imageUri)
+
+        val bookImageName =
+            "${book.bookId}_${book.bookName}.jpg"
+
+        // 调用上传图片的方法
+        ConnectAlibabaOssToImage.sendImage(
+            this,
+            bookImageName,
+            imageFilePath,
+            object : ConnectAlibabaOssToImage.UploadCallback {
+                override fun onUploadSuccess() {
+                    if (BookDao.insertBook(book)) {
+                        runOnUiThread {
+                            Toast.makeText(
+                                this@InsertBookMsgActivity,
+                                "图书上传并插入成功",
+                                Toast.LENGTH_SHORT
+                            ).show()
+                        }
+                    }
+                }
+
+                override fun onUploadFailure() {
+                    TODO("Not yet implemented")
+                }
+            })
+    }
+
 
     private fun initPickImageLauncher() {
         // 初始化ActivityResultLauncher来启动相册应用
@@ -180,14 +188,12 @@ class InsertBookMsgActivity : AppCompatActivity() {
 
     private fun bitmapToUri(bitmap: Bitmap?): Uri {
         val context = applicationContext
-        val imagesDir = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+        val imagesDir =
             MediaStore.Images.Media.getContentUri(MediaStore.VOLUME_EXTERNAL_PRIMARY)
-        } else {
-            TODO("VERSION.SDK_INT < Q")
-        }
         val resolver = context.contentResolver
         val contentValues = ContentValues().apply {
-            put(MediaStore.Images.Media.DISPLAY_NAME, "cropped_image.jpg")
+            val timeStamp = SimpleDateFormat("yyyyMMdd_HHmmss", Locale.getDefault()).format(Date())
+            put(MediaStore.Images.Media.DISPLAY_NAME, "image_$timeStamp.jpg")
             put(MediaStore.Images.Media.MIME_TYPE, "image/jpeg")
         }
         val imageUri = resolver.insert(imagesDir, contentValues)!!
