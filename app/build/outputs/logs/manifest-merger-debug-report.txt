@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:2:1-56:12
-INJECTED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:2:1-56:12
-INJECTED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:2:1-56:12
-INJECTED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:2:1-56:12
+ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:2:1-85:12
+INJECTED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:2:1-85:12
+INJECTED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:2:1-85:12
+INJECTED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:2:1-85:12
 MERGED from [androidx.databinding:viewbinding:8.1.0] C:\Users\小鹏\.gradle\caches\transforms-3\2d6ed4441db7a1869117309af6a89b4a\transformed\jetified-viewbinding-8.1.0\AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.navigation:navigation-common:2.7.7] C:\Users\小鹏\.gradle\caches\transforms-3\624265c8d472d8d08165767611229f24\transformed\navigation-common-2.7.7\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.navigation:navigation-common-ktx:2.7.7] C:\Users\小鹏\.gradle\caches\transforms-3\2d405fd6d8bcebaee04d8fa9244cb2e7\transformed\navigation-common-ktx-2.7.7\AndroidManifest.xml:2:1-7:12
@@ -18,6 +18,7 @@ MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\小鹏\.
 MERGED from [androidx.appcompat:appcompat-resources:1.6.1] C:\Users\小鹏\.gradle\caches\transforms-3\a63cb2a52b935cd2639ad48307e1b5d6\transformed\jetified-appcompat-resources-1.6.1\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.appcompat:appcompat:1.6.1] C:\Users\小鹏\.gradle\caches\transforms-3\26c911d3cf93a7c0e4fcf2c49b0a758c\transformed\appcompat-1.6.1\AndroidManifest.xml:17:1-22:12
 MERGED from [com.github.bumptech.glide:glide:4.9.0] C:\Users\小鹏\.gradle\caches\transforms-3\f6e33eb9a85d103e3fb0fac13acf0887\transformed\jetified-glide-4.9.0\AndroidManifest.xml:2:1-12:12
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\小鹏\.gradle\caches\transforms-3\ba7b888ba4c8a4537d924d002932bfb4\transformed\legacy-support-v4-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\小鹏\.gradle\caches\transforms-3\f805765a441ed38c989c1ca0232b20c7\transformed\jetified-viewpager2-1.0.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.fragment:fragment-ktx:1.6.2] C:\Users\小鹏\.gradle\caches\transforms-3\748e1b574cb97e7cea7d561896907b67\transformed\jetified-fragment-ktx-1.6.2\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.fragment:fragment:1.6.2] C:\Users\小鹏\.gradle\caches\transforms-3\88213542883183564f454968f69564bd\transformed\fragment-1.6.2\AndroidManifest.xml:17:1-22:12
@@ -32,6 +33,7 @@ MERGED from [androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\小鹏\.gradle
 MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.7.0] C:\Users\小鹏\.gradle\caches\transforms-3\c80f83df0a52599c528a445a1e18c940\transformed\jetified-lifecycle-viewmodel-savedstate-2.7.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.7.0] C:\Users\小鹏\.gradle\caches\transforms-3\5d8c245a79fe67c2f65745a36d9e27fd\transformed\lifecycle-livedata-core-2.7.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.7.0] C:\Users\小鹏\.gradle\caches\transforms-3\b57b4690aea40bec2f5a92ac5bb24930\transformed\jetified-lifecycle-livedata-core-ktx-2.7.0\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\小鹏\.gradle\caches\transforms-3\671a2f4ff42d0b1181d7fac020155788\transformed\legacy-support-core-ui-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.2.0] C:\Users\小鹏\.gradle\caches\transforms-3\8f4e811f5f15aeb2940c81cbf22dff3a\transformed\slidingpanelayout-1.2.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.transition:transition:1.5.0] C:\Users\小鹏\.gradle\caches\transforms-3\c7ae17f5b502b3573569f9fcdbc9cca0\transformed\transition-1.5.0\AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\小鹏\.gradle\caches\transforms-3\498e4da602ed41a52b8dd0746f0aca3e\transformed\dynamicanimation-1.0.0\AndroidManifest.xml:17:1-22:12
@@ -44,9 +46,11 @@ MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] C:\Users\小鹏\.gradle\c
 MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\小鹏\.gradle\caches\transforms-3\155e29d007de3b3784c0da79052b2def\transformed\coordinatorlayout-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\小鹏\.gradle\caches\transforms-3\f585dc77dc6a9ded7939aea5476c4245\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\小鹏\.gradle\caches\transforms-3\cfb7ef057b2f6b997a1e3e8a61251c25\transformed\vectordrawable-1.1.0\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\小鹏\.gradle\caches\transforms-3\d2c2cafc90d598b775e4bfe93c5b3c3d\transformed\recyclerview-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.media:media:1.0.0] C:\Users\小鹏\.gradle\caches\transforms-3\81f4ed8f8439b73145d92cd520bd07bc\transformed\media-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\小鹏\.gradle\caches\transforms-3\943d6c59c5b80ee3ade2cbe0091216d7\transformed\viewpager-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\小鹏\.gradle\caches\transforms-3\d2c2cafc90d598b775e4bfe93c5b3c3d\transformed\recyclerview-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.customview:customview:1.1.0] C:\Users\小鹏\.gradle\caches\transforms-3\0b79f98f4a0926635c9332b2a1c3258a\transformed\customview-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\小鹏\.gradle\caches\transforms-3\7dc5c873fd6d99613927999d2cfa7367\transformed\asynclayoutinflater-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.core:core-ktx:1.13.0] C:\Users\小鹏\.gradle\caches\transforms-3\367f9f02034985522501e371c0c9952d\transformed\jetified-core-ktx-1.13.0\AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.window:window:1.0.0] C:\Users\小鹏\.gradle\caches\transforms-3\c0acabf678f904fdd2c4c0b988fe2da2\transformed\jetified-window-1.0.0\AndroidManifest.xml:17:1-33:12
 MERGED from [androidx.core:core:1.13.0] C:\Users\小鹏\.gradle\caches\transforms-3\d31dfce54dca98da96c850d8ad76b0ee\transformed\core-1.13.0\AndroidManifest.xml:17:1-30:12
@@ -95,8 +99,8 @@ ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.x
 	android:name
 		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:7:22-77
 application
-ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:9:5-54:19
-INJECTED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:9:5-54:19
+ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:9:5-83:19
+INJECTED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:9:5-83:19
 MERGED from [com.google.android.material:material:1.12.0] C:\Users\小鹏\.gradle\caches\transforms-3\9b88b1a57bebe50125cfe6ef2782a5b3\transformed\material-1.12.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.12.0] C:\Users\小鹏\.gradle\caches\transforms-3\9b88b1a57bebe50125cfe6ef2782a5b3\transformed\material-1.12.0\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\小鹏\.gradle\caches\transforms-3\dec4614628d7a9d2a5f1f5197247ace1\transformed\constraintlayout-2.1.4\AndroidManifest.xml:9:5-20
@@ -145,72 +149,80 @@ MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\小鹏\.gradle\cac
 		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:11:9-65
 	android:usesCleartextTraffic
 		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:18:9-44
-activity#com.example.booksalesmanagement.activity.SelectUserOrAdminActivity
-ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:20:9-28:20
-	android:exported
-		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:22:13-36
-	android:name
-		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:21:13-63
-intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:23:13-27:29
-action#android.intent.action.MAIN
-ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:24:17-69
-	android:name
-		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:24:25-66
-category#android.intent.category.LAUNCHER
-ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:26:17-77
-	android:name
-		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:26:27-74
-activity#com.example.booksalesmanagement.activity.register_login.LoginActivity
-ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:29:9-31:39
-	android:exported
-		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:31:13-37
-	android:name
-		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:30:13-66
-activity#com.example.booksalesmanagement.activity.register_login.RegistrationActivity
-ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:32:9-34:40
-	android:exported
-		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:34:13-37
-	android:name
-		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:33:13-73
-activity#com.example.booksalesmanagement.activity.insertbook.InsertBookMsgActivity
-ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:35:9-37:40
-	android:exported
-		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:37:13-37
-	android:name
-		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:36:13-70
-activity#com.example.booksalesmanagement.imagetext.ConnectAlibabaBucketActivity
-ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:38:9-40:40
-	android:exported
-		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:40:13-37
-	android:name
-		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:39:13-67
-activity#com.example.booksalesmanagement.activity.BookProductDetailsActivity
-ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:41:9-44:63
-	android:exported
-		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:43:13-37
-	android:theme
-		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:44:13-60
-	android:name
-		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:42:13-64
-activity#com.example.booksalesmanagement.BottomNavigationViewActivity
-ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:45:9-49:63
+activity#com.example.booksalesmanagement.activity.comment.BookCommentActivity
+ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:20:9-23:40
 	android:label
-		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:48:13-74
+		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:22:13-33
 	android:exported
-		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:47:13-37
-	android:theme
-		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:49:13-60
+		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:23:13-37
 	android:name
-		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:46:13-57
+		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:21:13-65
+activity#com.example.booksalesmanagement.activity.register_login.LoginActivity
+ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:25:9-27:40
+	android:exported
+		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:27:13-37
+	android:name
+		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:26:13-66
+activity#com.example.booksalesmanagement.activity.register_login.RegistrationActivity
+ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:28:9-30:40
+	android:exported
+		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:30:13-37
+	android:name
+		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:29:13-73
+activity#com.example.booksalesmanagement.activity.insertbook.InsertBookMsgActivity
+ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:31:9-33:40
+	android:exported
+		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:33:13-37
+	android:name
+		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:32:13-70
+activity#com.example.booksalesmanagement.imagetext.ConnectAlibabaBucketActivity
+ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:34:9-36:40
+	android:exported
+		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:36:13-37
+	android:name
+		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:35:13-67
+activity#com.example.booksalesmanagement.activity.book_details.BookProductDetailsActivity
+ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:37:9-40:63
+	android:exported
+		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:39:13-37
+	android:theme
+		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:40:13-60
+	android:name
+		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:38:13-77
+activity#com.example.booksalesmanagement.BottomNavigationViewActivity
+ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:54:9-60:20
+	android:label
+		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:57:13-33
+	android:exported
+		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:56:13-37
+	android:theme
+		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:58:13-60
+	android:name
+		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:55:13-57
+activity#com.example.booksalesmanagement.activity.SelectUserOrAdminActivity
+ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:69:9-77:20
+	android:exported
+		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:71:13-36
+	android:name
+		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:70:13-63
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:72:13-76:29
+action#android.intent.action.MAIN
+ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:73:17-69
+	android:name
+		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:73:25-66
+category#android.intent.category.LAUNCHER
+ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:75:17-77
+	android:name
+		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:75:27-74
 activity#com.example.booksalesmanagement.MainActivity
-ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:50:9-53:72
+ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:79:9-82:63
 	android:exported
-		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:52:13-37
+		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:81:13-37
 	android:theme
-		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:53:13-60
+		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:82:13-60
 	android:name
-		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:51:13-41
+		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:80:13-41
 uses-sdk
 INJECTED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml
@@ -243,6 +255,8 @@ MERGED from [androidx.appcompat:appcompat:1.6.1] C:\Users\小鹏\.gradle\caches\
 MERGED from [androidx.appcompat:appcompat:1.6.1] C:\Users\小鹏\.gradle\caches\transforms-3\26c911d3cf93a7c0e4fcf2c49b0a758c\transformed\appcompat-1.6.1\AndroidManifest.xml:20:5-44
 MERGED from [com.github.bumptech.glide:glide:4.9.0] C:\Users\小鹏\.gradle\caches\transforms-3\f6e33eb9a85d103e3fb0fac13acf0887\transformed\jetified-glide-4.9.0\AndroidManifest.xml:6:5-8:41
 MERGED from [com.github.bumptech.glide:glide:4.9.0] C:\Users\小鹏\.gradle\caches\transforms-3\f6e33eb9a85d103e3fb0fac13acf0887\transformed\jetified-glide-4.9.0\AndroidManifest.xml:6:5-8:41
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\小鹏\.gradle\caches\transforms-3\ba7b888ba4c8a4537d924d002932bfb4\transformed\legacy-support-v4-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\小鹏\.gradle\caches\transforms-3\ba7b888ba4c8a4537d924d002932bfb4\transformed\legacy-support-v4-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\小鹏\.gradle\caches\transforms-3\f805765a441ed38c989c1ca0232b20c7\transformed\jetified-viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\小鹏\.gradle\caches\transforms-3\f805765a441ed38c989c1ca0232b20c7\transformed\jetified-viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.fragment:fragment-ktx:1.6.2] C:\Users\小鹏\.gradle\caches\transforms-3\748e1b574cb97e7cea7d561896907b67\transformed\jetified-fragment-ktx-1.6.2\AndroidManifest.xml:20:5-44
@@ -271,6 +285,8 @@ MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.7.0] C:\Users\小鹏\.
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.7.0] C:\Users\小鹏\.gradle\caches\transforms-3\5d8c245a79fe67c2f65745a36d9e27fd\transformed\lifecycle-livedata-core-2.7.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.7.0] C:\Users\小鹏\.gradle\caches\transforms-3\b57b4690aea40bec2f5a92ac5bb24930\transformed\jetified-lifecycle-livedata-core-ktx-2.7.0\AndroidManifest.xml:5:5-44
 MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.7.0] C:\Users\小鹏\.gradle\caches\transforms-3\b57b4690aea40bec2f5a92ac5bb24930\transformed\jetified-lifecycle-livedata-core-ktx-2.7.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\小鹏\.gradle\caches\transforms-3\671a2f4ff42d0b1181d7fac020155788\transformed\legacy-support-core-ui-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\小鹏\.gradle\caches\transforms-3\671a2f4ff42d0b1181d7fac020155788\transformed\legacy-support-core-ui-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.2.0] C:\Users\小鹏\.gradle\caches\transforms-3\8f4e811f5f15aeb2940c81cbf22dff3a\transformed\slidingpanelayout-1.2.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.2.0] C:\Users\小鹏\.gradle\caches\transforms-3\8f4e811f5f15aeb2940c81cbf22dff3a\transformed\slidingpanelayout-1.2.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.transition:transition:1.5.0] C:\Users\小鹏\.gradle\caches\transforms-3\c7ae17f5b502b3573569f9fcdbc9cca0\transformed\transition-1.5.0\AndroidManifest.xml:5:5-44
@@ -295,12 +311,16 @@ MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\小
 MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\小鹏\.gradle\caches\transforms-3\f585dc77dc6a9ded7939aea5476c4245\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\小鹏\.gradle\caches\transforms-3\cfb7ef057b2f6b997a1e3e8a61251c25\transformed\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\小鹏\.gradle\caches\transforms-3\cfb7ef057b2f6b997a1e3e8a61251c25\transformed\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\小鹏\.gradle\caches\transforms-3\d2c2cafc90d598b775e4bfe93c5b3c3d\transformed\recyclerview-1.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\小鹏\.gradle\caches\transforms-3\d2c2cafc90d598b775e4bfe93c5b3c3d\transformed\recyclerview-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.media:media:1.0.0] C:\Users\小鹏\.gradle\caches\transforms-3\81f4ed8f8439b73145d92cd520bd07bc\transformed\media-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.media:media:1.0.0] C:\Users\小鹏\.gradle\caches\transforms-3\81f4ed8f8439b73145d92cd520bd07bc\transformed\media-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\小鹏\.gradle\caches\transforms-3\943d6c59c5b80ee3ade2cbe0091216d7\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\小鹏\.gradle\caches\transforms-3\943d6c59c5b80ee3ade2cbe0091216d7\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\小鹏\.gradle\caches\transforms-3\d2c2cafc90d598b775e4bfe93c5b3c3d\transformed\recyclerview-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\小鹏\.gradle\caches\transforms-3\d2c2cafc90d598b775e4bfe93c5b3c3d\transformed\recyclerview-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.customview:customview:1.1.0] C:\Users\小鹏\.gradle\caches\transforms-3\0b79f98f4a0926635c9332b2a1c3258a\transformed\customview-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.customview:customview:1.1.0] C:\Users\小鹏\.gradle\caches\transforms-3\0b79f98f4a0926635c9332b2a1c3258a\transformed\customview-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\小鹏\.gradle\caches\transforms-3\7dc5c873fd6d99613927999d2cfa7367\transformed\asynclayoutinflater-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\小鹏\.gradle\caches\transforms-3\7dc5c873fd6d99613927999d2cfa7367\transformed\asynclayoutinflater-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.core:core-ktx:1.13.0] C:\Users\小鹏\.gradle\caches\transforms-3\367f9f02034985522501e371c0c9952d\transformed\jetified-core-ktx-1.13.0\AndroidManifest.xml:5:5-44
 MERGED from [androidx.core:core-ktx:1.13.0] C:\Users\小鹏\.gradle\caches\transforms-3\367f9f02034985522501e371c0c9952d\transformed\jetified-core-ktx-1.13.0\AndroidManifest.xml:5:5-44
 MERGED from [androidx.window:window:1.0.0] C:\Users\小鹏\.gradle\caches\transforms-3\c0acabf678f904fdd2c4c0b988fe2da2\transformed\jetified-window-1.0.0\AndroidManifest.xml:20:5-22:41

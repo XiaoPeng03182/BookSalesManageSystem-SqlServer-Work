@@ -33,14 +33,9 @@
         android:theme="@style/BookSalesManagementTheme"
         android:usesCleartextTraffic="true" >
         <activity
-            android:name="com.example.booksalesmanagement.activity.SelectUserOrAdminActivity"
-            android:exported="true" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:name="com.example.booksalesmanagement.activity.comment.BookCommentActivity"
+            android:exported="false"
+            android:label="书籍评论" />
         <activity
             android:name="com.example.booksalesmanagement.activity.register_login.LoginActivity"
             android:exported="false" />
@@ -54,14 +49,48 @@
             android:name="com.example.booksalesmanagement.imagetext.ConnectAlibabaBucketActivity"
             android:exported="false" />
         <activity
-            android:name="com.example.booksalesmanagement.activity.BookProductDetailsActivity"
+            android:name="com.example.booksalesmanagement.activity.book_details.BookProductDetailsActivity"
             android:exported="false"
             android:theme="@style/BookSalesManagementTheme" />
+        <!--
+            <activity
+            android:name=".BottomNavigationViewActivity"
+            android:exported="true"
+            android:label="图书销售"
+            android:theme="@style/BookSalesManagementTheme" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+        -->
+
         <activity
             android:name="com.example.booksalesmanagement.BottomNavigationViewActivity"
             android:exported="false"
-            android:label="@string/title_activity_bottom_navigation_view"
-            android:theme="@style/BookSalesManagementTheme" />
+            android:label="图书销售"
+            android:theme="@style/BookSalesManagementTheme" >
+        </activity>
+
+        <!--
+                    <activity
+                    android:name=".activity.SelectUserOrAdminActivity"
+                    android:exported="false">
+
+                </activity>
+        -->
+
+        <activity
+            android:name="com.example.booksalesmanagement.activity.SelectUserOrAdminActivity"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name="com.example.booksalesmanagement.MainActivity"
             android:exported="false"

@@ -18,8 +18,15 @@
         tools:layout="@layout/fragment_dashboard" />
 
     <fragment
-        android:id="@+id/navigation_notifications"
-        android:name="com.example.booksalesmanagement.fragment.notifications.NotificationsFragment"
-        android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        android:id="@+id/navigation_shopping_cart"
+        android:name="com.example.booksalesmanagement.fragment.shoppingCart.ShoppingCartFragment"
+        android:label="@string/title_shopping_cart"
+        tools:layout="@layout/fragment_shopping_cart" />
+    <!---->
+
+    <fragment
+        android:id="@+id/navigation_shopping_order"
+        android:name="com.example.booksalesmanagement.fragment.shoppingOrder.shoppingOrder.ShoppingOrderFragment"
+        android:label="@string/title_shopping_order"
+        tools:layout="@layout/fragment_shopping_order" />
 </navigation>

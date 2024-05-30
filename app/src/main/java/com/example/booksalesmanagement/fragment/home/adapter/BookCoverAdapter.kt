@@ -21,7 +21,7 @@ class BookCoverAdapter(private val context: Context, private var bookList: Array
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val view = LayoutInflater.from(context).inflate(R.layout.book_cover_item,parent,false)
+        val view = LayoutInflater.from(context).inflate(R.layout.recycler_book_cover_item,parent,false)
         /*使用 LayoutInflater 从 XML 布局文件中实例化一个新的视图。
         R.layout.fruit_item 是要实例化的布局资源文件，它定义了每个 RecyclerView 项的布局。
         parent 参数是 RecyclerView 的父容器，用于正确配置视图。
@@ -34,6 +34,7 @@ class BookCoverAdapter(private val context: Context, private var bookList: Array
             val book = bookList[position]
             val bookImageBitmapKeyName = "${book.bookId}_${book.bookName}.jpg"
             val intent = Intent(context, BookProductDetailsActivity::class.java).apply {
+                putExtra(BookProductDetailsActivity.BOOK_ID,book.bookId)
                 putExtra(BookProductDetailsActivity.BOOK_OBJECT,book)
                 putExtra(BookProductDetailsActivity.BOOK_NAME,book.bookName)
                 putExtra(BookProductDetailsActivity.BOOK_IMAGE_BitMAP_KEY_NAME,bookImageBitmapKeyName)

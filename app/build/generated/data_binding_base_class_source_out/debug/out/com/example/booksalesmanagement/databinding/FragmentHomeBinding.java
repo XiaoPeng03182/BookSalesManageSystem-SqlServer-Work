@@ -30,6 +30,9 @@ public final class FragmentHomeBinding implements ViewBinding {
   public final LinearLayout SearchBookLineLayout;
 
   @NonNull
+  public final Button btnCancelSearch;
+
+  @NonNull
   public final Button btnSearchBookByName;
 
   @NonNull
@@ -54,13 +57,14 @@ public final class FragmentHomeBinding implements ViewBinding {
   public final Toolbar toolbar;
 
   private FragmentHomeBinding(@NonNull DrawerLayout rootView,
-      @NonNull LinearLayout SearchBookLineLayout, @NonNull Button btnSearchBookByName,
-      @NonNull DrawerLayout drawLayout, @NonNull TextInputEditText etSearchBookByName,
-      @NonNull FloatingActionButton fab, @NonNull NavigationView navView,
-      @NonNull RecyclerView recyclerView, @NonNull SwipeRefreshLayout swipeRefreshLayout,
-      @NonNull Toolbar toolbar) {
+      @NonNull LinearLayout SearchBookLineLayout, @NonNull Button btnCancelSearch,
+      @NonNull Button btnSearchBookByName, @NonNull DrawerLayout drawLayout,
+      @NonNull TextInputEditText etSearchBookByName, @NonNull FloatingActionButton fab,
+      @NonNull NavigationView navView, @NonNull RecyclerView recyclerView,
+      @NonNull SwipeRefreshLayout swipeRefreshLayout, @NonNull Toolbar toolbar) {
     this.rootView = rootView;
     this.SearchBookLineLayout = SearchBookLineLayout;
+    this.btnCancelSearch = btnCancelSearch;
     this.btnSearchBookByName = btnSearchBookByName;
     this.drawLayout = drawLayout;
     this.etSearchBookByName = etSearchBookByName;
@@ -101,6 +105,12 @@ public final class FragmentHomeBinding implements ViewBinding {
       id = R.id.SearchBookLineLayout;
       LinearLayout SearchBookLineLayout = ViewBindings.findChildViewById(rootView, id);
       if (SearchBookLineLayout == null) {
+        break missingId;
+      }
+
+      id = R.id.btn_cancel_search;
+      Button btnCancelSearch = ViewBindings.findChildViewById(rootView, id);
+      if (btnCancelSearch == null) {
         break missingId;
       }
 
@@ -148,7 +158,7 @@ public final class FragmentHomeBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentHomeBinding((DrawerLayout) rootView, SearchBookLineLayout,
+      return new FragmentHomeBinding((DrawerLayout) rootView, SearchBookLineLayout, btnCancelSearch,
           btnSearchBookByName, drawLayout, etSearchBookByName, fab, navView, recyclerView,
           swipeRefreshLayout, toolbar);
     }

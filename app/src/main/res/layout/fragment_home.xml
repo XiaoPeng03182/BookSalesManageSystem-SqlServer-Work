@@ -44,8 +44,8 @@
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="0dp"
-                    android:layout_weight="3"
                     android:layout_height="wrap_content"
+                    android:layout_weight="4"
                     android:hint="请输入查询图书名称"
                     app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
@@ -53,6 +53,7 @@
                         android:id="@+id/et_searchBookByName"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_gravity="center"
                         android:layout_margin="5dp"
                         android:background="@color/white"
                         android:inputType="textMultiLine"
@@ -63,13 +64,30 @@
 
                 </com.google.android.material.textfield.TextInputLayout>
 
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:text="查询"
-                    android:textSize="20sp"
-                    android:layout_margin="5dp"
-                    android:id="@+id/btn_searchBookByName"/>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btn_searchBookByName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_margin="5dp"
+                        android:text="查询"
+                        android:textSize="17sp" />
+
+                    <Button
+                        android:id="@+id/btn_cancel_search"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_margin="5dp"
+                        android:text="取消"
+                        android:textSize="17sp" />
+                </LinearLayout>
             </LinearLayout>
 
             <androidx.swiperefreshlayout.widget.SwipeRefreshLayout

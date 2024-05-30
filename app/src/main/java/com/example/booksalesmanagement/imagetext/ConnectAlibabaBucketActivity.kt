@@ -336,7 +336,7 @@ class ConnectAlibabaBucketActivity : AppCompatActivity() {
     @SuppressLint("ResourceType")
     private fun sendImage() {
         // 获取资源 ID
-        val resourceId = R.drawable._pear
+       // val resourceId = R.drawable._pear
 
         /*        // 将资源转换为 InputStream
                 val inputStream = resources.openRawResource(resourceId).toString()

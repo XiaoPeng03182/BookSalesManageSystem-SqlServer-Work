@@ -17,6 +17,7 @@ import com.google.android.material.appbar.AppBarLayout;
 import com.google.android.material.appbar.CollapsingToolbarLayout;
 import com.google.android.material.bottomappbar.BottomAppBar;
 import com.google.android.material.button.MaterialButton;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
@@ -42,6 +43,9 @@ public final class ActivityBookProductDetailsBinding implements ViewBinding {
 
   @NonNull
   public final CollapsingToolbarLayout collapsingToolbarLayout;
+
+  @NonNull
+  public final FloatingActionButton flbComment;
 
   @NonNull
   public final Toolbar toolbar;
@@ -74,7 +78,8 @@ public final class ActivityBookProductDetailsBinding implements ViewBinding {
       @NonNull AppBarLayout appBar, @NonNull ImageView bookImageView,
       @NonNull BottomAppBar bottomAppBar, @NonNull MaterialButton btnAddToCart,
       @NonNull MaterialButton btnBuyNow, @NonNull CollapsingToolbarLayout collapsingToolbarLayout,
-      @NonNull Toolbar toolbar, @NonNull TextView tvBookAuthor, @NonNull TextView tvBookCategory,
+      @NonNull FloatingActionButton flbComment, @NonNull Toolbar toolbar,
+      @NonNull TextView tvBookAuthor, @NonNull TextView tvBookCategory,
       @NonNull TextView tvBookISBN, @NonNull TextView tvBookInfo, @NonNull TextView tvBookPrice,
       @NonNull TextView tvBookPublicationDate, @NonNull TextView tvBookPublisher,
       @NonNull TextView tvBookStock) {
@@ -85,6 +90,7 @@ public final class ActivityBookProductDetailsBinding implements ViewBinding {
     this.btnAddToCart = btnAddToCart;
     this.btnBuyNow = btnBuyNow;
     this.collapsingToolbarLayout = collapsingToolbarLayout;
+    this.flbComment = flbComment;
     this.toolbar = toolbar;
     this.tvBookAuthor = tvBookAuthor;
     this.tvBookCategory = tvBookCategory;
@@ -159,6 +165,12 @@ public final class ActivityBookProductDetailsBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.flb_comment;
+      FloatingActionButton flbComment = ViewBindings.findChildViewById(rootView, id);
+      if (flbComment == null) {
+        break missingId;
+      }
+
       id = R.id.toolbar;
       Toolbar toolbar = ViewBindings.findChildViewById(rootView, id);
       if (toolbar == null) {
@@ -214,9 +226,9 @@ public final class ActivityBookProductDetailsBinding implements ViewBinding {
       }
 
       return new ActivityBookProductDetailsBinding((CoordinatorLayout) rootView, appBar,
-          bookImageView, bottomAppBar, btnAddToCart, btnBuyNow, collapsingToolbarLayout, toolbar,
-          tvBookAuthor, tvBookCategory, tvBookISBN, tvBookInfo, tvBookPrice, tvBookPublicationDate,
-          tvBookPublisher, tvBookStock);
+          bookImageView, bottomAppBar, btnAddToCart, btnBuyNow, collapsingToolbarLayout, flbComment,
+          toolbar, tvBookAuthor, tvBookCategory, tvBookISBN, tvBookInfo, tvBookPrice,
+          tvBookPublicationDate, tvBookPublisher, tvBookStock);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

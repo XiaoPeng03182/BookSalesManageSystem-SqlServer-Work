@@ -2,6 +2,7 @@ package com.example.booksalesmanagement.dao
 
 import android.util.Log
 import com.example.booksalesmanagement.bean.Book
+import com.example.booksalesmanagement.bean.CartDetails
 import com.example.booksalesmanagement.database.ConnectionSqlServer
 import java.lang.StringBuilder
 import java.sql.Connection
@@ -10,6 +11,7 @@ import java.sql.ResultSet
 import java.sql.SQLException
 import java.sql.Statement
 import java.time.LocalDate
+import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
 import java.time.format.DateTimeParseException
 
@@ -144,6 +146,54 @@ object BookDao {
         }
         //Log.e("queryCourseMsg", resultCno)
         return bookList
+    }
+
+    //根据书名查找
+    fun queryBookByName(bookName: String): ArrayList<Book>? {
+        // 2. 查询该用户的购物车
+        val queryBookByNameSql = "select * from Book as b where b.bookname like ? "
+
+        try {
+            //检查是否已经存在用户的购物车,若存在则继续查询，否则直接返回null
+            val conn = ConnectionSqlServer.getConnection("BookSalesdb")
+            conn?.prepareStatement(queryBookByNameSql).use { stmt ->
+                stmt?.setString(1,  "%$bookName%")
+                val resultSet = stmt?.executeQuery()
+
+                val bookList = ArrayList<Book>()
+
+                while (resultSet?.next() == true) { // 表示有结果
+
+                    val dateString = resultSet.getString("publication_date")
+                    val formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd")
+                    val publicationDate = LocalDate.parse(dateString, formatter)
+
+                    val book =
+                        Book(
+                            bookId=resultSet.getInt("book_id"),
+                            bookName = resultSet.getString("bookname"),
+                            publisher=resultSet.getString("publisher"),
+                            price =resultSet.getBigDecimal("price"),
+                            author = resultSet.getString("author"),
+                            category = resultSet.getString("category"),
+                            stock = resultSet.getInt("stock"),
+                            publicationDate = publicationDate,
+                            bookInfo = resultSet.getString("bookinfo"),
+                            isbn = resultSet.getString("isbn"),
+                            creationTime = resultSet.getTimestamp("creationtime")
+                        )
+                    bookList.add(book)
+                }
+                if (bookList.size != 0) {
+                    return bookList
+                } else {
+                    return null
+                }
+            }
+        } catch (e: SQLException) {
+            e.printStackTrace()
+        }
+        return null // 出现异常时返回 true
     }
 
 }

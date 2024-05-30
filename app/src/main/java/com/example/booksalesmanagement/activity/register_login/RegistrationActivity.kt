@@ -86,7 +86,7 @@ class RegistrationActivity : AppCompatActivity() {
         }
 
         thread {
-            if (AdminVerifyCodeDao.queryAdminVerifyCode() != "") {
+            if (AdminVerifyCodeDao.queryAdminVerifyCode() != "" && !SelectUserOrManager.isSelectUser) {
                 if (inputAdminVerifyCode != AdminVerifyCodeDao.queryAdminVerifyCode()) {
                     runOnUiThread {
                         Toast.makeText(this, "管理员权限密码错误！", Toast.LENGTH_SHORT).show()

@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.booksalesmanagement.app-mergeDebugResources-50:/values-zh-rTW/values-zh-rTW.xml",
+            "outputFile": "com.example.booksalesmanagement.app-mergeDebugResources-51:/values-zh-rTW/values-zh-rTW.xml",
             "map": [
                 {
                     "source": "C:\\Users\\小鹏\\.gradle\\caches\\transforms-3\\26c911d3cf93a7c0e4fcf2c49b0a758c\\transformed\\appcompat-1.6.1\\res\\values-zh-rTW\\values-zh-rTW.xml",

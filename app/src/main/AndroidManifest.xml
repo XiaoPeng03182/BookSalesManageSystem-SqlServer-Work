@@ -19,16 +19,9 @@
         tools:targetApi="31">
         <activity
             android:name=".activity.comment.BookCommentActivity"
+            android:label="书籍评论"
             android:exported="false" />
-        <activity
-            android:name=".activity.SelectUserOrAdminActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
         <activity
             android:name=".activity.register_login.LoginActivity"
             android:exported="false" />
@@ -45,11 +38,44 @@
             android:name=".activity.book_details.BookProductDetailsActivity"
             android:exported="false"
             android:theme="@style/BookSalesManagementTheme" />
+<!--        <activity
+            android:name=".BottomNavigationViewActivity"
+            android:exported="true"
+            android:label="图书销售"
+            android:theme="@style/BookSalesManagementTheme" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>-->
+
         <activity
             android:name=".BottomNavigationViewActivity"
             android:exported="false"
-            android:label="@string/title_activity_bottom_navigation_view"
-            android:theme="@style/BookSalesManagementTheme" />
+            android:label="图书销售"
+            android:theme="@style/BookSalesManagementTheme" >
+
+        </activity>
+
+
+        <!--        <activity
+                    android:name=".activity.SelectUserOrAdminActivity"
+                    android:exported="false">
+
+                </activity>-->
+
+        <activity
+            android:name=".activity.SelectUserOrAdminActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
         <activity
             android:name=".MainActivity"
             android:exported="false"

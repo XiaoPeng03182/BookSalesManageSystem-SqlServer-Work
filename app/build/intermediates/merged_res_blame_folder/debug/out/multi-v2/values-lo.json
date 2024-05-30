@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.booksalesmanagement.app-mergeDebugResources-50:/values-lo/values-lo.xml",
+            "outputFile": "com.example.booksalesmanagement.app-mergeDebugResources-51:/values-lo/values-lo.xml",
             "map": [
                 {
                     "source": "C:\\Users\\小鹏\\.gradle\\caches\\transforms-3\\df4d48153b6edc873f170fa4d774f77b\\transformed\\navigation-ui-2.7.7\\res\\values-lo\\values-lo.xml",

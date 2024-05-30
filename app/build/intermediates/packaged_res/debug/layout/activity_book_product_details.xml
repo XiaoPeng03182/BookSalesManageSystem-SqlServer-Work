@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context=".activity.BookProductDetailsActivity">
+    tools:context=".activity.book_details.BookProductDetailsActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBar"
@@ -300,6 +300,7 @@
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:id="@+id/flb_comment"
         android:layout_margin="16dp"
         android:src="@drawable/ic_comment"
         app:layout_anchor="@id/appBar"

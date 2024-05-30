@@ -1,10 +1,12 @@
-#Sat May 25 21:57:13 CST 2024
+#Thu May 30 01:09:48 CST 2024
 base.0=E\:\\Android_Develop\\BookSalesManagement\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
 base.1=E\:\\Android_Develop\\BookSalesManagement\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
 base.10=E\:\\Android_Develop\\BookSalesManagement\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\6\\classes.dex
 base.11=E\:\\Android_Develop\\BookSalesManagement\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\7\\classes.dex
 base.12=E\:\\Android_Develop\\BookSalesManagement\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\9\\classes.dex
 base.13=E\:\\Android_Develop\\BookSalesManagement\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes2.dex
+base.14=E\:\\Android_Develop\\BookSalesManagement\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\3\\classes.dex
+base.15=E\:\\Android_Develop\\BookSalesManagement\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\12\\classes.dex
 base.2=E\:\\Android_Develop\\BookSalesManagement\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\10\\classes.dex
 base.3=E\:\\Android_Develop\\BookSalesManagement\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\11\\classes.dex
 base.4=E\:\\Android_Develop\\BookSalesManagement\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\13\\classes.dex
@@ -19,6 +21,8 @@ path.10=6/classes.dex
 path.11=7/classes.dex
 path.12=9/classes.dex
 path.13=classes2.dex
+path.14=3/classes.dex
+path.15=12/classes.dex
 path.2=10/classes.dex
 path.3=11/classes.dex
 path.4=13/classes.dex
@@ -33,6 +37,8 @@ renamed.10=classes11.dex
 renamed.11=classes12.dex
 renamed.12=classes13.dex
 renamed.13=classes14.dex
+renamed.14=classes15.dex
+renamed.15=classes16.dex
 renamed.2=classes3.dex
 renamed.3=classes4.dex
 renamed.4=classes5.dex

@@ -24,17 +24,17 @@ public final class NavHeaderBinding implements ViewBinding {
   public final CircleImageView iconImage;
 
   @NonNull
-  public final TextView mailText;
+  public final TextView tvNavEmail;
 
   @NonNull
-  public final TextView userText;
+  public final TextView tvNavUsername;
 
   private NavHeaderBinding(@NonNull RelativeLayout rootView, @NonNull CircleImageView iconImage,
-      @NonNull TextView mailText, @NonNull TextView userText) {
+      @NonNull TextView tvNavEmail, @NonNull TextView tvNavUsername) {
     this.rootView = rootView;
     this.iconImage = iconImage;
-    this.mailText = mailText;
-    this.userText = userText;
+    this.tvNavEmail = tvNavEmail;
+    this.tvNavUsername = tvNavUsername;
   }
 
   @Override
@@ -70,19 +70,19 @@ public final class NavHeaderBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.mailText;
-      TextView mailText = ViewBindings.findChildViewById(rootView, id);
-      if (mailText == null) {
+      id = R.id.tv_navEmail;
+      TextView tvNavEmail = ViewBindings.findChildViewById(rootView, id);
+      if (tvNavEmail == null) {
         break missingId;
       }
 
-      id = R.id.userText;
-      TextView userText = ViewBindings.findChildViewById(rootView, id);
-      if (userText == null) {
+      id = R.id.tv_navUsername;
+      TextView tvNavUsername = ViewBindings.findChildViewById(rootView, id);
+      if (tvNavUsername == null) {
         break missingId;
       }
 
-      return new NavHeaderBinding((RelativeLayout) rootView, iconImage, mailText, userText);
+      return new NavHeaderBinding((RelativeLayout) rootView, iconImage, tvNavEmail, tvNavUsername);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
