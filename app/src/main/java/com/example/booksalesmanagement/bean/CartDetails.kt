@@ -16,6 +16,7 @@ import java.time.LocalDateTime
  * @param createdAt 预购订单创建时间
  */
 data class CartDetails(
+    var userName :String = "",
     var cardDetailId: Int = 0,
     var cardId: Int,
     var bookId: Int,

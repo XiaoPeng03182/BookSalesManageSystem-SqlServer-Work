@@ -86,11 +86,12 @@ object CartDetailsDao {
         val checkCartSql = "SELECT TOP 1 cartId FROM Cart WHERE userId = ? ORDER BY createdAt DESC"
 
         // 2. 查询该用户的购物车
-        val queryCartSql = "select cd.cartDetailId as 购物车列表编号,cd.cartId as 购物车编号, cd.bookId as 图书编号, publisher as 出版社, cd.quantity as 数量,\n" +
-                "b.bookname as 书名,b.author as 作者,cd.createdAt as 预购时间\n" +
-                "from Book as b,Cart as c,CartDetails as cd\n" +
-                "where cd.cartId = c.cartId and c.userId = ? \n" +
-                "and b.book_id = cd.bookId"
+        val queryCartSql =
+            "select cd.cartDetailId as 购物车列表编号,cd.cartId as 购物车编号, cd.bookId as 图书编号, publisher as 出版社, cd.quantity as 数量,\n" +
+                    "b.bookname as 书名,b.author as 作者,cd.createdAt as 预购时间\n" +
+                    "from Book as b,Cart as c,CartDetails as cd\n" +
+                    "where cd.cartId = c.cartId and c.userId = ? \n" +
+                    "and b.book_id = cd.bookId"
 
         try {
             //检查是否已经存在用户的购物车,若存在则继续查询，否则直接返回null
@@ -126,6 +127,60 @@ object CartDetailsDao {
                                         }*/
 
                     val cartDetail = CartDetails(
+                        cardDetailId = rs.getInt("购物车列表编号"),
+                        cardId = rs.getInt("购物车编号"),
+                        bookId = rs.getInt("图书编号"),
+                        quantity = rs.getInt("数量"),
+                        publisher = rs.getString("出版社"),
+                        bookName = rs.getString("书名"),
+                        author = rs.getString("作者"),
+                        createdAt = createdAtTime
+                    )
+                    cartList.add(cartDetail)
+                }
+                if (cartList.size != 0) {
+                    return cartList
+                } else {
+                    return null
+                }
+            }
+        } catch (e: SQLException) {
+            e.printStackTrace()
+        }
+        return null // 出现异常时返回 true
+    }
+
+    //根据用户名查找购物车列表
+    fun queryCartListByUserName(userName: String): ArrayList<CartDetails>? {
+        //查询该用户的购物车
+        val queryCartSql =
+            "select cd.cartDetailId as 购物车列表编号,cd.cartId as 购物车编号, cd.bookId as 图书编号, publisher as 出版社, cd.quantity as 数量,\n" +
+                    "b.bookname as 书名,b.author as 作者,cd.createdAt as 预购时间\n" +
+                    "from Book as b,Cart as c,CartDetails as cd,Users as u\n" +
+                    "where cd.cartId = c.cartId and c.userId = u.userId \n" +
+                    "and b.book_id = cd.bookId and u.userName = ?"
+        try {
+            //检查是否已经存在用户的购物车,若存在则继续查询，否则直接返回null
+            val conn = ConnectionSqlServer.getConnection("BookSalesdb")
+            //查询该用户的购物车
+            conn?.prepareStatement(queryCartSql).use { stmt ->
+                stmt?.setString(1, userName)
+                val rs = stmt?.executeQuery() // 使用 executeQuery 方法来执行查询操作
+
+                val cartList = ArrayList<CartDetails>()
+
+                while (rs?.next() == true) { // 表示有结果
+
+                    val dateString = rs.getString("预购时间")
+                    val formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")
+                    val truncatedDateString = dateString.substring(0, 19)
+                    val createdAtTime =
+                        LocalDateTime.parse(truncatedDateString, formatter)
+
+                    Log.e("createdAtTime", createdAtTime.toString())
+
+                    val cartDetail = CartDetails(
+                        userName =  userName,
                         cardDetailId = rs.getInt("购物车列表编号"),
                         cardId = rs.getInt("购物车编号"),
                         bookId = rs.getInt("图书编号"),

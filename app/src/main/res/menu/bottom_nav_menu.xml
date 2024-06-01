@@ -7,9 +7,9 @@
         android:title="@string/title_home" />
 
     <item
-        android:id="@+id/navigation_dashboard"
-        android:icon="@drawable/ic_dashboard_black_24dp"
-        android:title="@string/title_dashboard" />
+        android:id="@+id/navigation_manage"
+        android:icon="@drawable/ic_admin"
+        android:title="@string/title_admin" />
 
     <item
         android:id="@+id/navigation_shopping_cart"

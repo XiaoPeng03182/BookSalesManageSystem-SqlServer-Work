@@ -18,9 +18,9 @@ object BookListImageBitmap {
         return bookImageBitmap[key]
     }
 
-
     // 删除书籍封面图像
     fun removeBookImage(key: String) {
         bookImageBitmap.remove(key)
     }
+
 }

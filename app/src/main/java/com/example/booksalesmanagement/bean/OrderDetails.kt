@@ -18,6 +18,7 @@ import java.time.LocalDateTime
  * @param orderDate 订单时间
  */
 data class OrderDetails(
+    var userName:String = "",
     var orderDetailId: Int = 0,
     var orderId: Int = 0,
     var userId:Int = 0,

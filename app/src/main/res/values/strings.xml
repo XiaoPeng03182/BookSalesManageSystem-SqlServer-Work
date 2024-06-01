@@ -2,7 +2,7 @@
     <string name="app_name">BookSalesManagement</string>
     <string name="title_activity_bottom_navigation_view">BottomNavigationViewActivity</string>
     <string name="title_home">主页</string>
-    <string name="title_dashboard">Dashboard</string>
+    <string name="title_admin">管理</string>
     <string name="title_shopping_cart">购物车</string>
 
     <string name="tony_green">用户名</string>

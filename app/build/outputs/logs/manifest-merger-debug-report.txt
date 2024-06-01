@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:2:1-85:12
-INJECTED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:2:1-85:12
-INJECTED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:2:1-85:12
-INJECTED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:2:1-85:12
+ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:2:1-150:12
+INJECTED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:2:1-150:12
+INJECTED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:2:1-150:12
+INJECTED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:2:1-150:12
 MERGED from [androidx.databinding:viewbinding:8.1.0] C:\Users\小鹏\.gradle\caches\transforms-3\2d6ed4441db7a1869117309af6a89b4a\transformed\jetified-viewbinding-8.1.0\AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.navigation:navigation-common:2.7.7] C:\Users\小鹏\.gradle\caches\transforms-3\624265c8d472d8d08165767611229f24\transformed\navigation-common-2.7.7\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.navigation:navigation-common-ktx:2.7.7] C:\Users\小鹏\.gradle\caches\transforms-3\2d405fd6d8bcebaee04d8fa9244cb2e7\transformed\navigation-common-ktx-2.7.7\AndroidManifest.xml:2:1-7:12
@@ -99,8 +99,8 @@ ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.x
 	android:name
 		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:7:22-77
 application
-ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:9:5-83:19
-INJECTED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:9:5-83:19
+ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:9:5-148:19
+INJECTED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:9:5-148:19
 MERGED from [com.google.android.material:material:1.12.0] C:\Users\小鹏\.gradle\caches\transforms-3\9b88b1a57bebe50125cfe6ef2782a5b3\transformed\material-1.12.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.12.0] C:\Users\小鹏\.gradle\caches\transforms-3\9b88b1a57bebe50125cfe6ef2782a5b3\transformed\material-1.12.0\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\小鹏\.gradle\caches\transforms-3\dec4614628d7a9d2a5f1f5197247ace1\transformed\constraintlayout-2.1.4\AndroidManifest.xml:9:5-20
@@ -149,80 +149,218 @@ MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\小鹏\.gradle\cac
 		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:11:9-65
 	android:usesCleartextTraffic
 		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:18:9-44
+activity#com.example.booksalesmanagement.activity.dataBaseManage.DBManageVerifyActivity
+ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:20:9-22:40
+	android:exported
+		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:22:13-37
+	android:name
+		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:21:13-75
+activity#com.example.booksalesmanagement.activity.dataBaseManage.systemManage.DataBackupAndRecoveryActivity
+ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:23:9-25:40
+	android:exported
+		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:25:13-37
+	android:name
+		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:24:13-95
+activity#com.example.booksalesmanagement.activity.dataBaseManage.systemManage.ObjectPermissionManageActivity
+ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:26:9-28:40
+	android:exported
+		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:28:13-37
+	android:name
+		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:27:13-96
+activity#com.example.booksalesmanagement.activity.dataBaseManage.systemManage.StatementPermissionManageActivity
+ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:29:9-31:40
+	android:exported
+		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:31:13-37
+	android:name
+		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:30:13-99
+activity#com.example.booksalesmanagement.activity.dataBaseManage.systemManage.SystemManageActivity
+ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:32:9-34:40
+	android:exported
+		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:34:13-37
+	android:name
+		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:33:13-86
+activity#com.example.booksalesmanagement.activity.dataBaseManage.adminMsgManage.updateAdminMsg.UpdateAdminMsgActivity
+ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:35:9-37:40
+	android:exported
+		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:37:13-37
+	android:name
+		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:36:13-105
+activity#com.example.booksalesmanagement.activity.dataBaseManage.adminMsgManage.deleteAdminMsg.DeleteAdminMsgActivity
+ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:38:9-40:40
+	android:exported
+		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:40:13-37
+	android:name
+		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:39:13-105
+activity#com.example.booksalesmanagement.activity.dataBaseManage.adminMsgManage.queryAdminMsg.QueryAdminMsgActivity
+ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:41:9-43:40
+	android:exported
+		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:43:13-37
+	android:name
+		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:42:13-103
+activity#com.example.booksalesmanagement.activity.dataBaseManage.adminMsgManage.addAdminMsg.AddAdminMsgActivity
+ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:44:9-46:40
+	android:exported
+		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:46:13-37
+	android:name
+		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:45:13-99
+activity#com.example.booksalesmanagement.activity.dataBaseManage.adminMsgManage.AdminMsgManageActivity
+ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:47:9-49:40
+	android:exported
+		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:49:13-37
+	android:name
+		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:48:13-90
+activity#com.example.booksalesmanagement.activity.dataBaseManage.userMsgManage.deleteUserMsg.DeleteUserMsgActivity
+ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:50:9-52:40
+	android:exported
+		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:52:13-37
+	android:name
+		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:51:13-102
+activity#com.example.booksalesmanagement.activity.dataBaseManage.userMsgManage.UserMsgManageActivity
+ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:53:9-55:40
+	android:exported
+		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:55:13-37
+	android:name
+		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:54:13-88
+activity#com.example.booksalesmanagement.activity.dataBaseManage.userMsgManage.queryUserMsg.QueryUserMsgActivity
+ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:56:9-58:40
+	android:exported
+		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:58:13-37
+	android:name
+		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:57:13-100
+activity#com.example.booksalesmanagement.activity.dataBaseManage.cartAndOrderManage.deleteOrder.DeleteOrderDetailsActivity
+ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:59:9-61:40
+	android:exported
+		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:61:13-37
+	android:name
+		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:60:13-110
+activity#com.example.booksalesmanagement.activity.dataBaseManage.cartAndOrderManage.queryOrder.QueryOrderDetailsActivity
+ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:62:9-64:40
+	android:exported
+		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:64:13-37
+	android:name
+		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:63:13-108
+activity#com.example.booksalesmanagement.activity.dataBaseManage.cartAndOrderManage.deleteCart.DeleteCartDetailsActivity
+ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:65:9-67:40
+	android:exported
+		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:67:13-37
+	android:name
+		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:66:13-108
+activity#com.example.booksalesmanagement.activity.dataBaseManage.cartAndOrderManage.queryCart.QueryCartDetailsActivity
+ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:68:9-70:40
+	android:exported
+		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:70:13-37
+	android:name
+		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:69:13-106
+activity#com.example.booksalesmanagement.activity.dataBaseManage.cartAndOrderManage.CartAndOrderManageActivity
+ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:71:9-73:40
+	android:exported
+		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:73:13-37
+	android:name
+		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:72:13-98
+activity#com.example.booksalesmanagement.activity.dataBaseManage.bookMsgManage.deletebook.DeleteBookActivity
+ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:74:9-76:40
+	android:exported
+		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:76:13-37
+	android:name
+		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:75:13-96
+activity#com.example.booksalesmanagement.activity.dataBaseManage.bookMsgManage.updatebook.UpdateMsgActivity
+ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:77:9-79:40
+	android:exported
+		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:79:13-37
+	android:name
+		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:78:13-95
+activity#com.example.booksalesmanagement.activity.dataBaseManage.bookMsgManage.updatebook.UpdateBookMsgActivity
+ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:80:9-82:40
+	android:exported
+		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:82:13-37
+	android:name
+		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:81:13-99
+activity#com.example.booksalesmanagement.activity.dataBaseManage.bookMsgManage.searchbook.SearchBookMsgActivity
+ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:83:9-85:40
+	android:exported
+		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:85:13-37
+	android:name
+		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:84:13-99
+activity#com.example.booksalesmanagement.activity.dataBaseManage.bookMsgManage.BookMsgManageActivity
+ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:86:9-88:40
+	android:exported
+		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:88:13-37
+	android:name
+		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:87:13-88
 activity#com.example.booksalesmanagement.activity.comment.BookCommentActivity
-ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:20:9-23:40
+ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:89:9-92:36
 	android:label
-		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:22:13-33
+		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:92:13-33
 	android:exported
-		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:23:13-37
+		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:91:13-37
 	android:name
-		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:21:13-65
+		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:90:13-65
 activity#com.example.booksalesmanagement.activity.register_login.LoginActivity
-ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:25:9-27:40
+ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:93:9-95:40
 	android:exported
-		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:27:13-37
+		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:95:13-37
 	android:name
-		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:26:13-66
+		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:94:13-66
 activity#com.example.booksalesmanagement.activity.register_login.RegistrationActivity
-ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:28:9-30:40
+ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:96:9-98:40
 	android:exported
-		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:30:13-37
+		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:98:13-37
 	android:name
-		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:29:13-73
-activity#com.example.booksalesmanagement.activity.insertbook.InsertBookMsgActivity
-ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:31:9-33:40
+		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:97:13-73
+activity#com.example.booksalesmanagement.activity.dataBaseManage.bookMsgManage.insertbook.InsertBookMsgActivity
+ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:99:9-101:40
 	android:exported
-		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:33:13-37
+		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:101:13-37
 	android:name
-		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:32:13-70
+		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:100:13-99
 activity#com.example.booksalesmanagement.imagetext.ConnectAlibabaBucketActivity
-ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:34:9-36:40
+ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:102:9-104:40
 	android:exported
-		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:36:13-37
+		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:104:13-37
 	android:name
-		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:35:13-67
+		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:103:13-67
 activity#com.example.booksalesmanagement.activity.book_details.BookProductDetailsActivity
-ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:37:9-40:63
+ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:105:9-108:63
 	android:exported
-		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:39:13-37
+		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:107:13-37
 	android:theme
-		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:40:13-60
+		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:108:13-60
 	android:name
-		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:38:13-77
+		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:106:13-77
 activity#com.example.booksalesmanagement.BottomNavigationViewActivity
-ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:54:9-60:20
+ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:123:9-127:63
 	android:label
-		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:57:13-33
+		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:126:13-33
 	android:exported
-		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:56:13-37
+		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:125:13-37
 	android:theme
-		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:58:13-60
+		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:127:13-60
 	android:name
-		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:55:13-57
+		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:124:13-57
 activity#com.example.booksalesmanagement.activity.SelectUserOrAdminActivity
-ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:69:9-77:20
+ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:135:9-143:20
 	android:exported
-		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:71:13-36
+		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:137:13-36
 	android:name
-		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:70:13-63
+		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:136:13-63
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:72:13-76:29
+ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:138:13-142:29
 action#android.intent.action.MAIN
-ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:73:17-69
+ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:139:17-69
 	android:name
-		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:73:25-66
+		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:139:25-66
 category#android.intent.category.LAUNCHER
-ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:75:17-77
+ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:141:17-77
 	android:name
-		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:75:27-74
+		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:141:27-74
 activity#com.example.booksalesmanagement.MainActivity
-ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:79:9-82:63
+ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:144:9-147:63
 	android:exported
-		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:81:13-37
+		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:146:13-37
 	android:theme
-		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:82:13-60
+		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:147:13-60
 	android:name
-		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:80:13-41
+		ADDED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:145:13-41
 uses-sdk
 INJECTED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml

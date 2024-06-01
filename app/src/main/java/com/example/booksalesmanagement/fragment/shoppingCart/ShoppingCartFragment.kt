@@ -5,7 +5,6 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.booksalesmanagement.R
@@ -13,7 +12,7 @@ import com.example.booksalesmanagement.activity.SaveUserMsg
 import com.example.booksalesmanagement.bean.CartDetails
 import com.example.booksalesmanagement.dao.CartDetailsDao
 import com.example.booksalesmanagement.databinding.FragmentShoppingCartBinding
-import com.example.booksalesmanagement.fragment.shoppingCart.adapter.ShoppingCartAdapter
+import com.example.booksalesmanagement.fragment.shoppingCart.adapter.QueryCartDetailsAdapter
 import kotlin.concurrent.thread
 
 class ShoppingCartFragment : Fragment() {
@@ -24,7 +23,7 @@ class ShoppingCartFragment : Fragment() {
 
     private var cartList = ArrayList<CartDetails>()
 
-    private var adapter:ShoppingCartAdapter? =null
+    private var adapter: QueryCartDetailsAdapter? =null
 
     @SuppressLint("ResourceAsColor")
     override fun onCreateView(
@@ -38,7 +37,7 @@ class ShoppingCartFragment : Fragment() {
         //初始化适配器
         val layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
         binding.shoppingCartRecyclerView.layoutManager = layoutManager
-        adapter = ShoppingCartAdapter(requireContext(), cartList)
+        adapter = QueryCartDetailsAdapter(requireContext(), cartList)
         binding.shoppingCartRecyclerView.adapter = adapter
 
         //初始化购物车
@@ -73,7 +72,7 @@ class ShoppingCartFragment : Fragment() {
     }
 
     @SuppressLint("NotifyDataSetChanged")
-    private fun refreshCart(adapter: ShoppingCartAdapter) {
+    private fun refreshCart(adapter: QueryCartDetailsAdapter) {
         // 初始化购物车列表
         thread {
             val newCartList = CartDetailsDao.queryPreOrderMsgFromSQLServer(SaveUserMsg.userId)

@@ -4,7 +4,6 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import com.example.booksalesmanagement.activity.insertbook.InsertBookMsgActivity
 import com.example.booksalesmanagement.database.ConnectionSqlServer
 import com.example.booksalesmanagement.bean.SC
 import com.example.booksalesmanagement.databinding.ActivityMainBinding

@@ -30,7 +30,7 @@
 19-->[androidx.core:core:1.13.0] C:\Users\小鹏\.gradle\caches\transforms-3\d31dfce54dca98da96c850d8ad76b0ee\transformed\core-1.13.0\AndroidManifest.xml:26:22-94
 20
 21    <application
-21-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:9:5-83:19
+21-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:9:5-148:19
 22        android:allowBackup="true"
 22-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:10:9-35
 23        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -55,184 +55,318 @@
 34        android:usesCleartextTraffic="true" >
 34-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:18:9-44
 35        <activity
-35-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:20:9-23:40
-36            android:name="com.example.booksalesmanagement.activity.comment.BookCommentActivity"
-36-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:21:13-65
-37            android:exported="false"
-37-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:23:13-37
-38            android:label="书籍评论" />
-38-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:22:13-33
-39        <activity
-39-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:25:9-27:40
-40            android:name="com.example.booksalesmanagement.activity.register_login.LoginActivity"
-40-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:26:13-66
-41            android:exported="false" />
-41-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:27:13-37
-42        <activity
-42-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:28:9-30:40
-43            android:name="com.example.booksalesmanagement.activity.register_login.RegistrationActivity"
-43-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:29:13-73
-44            android:exported="false" />
-44-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:30:13-37
-45        <activity
-45-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:31:9-33:40
-46            android:name="com.example.booksalesmanagement.activity.insertbook.InsertBookMsgActivity"
-46-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:32:13-70
-47            android:exported="false" />
-47-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:33:13-37
-48        <activity
-48-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:34:9-36:40
-49            android:name="com.example.booksalesmanagement.imagetext.ConnectAlibabaBucketActivity"
-49-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:35:13-67
-50            android:exported="false" />
-50-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:36:13-37
-51        <activity
-51-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:37:9-40:63
-52            android:name="com.example.booksalesmanagement.activity.book_details.BookProductDetailsActivity"
-52-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:38:13-77
-53            android:exported="false"
-53-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:39:13-37
-54            android:theme="@style/BookSalesManagementTheme" />
-54-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:40:13-60
-55        <!--
-56            <activity
-57            android:name=".BottomNavigationViewActivity"
-58            android:exported="true"
-59            android:label="图书销售"
-60            android:theme="@style/BookSalesManagementTheme" >
-61            <intent-filter>
-62                <action android:name="android.intent.action.MAIN" />
-63
-64                <category android:name="android.intent.category.LAUNCHER" />
-65            </intent-filter>
-66
-67        </activity>
-68        -->
-69
-70        <activity
-70-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:54:9-60:20
-71            android:name="com.example.booksalesmanagement.BottomNavigationViewActivity"
-71-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:55:13-57
-72            android:exported="false"
-72-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:56:13-37
-73            android:label="图书销售"
-73-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:57:13-33
-74            android:theme="@style/BookSalesManagementTheme" >
-74-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:58:13-60
-75        </activity>
-76
-77        <!--
-78                    <activity
-79                    android:name=".activity.SelectUserOrAdminActivity"
-80                    android:exported="false">
-81
-82                </activity>
-83        -->
-84
-85        <activity
-85-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:69:9-77:20
-86            android:name="com.example.booksalesmanagement.activity.SelectUserOrAdminActivity"
-86-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:70:13-63
-87            android:exported="true" >
-87-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:71:13-36
-88            <intent-filter>
-88-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:72:13-76:29
-89                <action android:name="android.intent.action.MAIN" />
-89-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:73:17-69
-89-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:73:25-66
-90
-91                <category android:name="android.intent.category.LAUNCHER" />
-91-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:75:17-77
-91-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:75:27-74
-92            </intent-filter>
-93        </activity>
-94        <activity
-94-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:79:9-82:63
-95            android:name="com.example.booksalesmanagement.MainActivity"
-95-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:80:13-41
-96            android:exported="false"
-96-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:81:13-37
-97            android:theme="@style/BookSalesManagementTheme" />
-97-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:82:13-60
-98
-99        <provider
-99-->[androidx.emoji2:emoji2:1.2.0] C:\Users\小鹏\.gradle\caches\transforms-3\88b64b835e8074ae67698c16f85507e1\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
-100            android:name="androidx.startup.InitializationProvider"
-100-->[androidx.emoji2:emoji2:1.2.0] C:\Users\小鹏\.gradle\caches\transforms-3\88b64b835e8074ae67698c16f85507e1\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:25:13-67
-101            android:authorities="com.example.booksalesmanagement.androidx-startup"
-101-->[androidx.emoji2:emoji2:1.2.0] C:\Users\小鹏\.gradle\caches\transforms-3\88b64b835e8074ae67698c16f85507e1\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:26:13-68
-102            android:exported="false" >
-102-->[androidx.emoji2:emoji2:1.2.0] C:\Users\小鹏\.gradle\caches\transforms-3\88b64b835e8074ae67698c16f85507e1\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:27:13-37
-103            <meta-data
-103-->[androidx.emoji2:emoji2:1.2.0] C:\Users\小鹏\.gradle\caches\transforms-3\88b64b835e8074ae67698c16f85507e1\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
-104                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-104-->[androidx.emoji2:emoji2:1.2.0] C:\Users\小鹏\.gradle\caches\transforms-3\88b64b835e8074ae67698c16f85507e1\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:30:17-75
-105                android:value="androidx.startup" />
-105-->[androidx.emoji2:emoji2:1.2.0] C:\Users\小鹏\.gradle\caches\transforms-3\88b64b835e8074ae67698c16f85507e1\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:31:17-49
-106            <meta-data
-106-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\小鹏\.gradle\caches\transforms-3\ffe898d1f6798349a62b7317ea237097\transformed\jetified-lifecycle-process-2.7.0\AndroidManifest.xml:29:13-31:52
-107                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-107-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\小鹏\.gradle\caches\transforms-3\ffe898d1f6798349a62b7317ea237097\transformed\jetified-lifecycle-process-2.7.0\AndroidManifest.xml:30:17-78
-108                android:value="androidx.startup" />
-108-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\小鹏\.gradle\caches\transforms-3\ffe898d1f6798349a62b7317ea237097\transformed\jetified-lifecycle-process-2.7.0\AndroidManifest.xml:31:17-49
-109            <meta-data
-109-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\小鹏\.gradle\caches\transforms-3\9611850f3a4dc11d8eb7d3ced16e1f8d\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:29:13-31:52
-110                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
-110-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\小鹏\.gradle\caches\transforms-3\9611850f3a4dc11d8eb7d3ced16e1f8d\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:30:17-85
-111                android:value="androidx.startup" />
-111-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\小鹏\.gradle\caches\transforms-3\9611850f3a4dc11d8eb7d3ced16e1f8d\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:31:17-49
-112        </provider>
-113
-114        <uses-library
-114-->[androidx.window:window:1.0.0] C:\Users\小鹏\.gradle\caches\transforms-3\c0acabf678f904fdd2c4c0b988fe2da2\transformed\jetified-window-1.0.0\AndroidManifest.xml:25:9-27:40
-115            android:name="androidx.window.extensions"
-115-->[androidx.window:window:1.0.0] C:\Users\小鹏\.gradle\caches\transforms-3\c0acabf678f904fdd2c4c0b988fe2da2\transformed\jetified-window-1.0.0\AndroidManifest.xml:26:13-54
-116            android:required="false" />
-116-->[androidx.window:window:1.0.0] C:\Users\小鹏\.gradle\caches\transforms-3\c0acabf678f904fdd2c4c0b988fe2da2\transformed\jetified-window-1.0.0\AndroidManifest.xml:27:13-37
-117        <uses-library
-117-->[androidx.window:window:1.0.0] C:\Users\小鹏\.gradle\caches\transforms-3\c0acabf678f904fdd2c4c0b988fe2da2\transformed\jetified-window-1.0.0\AndroidManifest.xml:28:9-30:40
-118            android:name="androidx.window.sidecar"
-118-->[androidx.window:window:1.0.0] C:\Users\小鹏\.gradle\caches\transforms-3\c0acabf678f904fdd2c4c0b988fe2da2\transformed\jetified-window-1.0.0\AndroidManifest.xml:29:13-51
-119            android:required="false" />
-119-->[androidx.window:window:1.0.0] C:\Users\小鹏\.gradle\caches\transforms-3\c0acabf678f904fdd2c4c0b988fe2da2\transformed\jetified-window-1.0.0\AndroidManifest.xml:30:13-37
-120
-121        <receiver
-121-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\小鹏\.gradle\caches\transforms-3\9611850f3a4dc11d8eb7d3ced16e1f8d\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:34:9-52:20
-122            android:name="androidx.profileinstaller.ProfileInstallReceiver"
-122-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\小鹏\.gradle\caches\transforms-3\9611850f3a4dc11d8eb7d3ced16e1f8d\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:35:13-76
-123            android:directBootAware="false"
-123-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\小鹏\.gradle\caches\transforms-3\9611850f3a4dc11d8eb7d3ced16e1f8d\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:36:13-44
-124            android:enabled="true"
-124-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\小鹏\.gradle\caches\transforms-3\9611850f3a4dc11d8eb7d3ced16e1f8d\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:37:13-35
-125            android:exported="true"
-125-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\小鹏\.gradle\caches\transforms-3\9611850f3a4dc11d8eb7d3ced16e1f8d\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:38:13-36
-126            android:permission="android.permission.DUMP" >
-126-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\小鹏\.gradle\caches\transforms-3\9611850f3a4dc11d8eb7d3ced16e1f8d\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:39:13-57
-127            <intent-filter>
-127-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\小鹏\.gradle\caches\transforms-3\9611850f3a4dc11d8eb7d3ced16e1f8d\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:40:13-42:29
-128                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
-128-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\小鹏\.gradle\caches\transforms-3\9611850f3a4dc11d8eb7d3ced16e1f8d\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:41:17-91
-128-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\小鹏\.gradle\caches\transforms-3\9611850f3a4dc11d8eb7d3ced16e1f8d\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:41:25-88
-129            </intent-filter>
+35-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:20:9-22:40
+36            android:name="com.example.booksalesmanagement.activity.dataBaseManage.DBManageVerifyActivity"
+36-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:21:13-75
+37            android:exported="false" />
+37-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:22:13-37
+38        <activity
+38-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:23:9-25:40
+39            android:name="com.example.booksalesmanagement.activity.dataBaseManage.systemManage.DataBackupAndRecoveryActivity"
+39-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:24:13-95
+40            android:exported="false" />
+40-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:25:13-37
+41        <activity
+41-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:26:9-28:40
+42            android:name="com.example.booksalesmanagement.activity.dataBaseManage.systemManage.ObjectPermissionManageActivity"
+42-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:27:13-96
+43            android:exported="false" />
+43-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:28:13-37
+44        <activity
+44-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:29:9-31:40
+45            android:name="com.example.booksalesmanagement.activity.dataBaseManage.systemManage.StatementPermissionManageActivity"
+45-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:30:13-99
+46            android:exported="false" />
+46-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:31:13-37
+47        <activity
+47-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:32:9-34:40
+48            android:name="com.example.booksalesmanagement.activity.dataBaseManage.systemManage.SystemManageActivity"
+48-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:33:13-86
+49            android:exported="false" />
+49-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:34:13-37
+50        <activity
+50-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:35:9-37:40
+51            android:name="com.example.booksalesmanagement.activity.dataBaseManage.adminMsgManage.updateAdminMsg.UpdateAdminMsgActivity"
+51-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:36:13-105
+52            android:exported="false" />
+52-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:37:13-37
+53        <activity
+53-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:38:9-40:40
+54            android:name="com.example.booksalesmanagement.activity.dataBaseManage.adminMsgManage.deleteAdminMsg.DeleteAdminMsgActivity"
+54-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:39:13-105
+55            android:exported="false" />
+55-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:40:13-37
+56        <activity
+56-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:41:9-43:40
+57            android:name="com.example.booksalesmanagement.activity.dataBaseManage.adminMsgManage.queryAdminMsg.QueryAdminMsgActivity"
+57-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:42:13-103
+58            android:exported="false" />
+58-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:43:13-37
+59        <activity
+59-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:44:9-46:40
+60            android:name="com.example.booksalesmanagement.activity.dataBaseManage.adminMsgManage.addAdminMsg.AddAdminMsgActivity"
+60-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:45:13-99
+61            android:exported="false" />
+61-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:46:13-37
+62        <activity
+62-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:47:9-49:40
+63            android:name="com.example.booksalesmanagement.activity.dataBaseManage.adminMsgManage.AdminMsgManageActivity"
+63-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:48:13-90
+64            android:exported="false" />
+64-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:49:13-37
+65        <activity
+65-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:50:9-52:40
+66            android:name="com.example.booksalesmanagement.activity.dataBaseManage.userMsgManage.deleteUserMsg.DeleteUserMsgActivity"
+66-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:51:13-102
+67            android:exported="false" />
+67-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:52:13-37
+68        <activity
+68-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:53:9-55:40
+69            android:name="com.example.booksalesmanagement.activity.dataBaseManage.userMsgManage.UserMsgManageActivity"
+69-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:54:13-88
+70            android:exported="false" />
+70-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:55:13-37
+71        <activity
+71-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:56:9-58:40
+72            android:name="com.example.booksalesmanagement.activity.dataBaseManage.userMsgManage.queryUserMsg.QueryUserMsgActivity"
+72-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:57:13-100
+73            android:exported="false" />
+73-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:58:13-37
+74        <activity
+74-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:59:9-61:40
+75            android:name="com.example.booksalesmanagement.activity.dataBaseManage.cartAndOrderManage.deleteOrder.DeleteOrderDetailsActivity"
+75-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:60:13-110
+76            android:exported="false" />
+76-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:61:13-37
+77        <activity
+77-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:62:9-64:40
+78            android:name="com.example.booksalesmanagement.activity.dataBaseManage.cartAndOrderManage.queryOrder.QueryOrderDetailsActivity"
+78-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:63:13-108
+79            android:exported="false" />
+79-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:64:13-37
+80        <activity
+80-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:65:9-67:40
+81            android:name="com.example.booksalesmanagement.activity.dataBaseManage.cartAndOrderManage.deleteCart.DeleteCartDetailsActivity"
+81-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:66:13-108
+82            android:exported="false" />
+82-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:67:13-37
+83        <activity
+83-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:68:9-70:40
+84            android:name="com.example.booksalesmanagement.activity.dataBaseManage.cartAndOrderManage.queryCart.QueryCartDetailsActivity"
+84-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:69:13-106
+85            android:exported="false" />
+85-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:70:13-37
+86        <activity
+86-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:71:9-73:40
+87            android:name="com.example.booksalesmanagement.activity.dataBaseManage.cartAndOrderManage.CartAndOrderManageActivity"
+87-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:72:13-98
+88            android:exported="false" />
+88-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:73:13-37
+89        <activity
+89-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:74:9-76:40
+90            android:name="com.example.booksalesmanagement.activity.dataBaseManage.bookMsgManage.deletebook.DeleteBookActivity"
+90-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:75:13-96
+91            android:exported="false" />
+91-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:76:13-37
+92        <activity
+92-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:77:9-79:40
+93            android:name="com.example.booksalesmanagement.activity.dataBaseManage.bookMsgManage.updatebook.UpdateMsgActivity"
+93-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:78:13-95
+94            android:exported="false" />
+94-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:79:13-37
+95        <activity
+95-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:80:9-82:40
+96            android:name="com.example.booksalesmanagement.activity.dataBaseManage.bookMsgManage.updatebook.UpdateBookMsgActivity"
+96-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:81:13-99
+97            android:exported="false" />
+97-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:82:13-37
+98        <activity
+98-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:83:9-85:40
+99            android:name="com.example.booksalesmanagement.activity.dataBaseManage.bookMsgManage.searchbook.SearchBookMsgActivity"
+99-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:84:13-99
+100            android:exported="false" />
+100-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:85:13-37
+101        <activity
+101-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:86:9-88:40
+102            android:name="com.example.booksalesmanagement.activity.dataBaseManage.bookMsgManage.BookMsgManageActivity"
+102-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:87:13-88
+103            android:exported="false" />
+103-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:88:13-37
+104        <activity
+104-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:89:9-92:36
+105            android:name="com.example.booksalesmanagement.activity.comment.BookCommentActivity"
+105-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:90:13-65
+106            android:exported="false"
+106-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:91:13-37
+107            android:label="书籍评论" />
+107-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:92:13-33
+108        <activity
+108-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:93:9-95:40
+109            android:name="com.example.booksalesmanagement.activity.register_login.LoginActivity"
+109-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:94:13-66
+110            android:exported="false" />
+110-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:95:13-37
+111        <activity
+111-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:96:9-98:40
+112            android:name="com.example.booksalesmanagement.activity.register_login.RegistrationActivity"
+112-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:97:13-73
+113            android:exported="false" />
+113-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:98:13-37
+114        <activity
+114-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:99:9-101:40
+115            android:name="com.example.booksalesmanagement.activity.dataBaseManage.bookMsgManage.insertbook.InsertBookMsgActivity"
+115-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:100:13-99
+116            android:exported="false" />
+116-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:101:13-37
+117        <activity
+117-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:102:9-104:40
+118            android:name="com.example.booksalesmanagement.imagetext.ConnectAlibabaBucketActivity"
+118-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:103:13-67
+119            android:exported="false" />
+119-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:104:13-37
+120        <activity
+120-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:105:9-108:63
+121            android:name="com.example.booksalesmanagement.activity.book_details.BookProductDetailsActivity"
+121-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:106:13-77
+122            android:exported="false"
+122-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:107:13-37
+123            android:theme="@style/BookSalesManagementTheme" />
+123-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:108:13-60
+124        <!--
+125        <activity
+126            android:name=".BottomNavigationViewActivity"
+127            android:exported="true"
+128            android:label="图书销售"
+129            android:theme="@style/BookSalesManagementTheme" >
 130            <intent-filter>
-130-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\小鹏\.gradle\caches\transforms-3\9611850f3a4dc11d8eb7d3ced16e1f8d\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:43:13-45:29
-131                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
-131-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\小鹏\.gradle\caches\transforms-3\9611850f3a4dc11d8eb7d3ced16e1f8d\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:44:17-85
-131-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\小鹏\.gradle\caches\transforms-3\9611850f3a4dc11d8eb7d3ced16e1f8d\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:44:25-82
-132            </intent-filter>
-133            <intent-filter>
-133-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\小鹏\.gradle\caches\transforms-3\9611850f3a4dc11d8eb7d3ced16e1f8d\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:46:13-48:29
-134                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
-134-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\小鹏\.gradle\caches\transforms-3\9611850f3a4dc11d8eb7d3ced16e1f8d\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:47:17-88
-134-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\小鹏\.gradle\caches\transforms-3\9611850f3a4dc11d8eb7d3ced16e1f8d\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:47:25-85
-135            </intent-filter>
-136            <intent-filter>
-136-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\小鹏\.gradle\caches\transforms-3\9611850f3a4dc11d8eb7d3ced16e1f8d\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:49:13-51:29
-137                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
-137-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\小鹏\.gradle\caches\transforms-3\9611850f3a4dc11d8eb7d3ced16e1f8d\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:50:17-95
-137-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\小鹏\.gradle\caches\transforms-3\9611850f3a4dc11d8eb7d3ced16e1f8d\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:50:25-92
-138            </intent-filter>
-139        </receiver>
-140    </application>
-141
-142</manifest>
+131                <action android:name="android.intent.action.MAIN" />
+132
+133                <category android:name="android.intent.category.LAUNCHER" />
+134            </intent-filter>
+135
+136        </activity>
+137        -->
+138        <activity
+138-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:123:9-127:63
+139            android:name="com.example.booksalesmanagement.BottomNavigationViewActivity"
+139-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:124:13-57
+140            android:exported="false"
+140-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:125:13-37
+141            android:label="图书销售"
+141-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:126:13-33
+142            android:theme="@style/BookSalesManagementTheme" />
+142-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:127:13-60
+143        <!--
+144        <activity
+145                    android:name=".activity.SelectUserOrAdminActivity"
+146                    android:exported="false">
+147
+148                </activity>
+149        -->
+150        <activity
+150-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:135:9-143:20
+151            android:name="com.example.booksalesmanagement.activity.SelectUserOrAdminActivity"
+151-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:136:13-63
+152            android:exported="true" >
+152-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:137:13-36
+153            <intent-filter>
+153-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:138:13-142:29
+154                <action android:name="android.intent.action.MAIN" />
+154-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:139:17-69
+154-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:139:25-66
+155
+156                <category android:name="android.intent.category.LAUNCHER" />
+156-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:141:17-77
+156-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:141:27-74
+157            </intent-filter>
+158        </activity>
+159        <activity
+159-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:144:9-147:63
+160            android:name="com.example.booksalesmanagement.MainActivity"
+160-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:145:13-41
+161            android:exported="false"
+161-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:146:13-37
+162            android:theme="@style/BookSalesManagementTheme" />
+162-->E:\Android_Develop\BookSalesManagement\app\src\main\AndroidManifest.xml:147:13-60
+163
+164        <provider
+164-->[androidx.emoji2:emoji2:1.2.0] C:\Users\小鹏\.gradle\caches\transforms-3\88b64b835e8074ae67698c16f85507e1\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+165            android:name="androidx.startup.InitializationProvider"
+165-->[androidx.emoji2:emoji2:1.2.0] C:\Users\小鹏\.gradle\caches\transforms-3\88b64b835e8074ae67698c16f85507e1\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:25:13-67
+166            android:authorities="com.example.booksalesmanagement.androidx-startup"
+166-->[androidx.emoji2:emoji2:1.2.0] C:\Users\小鹏\.gradle\caches\transforms-3\88b64b835e8074ae67698c16f85507e1\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:26:13-68
+167            android:exported="false" >
+167-->[androidx.emoji2:emoji2:1.2.0] C:\Users\小鹏\.gradle\caches\transforms-3\88b64b835e8074ae67698c16f85507e1\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:27:13-37
+168            <meta-data
+168-->[androidx.emoji2:emoji2:1.2.0] C:\Users\小鹏\.gradle\caches\transforms-3\88b64b835e8074ae67698c16f85507e1\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+169                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+169-->[androidx.emoji2:emoji2:1.2.0] C:\Users\小鹏\.gradle\caches\transforms-3\88b64b835e8074ae67698c16f85507e1\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:30:17-75
+170                android:value="androidx.startup" />
+170-->[androidx.emoji2:emoji2:1.2.0] C:\Users\小鹏\.gradle\caches\transforms-3\88b64b835e8074ae67698c16f85507e1\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:31:17-49
+171            <meta-data
+171-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\小鹏\.gradle\caches\transforms-3\ffe898d1f6798349a62b7317ea237097\transformed\jetified-lifecycle-process-2.7.0\AndroidManifest.xml:29:13-31:52
+172                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+172-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\小鹏\.gradle\caches\transforms-3\ffe898d1f6798349a62b7317ea237097\transformed\jetified-lifecycle-process-2.7.0\AndroidManifest.xml:30:17-78
+173                android:value="androidx.startup" />
+173-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\小鹏\.gradle\caches\transforms-3\ffe898d1f6798349a62b7317ea237097\transformed\jetified-lifecycle-process-2.7.0\AndroidManifest.xml:31:17-49
+174            <meta-data
+174-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\小鹏\.gradle\caches\transforms-3\9611850f3a4dc11d8eb7d3ced16e1f8d\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:29:13-31:52
+175                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+175-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\小鹏\.gradle\caches\transforms-3\9611850f3a4dc11d8eb7d3ced16e1f8d\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:30:17-85
+176                android:value="androidx.startup" />
+176-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\小鹏\.gradle\caches\transforms-3\9611850f3a4dc11d8eb7d3ced16e1f8d\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:31:17-49
+177        </provider>
+178
+179        <uses-library
+179-->[androidx.window:window:1.0.0] C:\Users\小鹏\.gradle\caches\transforms-3\c0acabf678f904fdd2c4c0b988fe2da2\transformed\jetified-window-1.0.0\AndroidManifest.xml:25:9-27:40
+180            android:name="androidx.window.extensions"
+180-->[androidx.window:window:1.0.0] C:\Users\小鹏\.gradle\caches\transforms-3\c0acabf678f904fdd2c4c0b988fe2da2\transformed\jetified-window-1.0.0\AndroidManifest.xml:26:13-54
+181            android:required="false" />
+181-->[androidx.window:window:1.0.0] C:\Users\小鹏\.gradle\caches\transforms-3\c0acabf678f904fdd2c4c0b988fe2da2\transformed\jetified-window-1.0.0\AndroidManifest.xml:27:13-37
+182        <uses-library
+182-->[androidx.window:window:1.0.0] C:\Users\小鹏\.gradle\caches\transforms-3\c0acabf678f904fdd2c4c0b988fe2da2\transformed\jetified-window-1.0.0\AndroidManifest.xml:28:9-30:40
+183            android:name="androidx.window.sidecar"
+183-->[androidx.window:window:1.0.0] C:\Users\小鹏\.gradle\caches\transforms-3\c0acabf678f904fdd2c4c0b988fe2da2\transformed\jetified-window-1.0.0\AndroidManifest.xml:29:13-51
+184            android:required="false" />
+184-->[androidx.window:window:1.0.0] C:\Users\小鹏\.gradle\caches\transforms-3\c0acabf678f904fdd2c4c0b988fe2da2\transformed\jetified-window-1.0.0\AndroidManifest.xml:30:13-37
+185
+186        <receiver
+186-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\小鹏\.gradle\caches\transforms-3\9611850f3a4dc11d8eb7d3ced16e1f8d\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:34:9-52:20
+187            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+187-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\小鹏\.gradle\caches\transforms-3\9611850f3a4dc11d8eb7d3ced16e1f8d\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:35:13-76
+188            android:directBootAware="false"
+188-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\小鹏\.gradle\caches\transforms-3\9611850f3a4dc11d8eb7d3ced16e1f8d\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:36:13-44
+189            android:enabled="true"
+189-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\小鹏\.gradle\caches\transforms-3\9611850f3a4dc11d8eb7d3ced16e1f8d\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:37:13-35
+190            android:exported="true"
+190-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\小鹏\.gradle\caches\transforms-3\9611850f3a4dc11d8eb7d3ced16e1f8d\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:38:13-36
+191            android:permission="android.permission.DUMP" >
+191-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\小鹏\.gradle\caches\transforms-3\9611850f3a4dc11d8eb7d3ced16e1f8d\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:39:13-57
+192            <intent-filter>
+192-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\小鹏\.gradle\caches\transforms-3\9611850f3a4dc11d8eb7d3ced16e1f8d\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:40:13-42:29
+193                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+193-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\小鹏\.gradle\caches\transforms-3\9611850f3a4dc11d8eb7d3ced16e1f8d\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:41:17-91
+193-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\小鹏\.gradle\caches\transforms-3\9611850f3a4dc11d8eb7d3ced16e1f8d\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:41:25-88
+194            </intent-filter>
+195            <intent-filter>
+195-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\小鹏\.gradle\caches\transforms-3\9611850f3a4dc11d8eb7d3ced16e1f8d\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:43:13-45:29
+196                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+196-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\小鹏\.gradle\caches\transforms-3\9611850f3a4dc11d8eb7d3ced16e1f8d\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:44:17-85
+196-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\小鹏\.gradle\caches\transforms-3\9611850f3a4dc11d8eb7d3ced16e1f8d\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:44:25-82
+197            </intent-filter>
+198            <intent-filter>
+198-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\小鹏\.gradle\caches\transforms-3\9611850f3a4dc11d8eb7d3ced16e1f8d\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:46:13-48:29
+199                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+199-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\小鹏\.gradle\caches\transforms-3\9611850f3a4dc11d8eb7d3ced16e1f8d\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:47:17-88
+199-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\小鹏\.gradle\caches\transforms-3\9611850f3a4dc11d8eb7d3ced16e1f8d\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:47:25-85
+200            </intent-filter>
+201            <intent-filter>
+201-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\小鹏\.gradle\caches\transforms-3\9611850f3a4dc11d8eb7d3ced16e1f8d\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:49:13-51:29
+202                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+202-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\小鹏\.gradle\caches\transforms-3\9611850f3a4dc11d8eb7d3ced16e1f8d\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:50:17-95
+202-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\小鹏\.gradle\caches\transforms-3\9611850f3a4dc11d8eb7d3ced16e1f8d\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:50:25-92
+203            </intent-filter>
+204        </receiver>
+205    </application>
+206
+207</manifest>

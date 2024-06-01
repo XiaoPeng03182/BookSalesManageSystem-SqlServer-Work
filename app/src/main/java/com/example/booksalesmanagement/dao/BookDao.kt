@@ -1,17 +1,15 @@
 package com.example.booksalesmanagement.dao
 
+import android.content.Context
 import android.util.Log
 import com.example.booksalesmanagement.bean.Book
-import com.example.booksalesmanagement.bean.CartDetails
 import com.example.booksalesmanagement.database.ConnectionSqlServer
-import java.lang.StringBuilder
 import java.sql.Connection
 import java.sql.Date
 import java.sql.ResultSet
 import java.sql.SQLException
 import java.sql.Statement
 import java.time.LocalDate
-import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
 import java.time.format.DateTimeParseException
 
@@ -150,14 +148,14 @@ object BookDao {
 
     //根据书名查找
     fun queryBookByName(bookName: String): ArrayList<Book>? {
-        // 2. 查询该用户的购物车
+
         val queryBookByNameSql = "select * from Book as b where b.bookname like ? "
 
         try {
             //检查是否已经存在用户的购物车,若存在则继续查询，否则直接返回null
             val conn = ConnectionSqlServer.getConnection("BookSalesdb")
             conn?.prepareStatement(queryBookByNameSql).use { stmt ->
-                stmt?.setString(1,  "%$bookName%")
+                stmt?.setString(1, "%$bookName%")
                 val resultSet = stmt?.executeQuery()
 
                 val bookList = ArrayList<Book>()
@@ -170,10 +168,10 @@ object BookDao {
 
                     val book =
                         Book(
-                            bookId=resultSet.getInt("book_id"),
+                            bookId = resultSet.getInt("book_id"),
                             bookName = resultSet.getString("bookname"),
-                            publisher=resultSet.getString("publisher"),
-                            price =resultSet.getBigDecimal("price"),
+                            publisher = resultSet.getString("publisher"),
+                            price = resultSet.getBigDecimal("price"),
                             author = resultSet.getString("author"),
                             category = resultSet.getString("category"),
                             stock = resultSet.getInt("stock"),
@@ -194,6 +192,109 @@ object BookDao {
             e.printStackTrace()
         }
         return null // 出现异常时返回 true
+    }
+
+    //查找全部图书信息
+    fun queryAllBookMsg(): ArrayList<Book>? {
+
+        val queryAllBookMsgSql = "select * from Book"
+
+        try {
+            //检查是否已经存在用户的购物车,若存在则继续查询，否则直接返回null
+            val conn = ConnectionSqlServer.getConnection("BookSalesdb")
+            conn?.prepareStatement(queryAllBookMsgSql).use { stmt ->
+
+                val resultSet = stmt?.executeQuery()
+
+                val bookList = ArrayList<Book>()
+
+                while (resultSet?.next() == true) { // 表示有结果
+
+                    val dateString = resultSet.getString("publication_date")
+                    val formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd")
+                    val publicationDate = LocalDate.parse(dateString, formatter)
+
+                    val book =
+                        Book(
+                            bookId = resultSet.getInt("book_id"),
+                            bookName = resultSet.getString("bookname"),
+                            publisher = resultSet.getString("publisher"),
+                            price = resultSet.getBigDecimal("price"),
+                            author = resultSet.getString("author"),
+                            category = resultSet.getString("category"),
+                            stock = resultSet.getInt("stock"),
+                            publicationDate = publicationDate,
+                            bookInfo = resultSet.getString("bookinfo"),
+                            isbn = resultSet.getString("isbn"),
+                            creationTime = resultSet.getTimestamp("creationtime")
+                        )
+                    bookList.add(book)
+                }
+                if (bookList.size != 0) {
+                    return bookList
+                } else {
+                    return null
+                }
+            }
+        } catch (e: SQLException) {
+            e.printStackTrace()
+        }
+        return null // 出现异常时返回 true
+    }
+
+    //更新图书信息
+    fun updateBookMsg(context: Context, bookId: Int, updates: Map<String, Any>): Boolean {
+        val updateBookMsgSQL = StringBuilder("UPDATE Book SET ")
+        updates.forEach { (column, value) -> updateBookMsgSQL.append(column).append(" = ?, ") }
+        updateBookMsgSQL.setLength(updateBookMsgSQL.length - 2) // 去除最后的逗号
+
+        updateBookMsgSQL.append(" WHERE book_id = ?")
+
+        try {
+            val conn = ConnectionSqlServer.getConnection("BookSalesdb")
+            conn?.prepareStatement(updateBookMsgSQL.toString()).use { stmt ->
+                var index = 1
+                //循环用于遍历 updates 中的每个值，并依次设置到 PreparedStatement 中的占位符 ?
+                for ((column, value) in updates) {
+                    if (column == "publication_date") {
+                        stmt?.setDate(index++, Date.valueOf(value.toString()))
+                    } else {
+                        stmt?.setObject(index++, value) //stmt.setObject 方法会根据值的类型自动处理适当的数据类型
+                    }
+                }
+                stmt?.setInt(index, bookId)
+                val affectedRows = stmt?.executeUpdate() // 执行删除操作并获取受影响的行数
+                Log.e("BookDao_updateBookMsg", "受影响的行数: $affectedRows")
+                Log.e("BookDao_updateBookMsg", "集合数量: ${updates.size}")
+                return affectedRows?.let { it == updates.size }
+                    ?: false // 如果受影响的行数等于集合大小，则表示全部更新成功，返回 true，否则返回 false
+            }
+        } catch (e: SQLException) {
+            e.printStackTrace()
+        }
+
+        return false
+    }
+
+    //根据图书ID删除图书
+    fun deleteBookById(bookId: Int): Boolean {
+
+        val deleteBookByIdSQL = "DELETE FROM Book WHERE book_id = ?"
+        try {
+            //检查是否已经存在用户的购物车,若存在则继续查询，否则直接返回null
+            val conn = ConnectionSqlServer.getConnection("BookSalesdb")
+            conn?.prepareStatement(deleteBookByIdSQL).use { stmt ->
+
+                stmt?.setInt(1, bookId)
+                val affectedRows = stmt?.executeUpdate() // 执行删除操作并获取受影响的行数
+                return affectedRows?.let { it > 0}
+                    ?: false // 如果受影响的行数等于集合大小，则表示全部更新成功，返回 true，否则返回 false
+            }
+        } catch (e: SQLException) {
+            e.printStackTrace()
+        }
+
+        return false
     }
 
 }

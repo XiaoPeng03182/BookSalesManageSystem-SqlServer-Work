@@ -3,6 +3,7 @@ package com.example.booksalesmanagement.activity.comment
 import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.MenuItem
 import android.widget.EditText
@@ -38,7 +39,7 @@ class BookCommentActivity : AppCompatActivity() {
 
         setSupportActionBar(binding.commentToolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)//显示Home按钮
-       // binding.collapsingToolbarLayout.title = "书籍评论"
+        // binding.collapsingToolbarLayout.title = "书籍评论"
 
         //初始化适配器
         val layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
@@ -78,7 +79,7 @@ class BookCommentActivity : AppCompatActivity() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        when(item.itemId) {
+        when (item.itemId) {
             android.R.id.home -> {
                 finish()
                 return true
@@ -115,10 +116,16 @@ class BookCommentActivity : AppCompatActivity() {
                 val inputComment = etContent.text.toString()
                 val rating = inputRating.toInt()
 
+                if (inputComment.isEmpty() || inputRating.isEmpty()) {
+                    Toast.makeText(this, "请输入完整的信息！", Toast.LENGTH_SHORT).show()
+                    return@setPositiveButton
+                }
+
                 if (rating < 0 || rating > 5) {
                     Toast.makeText(this, "请输入0-5之间的评分！", Toast.LENGTH_SHORT).show()
                     return@setPositiveButton
                 }
+
                 if (inputComment.isEmpty()) {
                     // 处理提交的评论
                     Toast.makeText(this, "请输入评论！", Toast.LENGTH_SHORT).show()
@@ -131,6 +138,8 @@ class BookCommentActivity : AppCompatActivity() {
                     rating = rating,
                     comment = inputComment
                 )
+                Log.e("TAG", "addCommentByDialog: ${review.bookId}")
+
                 thread {
                     if (ReviewsDao.insertReviewToSQlServer(review)) {
                         runOnUiThread {

@@ -23,6 +23,33 @@ object ConnectionSqlServer {
                 //"jdbc:jtds:sqlserver://$ip:1433;Database=$dbName;encrypt=true;trustServerCertificate=true", // 数据库连接 URL
                 "jdbc:jtds:sqlserver://$ip:1433/$dbName;encrypt=true;trustServerCertificate=true", // 数据库连接 URL
                 //"jdbc:sqlserver://$ip:1433;database=$dbName;encrypt=true;encrypt=true;trustServerCertificate=true", // 数据库连接 URL
+                "users", "123456"  // 数据库用户名和密码
+            ) as Connection
+            //TextLoginActivity.conn_on = 1 //用于向主函数传参，判断连接是否成功，// 设置连接状态为成功
+        } catch (ex: SQLException) { // 捕获 SQL 异常
+            ex.printStackTrace()
+            //TextLoginActivity.conn_on = 2 // 设置连接状态为失败
+        } catch (ex: ClassNotFoundException) {
+            ex.printStackTrace()
+            //TextLoginActivity.conn_on = 2  // 设置连接状态为失败
+        }
+        return conn //返回Connection型变量conn用于后续连接
+    }
+
+    // 获取数据库连接的函数，接受数据库名作为参数
+    @Throws(SQLException::class)
+    fun getConnectionAdmin(dbName: String): Connection? {
+        var conn: Connection? = null
+        try {
+            //Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver") //加载驱动
+            Class.forName("net.sourceforge.jtds.jdbc.Driver") //加载驱动
+            val ip = "10.203.132.6"
+
+            // 使用 DriverManager 建立数据库连接
+            conn = DriverManager.getConnection(
+                //"jdbc:jtds:sqlserver://$ip:1433;Database=$dbName;encrypt=true;trustServerCertificate=true", // 数据库连接 URL
+                "jdbc:jtds:sqlserver://$ip:1433/$dbName;encrypt=true;trustServerCertificate=true", // 数据库连接 URL
+                //"jdbc:sqlserver://$ip:1433;database=$dbName;encrypt=true;encrypt=true;trustServerCertificate=true", // 数据库连接 URL
                 "sa", "123456"  // 数据库用户名和密码
             ) as Connection
             //TextLoginActivity.conn_on = 1 //用于向主函数传参，判断连接是否成功，// 设置连接状态为成功

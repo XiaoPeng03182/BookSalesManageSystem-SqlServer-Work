@@ -1,23 +1,39 @@
 [
     {
-        "merged": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-mergeDebugResources-52:\\layout\\activity_select_user_or_admin.xml",
-        "source": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-main-55:\\layout\\activity_select_user_or_admin.xml"
+        "merged": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-mergeDebugResources-52:\\layout\\activity_data_backup_and_recovery.xml",
+        "source": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-main-55:\\layout\\activity_data_backup_and_recovery.xml"
     },
     {
-        "merged": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-mergeDebugResources-52:\\layout\\activity_login.xml",
-        "source": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-main-55:\\layout\\activity_login.xml"
+        "merged": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-mergeDebugResources-52:\\layout\\activity_object_permission_manage.xml",
+        "source": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-main-55:\\layout\\activity_object_permission_manage.xml"
     },
     {
-        "merged": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-mergeDebugResources-52:\\layout\\activity_book_comment.xml",
-        "source": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-main-55:\\layout\\activity_book_comment.xml"
+        "merged": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-mergeDebugResources-52:\\layout\\recycler_manage_delete_admin_msg_item.xml",
+        "source": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-main-55:\\layout\\recycler_manage_delete_admin_msg_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-mergeDebugResources-52:\\layout\\recycler_manage_query_order_item.xml",
+        "source": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-main-55:\\layout\\recycler_manage_query_order_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-mergeDebugResources-52:\\layout\\activity_system_manage.xml",
+        "source": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-main-55:\\layout\\activity_system_manage.xml"
+    },
+    {
+        "merged": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-mergeDebugResources-52:\\layout\\activity_dbmanage_verify.xml",
+        "source": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-main-55:\\layout\\activity_dbmanage_verify.xml"
+    },
+    {
+        "merged": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-mergeDebugResources-52:\\layout\\activity_update_msg.xml",
+        "source": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-main-55:\\layout\\activity_update_msg.xml"
+    },
+    {
+        "merged": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-mergeDebugResources-52:\\layout\\activity_delete_cart_details.xml",
+        "source": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-main-55:\\layout\\activity_delete_cart_details.xml"
     },
     {
         "merged": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-mergeDebugResources-52:\\layout\\dialog_set_purchase_msg.xml",
         "source": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-main-55:\\layout\\dialog_set_purchase_msg.xml"
-    },
-    {
-        "merged": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-mergeDebugResources-52:\\layout\\fragment_shopping_order.xml",
-        "source": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-main-55:\\layout\\fragment_shopping_order.xml"
     },
     {
         "merged": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-mergeDebugResources-52:\\layout\\activity_insert_book_msg.xml",
@@ -28,6 +44,122 @@
         "source": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-main-55:\\layout\\fragment_dashboard.xml"
     },
     {
+        "merged": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-mergeDebugResources-52:\\layout\\activity_delete_book.xml",
+        "source": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-main-55:\\layout\\activity_delete_book.xml"
+    },
+    {
+        "merged": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-mergeDebugResources-52:\\layout\\fragment_shopping_cart.xml",
+        "source": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-main-55:\\layout\\fragment_shopping_cart.xml"
+    },
+    {
+        "merged": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-mergeDebugResources-52:\\layout\\activity_query_user_msg.xml",
+        "source": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-main-55:\\layout\\activity_query_user_msg.xml"
+    },
+    {
+        "merged": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-mergeDebugResources-52:\\layout\\activity_query_admin_msg.xml",
+        "source": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-main-55:\\layout\\activity_query_admin_msg.xml"
+    },
+    {
+        "merged": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-mergeDebugResources-52:\\layout\\activity_admin_msg_manage.xml",
+        "source": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-main-55:\\layout\\activity_admin_msg_manage.xml"
+    },
+    {
+        "merged": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-mergeDebugResources-52:\\layout\\activity_bottom_navigation_view.xml",
+        "source": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-main-55:\\layout\\activity_bottom_navigation_view.xml"
+    },
+    {
+        "merged": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-mergeDebugResources-52:\\layout\\activity_registration.xml",
+        "source": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-main-55:\\layout\\activity_registration.xml"
+    },
+    {
+        "merged": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-mergeDebugResources-52:\\layout\\activity_book_msg_manage.xml",
+        "source": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-main-55:\\layout\\activity_book_msg_manage.xml"
+    },
+    {
+        "merged": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-mergeDebugResources-52:\\layout\\dialog_update_user_msg.xml",
+        "source": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-main-55:\\layout\\dialog_update_user_msg.xml"
+    },
+    {
+        "merged": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-mergeDebugResources-52:\\layout\\activity_update_admin_msg.xml",
+        "source": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-main-55:\\layout\\activity_update_admin_msg.xml"
+    },
+    {
+        "merged": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-mergeDebugResources-52:\\layout\\dialog_update_user_password.xml",
+        "source": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-main-55:\\layout\\dialog_update_user_password.xml"
+    },
+    {
+        "merged": "com.example.booksalesmanagement.app-mergeDebugResources-52:/layout/activity_admin_msg_manage.xml",
+        "source": "com.example.booksalesmanagement.app-main-55:/layout/activity_admin_msg_manage.xml"
+    },
+    {
+        "merged": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-mergeDebugResources-52:\\layout\\activity_query_order_details.xml",
+        "source": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-main-55:\\layout\\activity_query_order_details.xml"
+    },
+    {
+        "merged": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-mergeDebugResources-52:\\layout\\recycler_manage_delete_cart_item.xml",
+        "source": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-main-55:\\layout\\recycler_manage_delete_cart_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-mergeDebugResources-52:\\layout\\activity_delete_order_details.xml",
+        "source": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-main-55:\\layout\\activity_delete_order_details.xml"
+    },
+    {
+        "merged": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-mergeDebugResources-52:\\layout\\dialog_select_booking_nums.xml",
+        "source": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-main-55:\\layout\\dialog_select_booking_nums.xml"
+    },
+    {
+        "merged": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-mergeDebugResources-52:\\layout\\recycler_manage_query_user_item.xml",
+        "source": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-main-55:\\layout\\recycler_manage_query_user_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-mergeDebugResources-52:\\layout\\activity_connect_alibaba_bucket.xml",
+        "source": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-main-55:\\layout\\activity_connect_alibaba_bucket.xml"
+    },
+    {
+        "merged": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-mergeDebugResources-52:\\layout\\activity_main.xml",
+        "source": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-main-55:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-mergeDebugResources-52:\\layout\\activity_delete_admin_msg.xml",
+        "source": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-main-55:\\layout\\activity_delete_admin_msg.xml"
+    },
+    {
+        "merged": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-mergeDebugResources-52:\\layout\\dialog_add_admin_msg.xml",
+        "source": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-main-55:\\layout\\dialog_add_admin_msg.xml"
+    },
+    {
+        "merged": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-mergeDebugResources-52:\\layout\\recycler_manage_delete_user_item.xml",
+        "source": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-main-55:\\layout\\recycler_manage_delete_user_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-mergeDebugResources-52:\\layout\\activity_login.xml",
+        "source": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-main-55:\\layout\\activity_login.xml"
+    },
+    {
+        "merged": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-mergeDebugResources-52:\\layout\\dialog_update_admin_msg.xml",
+        "source": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-main-55:\\layout\\dialog_update_admin_msg.xml"
+    },
+    {
+        "merged": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-mergeDebugResources-52:\\layout\\activity_book_comment.xml",
+        "source": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-main-55:\\layout\\activity_book_comment.xml"
+    },
+    {
+        "merged": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-mergeDebugResources-52:\\layout\\activity_cart_and_order_manage.xml",
+        "source": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-main-55:\\layout\\activity_cart_and_order_manage.xml"
+    },
+    {
+        "merged": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-mergeDebugResources-52:\\layout\\fragment_shopping_order.xml",
+        "source": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-main-55:\\layout\\fragment_shopping_order.xml"
+    },
+    {
+        "merged": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-mergeDebugResources-52:\\layout\\activity_query_cart_details.xml",
+        "source": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-main-55:\\layout\\activity_query_cart_details.xml"
+    },
+    {
+        "merged": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-mergeDebugResources-52:\\layout\\fragment_manage.xml",
+        "source": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-main-55:\\layout\\fragment_manage.xml"
+    },
+    {
         "merged": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-mergeDebugResources-52:\\layout\\recycler_shopping_card_item.xml",
         "source": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-main-55:\\layout\\recycler_shopping_card_item.xml"
     },
@@ -36,59 +168,79 @@
         "source": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-main-55:\\layout\\recycler_shopping_order_item.xml"
     },
     {
-        "merged": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-mergeDebugResources-52:\\layout\\fragment_shopping_cart.xml",
-        "source": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-main-55:\\layout\\fragment_shopping_cart.xml"
-    },
-    {
         "merged": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-mergeDebugResources-52:\\layout\\fragment_home.xml",
         "source": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-main-55:\\layout\\fragment_home.xml"
-    },
-    {
-        "merged": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-mergeDebugResources-52:\\layout\\recycler_book_reviews_item.xml",
-        "source": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-main-55:\\layout\\recycler_book_reviews_item.xml"
     },
     {
         "merged": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-mergeDebugResources-52:\\layout\\recycler_book_cover_item.xml",
         "source": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-main-55:\\layout\\recycler_book_cover_item.xml"
     },
     {
-        "merged": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-mergeDebugResources-52:\\layout\\activity_book_product_details.xml",
-        "source": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-main-55:\\layout\\activity_book_product_details.xml"
-    },
-    {
         "merged": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-mergeDebugResources-52:\\layout\\nav_header.xml",
         "source": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-main-55:\\layout\\nav_header.xml"
     },
     {
-        "merged": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-mergeDebugResources-52:\\layout\\dialog_select_booking_nums.xml",
-        "source": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-main-55:\\layout\\dialog_select_booking_nums.xml"
+        "merged": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-mergeDebugResources-52:\\layout\\activity_book_product_details.xml",
+        "source": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-main-55:\\layout\\activity_book_product_details.xml"
     },
     {
-        "merged": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-mergeDebugResources-52:\\layout\\activity_bottom_navigation_view.xml",
-        "source": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-main-55:\\layout\\activity_bottom_navigation_view.xml"
+        "merged": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-mergeDebugResources-52:\\layout\\recycler_manage_query_cart_item.xml",
+        "source": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-main-55:\\layout\\recycler_manage_query_cart_item.xml"
     },
     {
-        "merged": "com.example.booksalesmanagement.app-mergeDebugResources-52:/layout/fragment_home.xml",
-        "source": "com.example.booksalesmanagement.app-main-55:/layout/fragment_home.xml"
-    },
-    {
-        "merged": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-mergeDebugResources-52:\\layout\\activity_registration.xml",
-        "source": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-main-55:\\layout\\activity_registration.xml"
-    },
-    {
-        "merged": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-mergeDebugResources-52:\\layout\\activity_connect_alibaba_bucket.xml",
-        "source": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-main-55:\\layout\\activity_connect_alibaba_bucket.xml"
+        "merged": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-mergeDebugResources-52:\\layout\\activity_statement_permission_manage.xml",
+        "source": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-main-55:\\layout\\activity_statement_permission_manage.xml"
     },
     {
         "merged": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-mergeDebugResources-52:\\layout\\dialog_add_comment.xml",
         "source": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-main-55:\\layout\\dialog_add_comment.xml"
     },
     {
-        "merged": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-mergeDebugResources-52:\\layout\\dialog_update_user_msg.xml",
-        "source": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-main-55:\\layout\\dialog_update_user_msg.xml"
+        "merged": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-mergeDebugResources-52:\\layout\\activity_user_msg_manage.xml",
+        "source": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-main-55:\\layout\\activity_user_msg_manage.xml"
     },
     {
-        "merged": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-mergeDebugResources-52:\\layout\\activity_main.xml",
-        "source": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-main-55:\\layout\\activity_main.xml"
+        "merged": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-mergeDebugResources-52:\\layout\\activity_search_book_msg.xml",
+        "source": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-main-55:\\layout\\activity_search_book_msg.xml"
+    },
+    {
+        "merged": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-mergeDebugResources-52:\\layout\\activity_select_user_or_admin.xml",
+        "source": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-main-55:\\layout\\activity_select_user_or_admin.xml"
+    },
+    {
+        "merged": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-mergeDebugResources-52:\\layout\\recycler_update_book_item.xml",
+        "source": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-main-55:\\layout\\recycler_update_book_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-mergeDebugResources-52:\\layout\\activity_update_book_msg.xml",
+        "source": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-main-55:\\layout\\activity_update_book_msg.xml"
+    },
+    {
+        "merged": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-mergeDebugResources-52:\\layout\\dialog_grant_revoke_state_permission.xml",
+        "source": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-main-55:\\layout\\dialog_grant_revoke_state_permission.xml"
+    },
+    {
+        "merged": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-mergeDebugResources-52:\\layout\\activity_delete_user_msg.xml",
+        "source": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-main-55:\\layout\\activity_delete_user_msg.xml"
+    },
+    {
+        "merged": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-mergeDebugResources-52:\\layout\\activity_add_admin_msg.xml",
+        "source": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-main-55:\\layout\\activity_add_admin_msg.xml"
+    },
+    {
+        "merged": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-mergeDebugResources-52:\\layout\\recycler_book_reviews_item.xml",
+        "source": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-main-55:\\layout\\recycler_book_reviews_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-mergeDebugResources-52:\\layout\\recycler_manage_delete_order_item.xml",
+        "source": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-main-55:\\layout\\recycler_manage_delete_order_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-mergeDebugResources-52:\\layout\\recycler_manage_query_admin_msg_item.xml",
+        "source": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-main-55:\\layout\\recycler_manage_query_admin_msg_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-mergeDebugResources-52:\\layout\\dialog_grant_revoke_object_permission.xml",
+        "source": "C:\\Users\\小鹏\\.gradle\\daemon\\8.0\\com.example.booksalesmanagement.app-main-55:\\layout\\dialog_grant_revoke_object_permission.xml"
     }
 ]

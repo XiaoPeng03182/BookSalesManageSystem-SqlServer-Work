@@ -27,7 +27,6 @@ class BookProductDetailsActivity : AppCompatActivity() {
         const val BOOK_OBJECT = "bookObject"
         const val BOOK_NAME = "bookName"
         const val BOOK_IMAGE_BitMAP_KEY_NAME = "bookImageBitmapKeyName"
-
     }
 
     private var _binding: ActivityBookProductDetailsBinding? = null

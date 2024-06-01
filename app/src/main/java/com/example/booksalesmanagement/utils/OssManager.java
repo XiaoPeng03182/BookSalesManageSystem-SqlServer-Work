@@ -280,7 +280,7 @@ public class OssManager {
     private void onDelete(OSS oss) {
         // 创建删除请求。
         // 依次填写Bucket名称（例如examplebucket）和Object完整路径（例如exampledir/exampleobject.txt）。Object完整路径中不能包含Bucket名称。
-        DeleteObjectRequest delete = new DeleteObjectRequest("examplebucket", "exampledir/exampleobject.txt");
+        DeleteObjectRequest delete = new DeleteObjectRequest(mBucketName, mObjectKey);
         // 异步删除。
         mOSSAsyncTask = oss.asyncDeleteObject(delete, new OSSCompletedCallback<DeleteObjectRequest, DeleteObjectResult>() {
             @Override

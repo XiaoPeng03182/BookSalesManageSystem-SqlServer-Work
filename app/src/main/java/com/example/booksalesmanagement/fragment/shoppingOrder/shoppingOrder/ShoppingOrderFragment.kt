@@ -10,7 +10,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.booksalesmanagement.R
 import com.example.booksalesmanagement.activity.SaveUserMsg
 import com.example.booksalesmanagement.bean.OrderDetails
-import com.example.booksalesmanagement.dao.CartDetailsDao
 import com.example.booksalesmanagement.dao.OrderDetailsDao
 import com.example.booksalesmanagement.databinding.FragmentShoppingOrderBinding
 import com.example.booksalesmanagement.fragment.shoppingOrder.shoppingOrder.adapter.ShoppingOrderAdapter

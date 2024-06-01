@@ -115,6 +115,10 @@ class HomeFragment : Fragment() {
                     updateMsgByDialog(Nav_Location)
                 }
 
+                R.id.navUpdatePassword -> {
+                    updatePassWordByDialog()
+                }
+
                 R.id.navMail -> {
                     updateMsgByDialog(Nav_Email)
                 }
@@ -122,13 +126,14 @@ class HomeFragment : Fragment() {
                 R.id.navLogOut -> {
                     startActivity(
                         Intent(context, LoginActivity::class.java)
-                        .apply {//在这里可以对对象进行操作,操作完毕后，返回对象本身
-                            // 设置 FLAG_ACTIVITY_CLEAR_TASK 标志位，清除任务栈
-                            flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
-                            /*在 Intent 中同时设置了这两个标志位时，系统会先创建一个新的任务栈，并清除该任务栈中的所有 Activity，
-                            然后将目标 Activity 放入该任务栈的栈顶，从而创建一个全新的任务栈。这种组合通常用于实现“清除并启动”新任务栈的操作，
-                            例如在用户注销或切换用户时清除所有之前的 Activity，并启动一个全新的登录界面*/
-                        }
+                            .apply {//在这里可以对对象进行操作,操作完毕后，返回对象本身
+                                // 设置 FLAG_ACTIVITY_CLEAR_TASK 标志位，清除任务栈
+                                flags =
+                                    Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                                /*在 Intent 中同时设置了这两个标志位时，系统会先创建一个新的任务栈，并清除该任务栈中的所有 Activity，
+                                然后将目标 Activity 放入该任务栈的栈顶，从而创建一个全新的任务栈。这种组合通常用于实现“清除并启动”新任务栈的操作，
+                                例如在用户注销或切换用户时清除所有之前的 Activity，并启动一个全新的登录界面*/
+                            }
                     )
                 }
 
@@ -147,14 +152,14 @@ class HomeFragment : Fragment() {
             val inputBookName = binding.etSearchBookByName.text.toString()
             thread {
                 val newBookList = BookDao.queryBookByName(inputBookName)
-                if(newBookList?.isNotEmpty() == true) {
+                if (newBookList?.isNotEmpty() == true) {
                     activity?.runOnUiThread {
                         Toast.makeText(context, "查询成功！", Toast.LENGTH_SHORT)
                             .show()
                         adapter!!.updateData(newBookList)
                         adapter!!.notifyDataSetChanged()
                     }
-                }else{
+                } else {
                     activity?.runOnUiThread {
                         Toast.makeText(context, "没有匹配和书籍！", Toast.LENGTH_SHORT)
                             .show()
@@ -186,20 +191,70 @@ class HomeFragment : Fragment() {
         return root
     }
 
+    @SuppressLint("MissingInflatedId")
+    private fun updatePassWordByDialog() {
+        // 创建对话框
+        val dialogView =
+            LayoutInflater.from(requireContext())
+                .inflate(R.layout.dialog_update_user_password, null)
+
+        val etOldPassWord: EditText = dialogView.findViewById(R.id.et_oldPassWord)
+        val etNewPassWord: EditText = dialogView.findViewById(R.id.et_newPassWord)
+        val etConfirmPassWord: EditText = dialogView.findViewById(R.id.et_confirmPassWord)
+
+        val dialog = AlertDialog.Builder(requireContext())
+            .setTitle("修改密码")
+            .setView(dialogView)
+            .setPositiveButton("确认修改") { _, _ ->
+                val inputOldPassWord = etOldPassWord.text.toString()
+                val inputNewPassWord = etNewPassWord.text.toString()
+                val inputConfirmPassWord =
+                    etConfirmPassWord.text.toString()
+
+                if (inputOldPassWord.isEmpty() || inputNewPassWord.isEmpty() || inputConfirmPassWord.isEmpty()) {
+                    // 处理提交的评论
+                    Toast.makeText(context, "请输入完整的修改信息！", Toast.LENGTH_SHORT).show()
+                    return@setPositiveButton
+                }
+                if (inputOldPassWord != SaveUserMsg.password) {
+                    Toast.makeText(context, "原密码错误！", Toast.LENGTH_SHORT).show()
+                    return@setPositiveButton
+                }else {
+                    thread {
+                        if (UserDao.updatePassword(SaveUserMsg.userId, inputNewPassWord)) {
+                            activity?.runOnUiThread {
+                                Toast.makeText(context,"密码修改成功！", Toast.LENGTH_SHORT).show()
+                            }
+                        }else {
+                            activity?.runOnUiThread {
+                                Toast.makeText(context,"密码修改失败！", Toast.LENGTH_SHORT).show()
+                            }
+                        }
+                    }
+                }
+            }
+            .setNegativeButton("取消", null)
+            .create()
+        dialog.show()
+    }
+
     private fun initNavigationViewMsg() {
         thread {
             val getUser = UserDao.queryUserAllMsg(SaveUserMsg.userId)
             val userName = getUser?.userName
             val email = getUser?.email
-/*            val phoneNumber = getUser?.phoneNumber
-            val address = getUser?.address*/
+            /*            val phoneNumber = getUser?.phoneNumber
+                        val address = getUser?.address*/
 
-            val navView: NavigationView = binding.navView
-            val headerView: View = navView.getHeaderView(0)
-            val tvUserName: TextView = headerView.findViewById(R.id.tv_navUsername)
-            val tvUserEmail: TextView = headerView.findViewById(R.id.tv_navEmail)
-            tvUserName.text = userName
-            tvUserEmail.text = email
+            // 将UI更新移到主线程
+            activity?.runOnUiThread {
+                val navView: NavigationView = binding.navView
+                val headerView: View = navView.getHeaderView(0)
+                val tvUserName: TextView = headerView.findViewById(R.id.tv_navUsername)
+                val tvUserEmail: TextView = headerView.findViewById(R.id.tv_navEmail)
+                tvUserName.text = userName
+                tvUserEmail.text = email
+            }
         }
     }
 
@@ -320,6 +375,7 @@ class HomeFragment : Fragment() {
                                 checkAllImagesDownloaded(totalBooks, downloadedImages)
 
                             }
+
                             override fun onError() {
                                 TODO("Not yet implemented")
                             }
@@ -333,7 +389,9 @@ class HomeFragment : Fragment() {
 
             override fun onFailure(exception: Exception) {
                 exception.printStackTrace()
-                Toast.makeText(context, "更新图书数据失败！", Toast.LENGTH_SHORT).show()
+                activity?.runOnUiThread {
+                    Toast.makeText(context, "更新图书数据失败！", Toast.LENGTH_SHORT).show()
+                }
             }
         })
     }
@@ -450,18 +508,18 @@ class HomeFragment : Fragment() {
                 return true
             }
 
-/*            R.id.backup -> {
-                return true
-            }*/
+            /*            R.id.backup -> {
+                            return true
+                        }*/
 
             R.id.searchBook -> {
                 binding.SearchBookLineLayout.visibility = View.VISIBLE
                 return true
             }
 
-/*            R.id.settings -> {
-                return true
-            }*/
+            /*            R.id.settings -> {
+                            return true
+                        }*/
         }
         return super.onOptionsItemSelected(item)
     }

@@ -12,7 +12,6 @@ import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.example.booksalesmanagement.R
 import com.example.booksalesmanagement.bean.OrderDetails
-import com.example.booksalesmanagement.dao.CartDetailsDao
 import com.example.booksalesmanagement.dao.OrderDetailsDao
 import java.time.format.DateTimeFormatter
 import kotlin.concurrent.thread
@@ -77,8 +76,10 @@ class ShoppingOrderAdapter(
                 if (OrderDetailsDao.deleteOrderDetails(order.orderDetailId)) {
                     (context as Activity).runOnUiThread {
                         Toast.makeText(context, "删除订单成功！", Toast.LENGTH_SHORT).show()
+                        orderList.removeAt(position)
+                        notifyItemRemoved(position)
+                        notifyItemRangeChanged(position, orderList.size)
                     }
-                    updateData(orderList)
                 } else {
                     (context as Activity).runOnUiThread {
                         Toast.makeText(context, "删除订单失败！", Toast.LENGTH_SHORT).show()
@@ -93,8 +94,11 @@ class ShoppingOrderAdapter(
                 if (OrderDetailsDao.deleteOrderDetails(order.orderDetailId)) {
                     (context as Activity).runOnUiThread {
                         Toast.makeText(context, "确认收货成功！", Toast.LENGTH_SHORT).show()
+                        orderList.removeAt(position)
+                        notifyItemRemoved(position)
+                        notifyItemRangeChanged(position, orderList.size)
                     }
-                    updateData(orderList)
+
                 } else {
                     (context as Activity).runOnUiThread {
                         Toast.makeText(context, "确认收货失败！", Toast.LENGTH_SHORT).show()

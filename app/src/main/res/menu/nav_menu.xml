@@ -14,6 +14,10 @@
             android:icon="@drawable/nav_mail"
             android:title="邮箱" />
         <item
+            android:id="@+id/navUpdatePassword"
+            android:icon="@drawable/nav_update_password"
+            android:title="修改密码" />
+        <item
             android:id="@+id/navLogOut"
             android:icon="@drawable/nav_logout"
             android:title="退出登录" />

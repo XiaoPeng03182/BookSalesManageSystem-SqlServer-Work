@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.insertbook.InsertBookMsgActivity">
+    tools:context=".activity.dataBaseManage.bookMsgManage.insertbook.InsertBookMsgActivity">
 
     <LinearLayout
         android:layout_width="match_parent"

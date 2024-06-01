@@ -1,6 +1,7 @@
 package com.example.booksalesmanagement.dao
 
 import com.example.booksalesmanagement.activity.SaveUserMsg
+import com.example.booksalesmanagement.bean.Book
 import com.example.booksalesmanagement.bean.User
 import com.example.booksalesmanagement.database.ConnectionSqlServer
 import java.sql.SQLException
@@ -55,6 +56,27 @@ object UserDao {
     }
 
 
+    //更新密码
+    fun updatePassword(userId: Int, newPassword: String): Boolean {
+        val updatePasswordSQL = "update Users set passWord = ? where userId = ?"
+
+        try {
+            val conn = ConnectionSqlServer.getConnection("BookSalesdb")
+            conn?.prepareStatement(updatePasswordSQL).use { stmt ->
+                stmt?.setString(1, newPassword)
+                stmt?.setInt(2, userId)
+
+                val affectedRows = stmt?.executeUpdate() // 执行插入操作并获取受影响的行数
+                return affectedRows?.let { it > 0 }
+                    ?: false // 如果受影响的行数大于 0，则表示插入成功，返回 true，否则返回 false
+            }
+        } catch (e: SQLException) {
+            e.printStackTrace()
+        }
+        return false // 出现异常时返回 false
+    }
+
+
     /**
      * 向数据库中插入普通用户信息
      * @param user 普通用户信息
@@ -104,6 +126,7 @@ object UserDao {
                 if (rs?.next() == true) { // 表示有结果
                     //保存结果
                     SaveUserMsg.userId = rs.getInt("userId")
+                    SaveUserMsg.password = rs.getString("passWord")
                     val dateString = rs.getString("registrationDate")
                     //val formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss.SSS")
                     //val registrationDate = LocalDate.parse(dateString, formatter)
@@ -174,8 +197,8 @@ object UserDao {
                     //保存结果
                     SaveUserMsg.userId = rs.getInt("userId")
                     val dateString = rs.getString("registrationDate")
-/*                    val formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss.SSS")
-                    val registrationDate = LocalDate.parse(dateString, formatter)*/
+                    /*                    val formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss.SSS")
+                                        val registrationDate = LocalDate.parse(dateString, formatter)*/
                     val formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd")
                     val truncatedDateString = dateString.substring(0, 10)
                     val registrationDate = /*try {*/
@@ -203,5 +226,108 @@ object UserDao {
             e.printStackTrace()
         }
         return null // 出现异常时返回 true
+    }
+
+    //管理员，通过姓名查询用户信息
+    fun queryUserMsgByName(userName: String): User? {
+        val queryUserSQL = "select * from Users where userName = ?"
+
+        try {
+            val conn = ConnectionSqlServer.getConnection("BookSalesdb")
+            conn?.prepareStatement(queryUserSQL).use { stmt ->
+                stmt?.setString(1, userName)
+
+                val rs = stmt?.executeQuery() // 使用 executeQuery 方法来执行查询操作
+
+                if (rs?.next() == true) { // 表示有结果
+                    //保存结果
+                    val dateString = rs.getString("registrationDate")
+                    /*                    val formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss.SSS")
+                                        val registrationDate = LocalDate.parse(dateString, formatter)*/
+                    val formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd")
+                    val truncatedDateString = dateString.substring(0, 10)
+                    val registrationDate = /*try {*/
+                        LocalDate.parse(truncatedDateString, formatter)
+
+                    //返回用户信息
+                    return User(
+                        userId = rs.getInt("userId"),
+                        userName = rs.getString("userName"),
+                        password = rs.getString("passWord"),
+                        registrationDate = registrationDate,
+                        phoneNumber = rs.getString("phoneNumber") ?: "Default Phone Number",
+                        address = rs.getString("address") ?: "Default Address",
+                        email = rs.getString("email") ?: "Default Email"
+                    )
+                } else {
+                    return null //没有结果返回
+                }
+            }
+        } catch (e: SQLException) {
+            e.printStackTrace()
+        }
+        return null // 出现异常时返回 true
+    }
+
+    //管理员查询所有用户信息
+    fun queryAllUserMsg(): ArrayList<User>? {
+        val queryAllUserMsgSql = "select * from Users"
+        try {
+            //检查是否已经存在用户的购物车,若存在则继续查询，否则直接返回null
+            val conn = ConnectionSqlServer.getConnection("BookSalesdb")
+            conn?.prepareStatement(queryAllUserMsgSql).use { stmt ->
+
+                val rs = stmt?.executeQuery()
+
+                val userList = ArrayList<User>()
+
+                while (rs?.next() == true) { // 表示有结果
+                    //保存结果
+                    val dateString = rs.getString("registrationDate")
+                    val formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd")
+                    val truncatedDateString = dateString.substring(0, 10)
+                    val registrationDate = /*try {*/
+                        LocalDate.parse(truncatedDateString, formatter)
+                    val user = User(
+                        userId = rs.getInt("userId"),
+                        userName = rs.getString("userName"),
+                        password = rs.getString("passWord"),
+                        registrationDate = registrationDate,
+                        phoneNumber = rs.getString("phoneNumber") ?: "Default Phone Number",
+                        address = rs.getString("address") ?: "Default Address",
+                        email = rs.getString("email") ?: "Default Email"
+                    )
+                    userList.add(user)
+                }
+                if (userList.size != 0) {
+                    return userList
+                } else {
+                    return null
+                }
+            }
+        } catch (e: SQLException) {
+            e.printStackTrace()
+        }
+        return null // 出现异常时返回 true
+    }
+
+    //更具用户Id删除用户
+    fun deleteUserById(userId: Int): Boolean {
+        val deleteUserMsgByIdSQL = "DELETE FROM Users WHERE userId = ?"
+        try {
+            //检查是否已经存在用户的购物车,若存在则继续查询，否则直接返回null
+            val conn = ConnectionSqlServer.getConnection("BookSalesdb")
+            conn?.prepareStatement(deleteUserMsgByIdSQL).use { stmt ->
+
+                stmt?.setInt(1, userId)
+                val affectedRows = stmt?.executeUpdate() // 执行删除操作并获取受影响的行数
+                return affectedRows?.let { it > 0 }
+                    ?: false // 如果受影响的行数等于集合大小，则表示全部更新成功，返回 true，否则返回 false
+            }
+        } catch (e: SQLException) {
+            e.printStackTrace()
+        }
+
+        return false
     }
 }

@@ -33,6 +33,75 @@
         android:theme="@style/BookSalesManagementTheme"
         android:usesCleartextTraffic="true" >
         <activity
+            android:name="com.example.booksalesmanagement.activity.dataBaseManage.DBManageVerifyActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.booksalesmanagement.activity.dataBaseManage.systemManage.DataBackupAndRecoveryActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.booksalesmanagement.activity.dataBaseManage.systemManage.ObjectPermissionManageActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.booksalesmanagement.activity.dataBaseManage.systemManage.StatementPermissionManageActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.booksalesmanagement.activity.dataBaseManage.systemManage.SystemManageActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.booksalesmanagement.activity.dataBaseManage.adminMsgManage.updateAdminMsg.UpdateAdminMsgActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.booksalesmanagement.activity.dataBaseManage.adminMsgManage.deleteAdminMsg.DeleteAdminMsgActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.booksalesmanagement.activity.dataBaseManage.adminMsgManage.queryAdminMsg.QueryAdminMsgActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.booksalesmanagement.activity.dataBaseManage.adminMsgManage.addAdminMsg.AddAdminMsgActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.booksalesmanagement.activity.dataBaseManage.adminMsgManage.AdminMsgManageActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.booksalesmanagement.activity.dataBaseManage.userMsgManage.deleteUserMsg.DeleteUserMsgActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.booksalesmanagement.activity.dataBaseManage.userMsgManage.UserMsgManageActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.booksalesmanagement.activity.dataBaseManage.userMsgManage.queryUserMsg.QueryUserMsgActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.booksalesmanagement.activity.dataBaseManage.cartAndOrderManage.deleteOrder.DeleteOrderDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.booksalesmanagement.activity.dataBaseManage.cartAndOrderManage.queryOrder.QueryOrderDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.booksalesmanagement.activity.dataBaseManage.cartAndOrderManage.deleteCart.DeleteCartDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.booksalesmanagement.activity.dataBaseManage.cartAndOrderManage.queryCart.QueryCartDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.booksalesmanagement.activity.dataBaseManage.cartAndOrderManage.CartAndOrderManageActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.booksalesmanagement.activity.dataBaseManage.bookMsgManage.deletebook.DeleteBookActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.booksalesmanagement.activity.dataBaseManage.bookMsgManage.updatebook.UpdateMsgActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.booksalesmanagement.activity.dataBaseManage.bookMsgManage.updatebook.UpdateBookMsgActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.booksalesmanagement.activity.dataBaseManage.bookMsgManage.searchbook.SearchBookMsgActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.booksalesmanagement.activity.dataBaseManage.bookMsgManage.BookMsgManageActivity"
+            android:exported="false" />
+        <activity
             android:name="com.example.booksalesmanagement.activity.comment.BookCommentActivity"
             android:exported="false"
             android:label="书籍评论" />
@@ -43,7 +112,7 @@
             android:name="com.example.booksalesmanagement.activity.register_login.RegistrationActivity"
             android:exported="false" />
         <activity
-            android:name="com.example.booksalesmanagement.activity.insertbook.InsertBookMsgActivity"
+            android:name="com.example.booksalesmanagement.activity.dataBaseManage.bookMsgManage.insertbook.InsertBookMsgActivity"
             android:exported="false" />
         <activity
             android:name="com.example.booksalesmanagement.imagetext.ConnectAlibabaBucketActivity"
@@ -53,7 +122,7 @@
             android:exported="false"
             android:theme="@style/BookSalesManagementTheme" />
         <!--
-            <activity
+        <activity
             android:name=".BottomNavigationViewActivity"
             android:exported="true"
             android:label="图书销售"
@@ -66,22 +135,18 @@
 
         </activity>
         -->
-
         <activity
             android:name="com.example.booksalesmanagement.BottomNavigationViewActivity"
             android:exported="false"
             android:label="图书销售"
-            android:theme="@style/BookSalesManagementTheme" >
-        </activity>
-
+            android:theme="@style/BookSalesManagementTheme" />
         <!--
-                    <activity
+        <activity
                     android:name=".activity.SelectUserOrAdminActivity"
                     android:exported="false">
 
                 </activity>
         -->
-
         <activity
             android:name="com.example.booksalesmanagement.activity.SelectUserOrAdminActivity"
             android:exported="true" >

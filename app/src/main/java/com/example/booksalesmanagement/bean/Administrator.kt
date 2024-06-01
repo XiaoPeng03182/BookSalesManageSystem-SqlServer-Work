@@ -15,5 +15,6 @@ data class Administrator(
     var  adminName :String,
     var passWord :String,
     var registrationDate:LocalDate =  LocalDate.of(2003, 10, 24),
-    var phoneNumber: String = ""
+    var phoneNumber: String = "",
+    var adminId :Int = 0
 ):Serializable
