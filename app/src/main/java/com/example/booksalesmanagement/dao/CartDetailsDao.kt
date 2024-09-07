@@ -93,6 +93,8 @@ object CartDetailsDao {
                     "where cd.cartId = c.cartId and c.userId = ? \n" +
                     "and b.book_id = cd.bookId"
 
+        val queryCartAllMsgFunctionSQL = "select * from dbo.Search_CartDetailsAllMsg (?)"
+
         try {
             //检查是否已经存在用户的购物车,若存在则继续查询，否则直接返回null
             val conn = ConnectionSqlServer.getConnection("BookSalesdb")
@@ -106,7 +108,7 @@ object CartDetailsDao {
                 }
             }
             //查询该用户的购物车
-            conn?.prepareStatement(queryCartSql).use { stmt ->
+            conn?.prepareStatement(queryCartAllMsgFunctionSQL).use { stmt ->
                 stmt?.setInt(1, userId)
                 val rs = stmt?.executeQuery() // 使用 executeQuery 方法来执行查询操作
 
@@ -159,11 +161,13 @@ object CartDetailsDao {
                     "from Book as b,Cart as c,CartDetails as cd,Users as u\n" +
                     "where cd.cartId = c.cartId and c.userId = u.userId \n" +
                     "and b.book_id = cd.bookId and u.userName = ?"
+
+        val queryCartFunctionSQL = "select * from dbo.Search_CartDetailsMsgByName (?)"
         try {
             //检查是否已经存在用户的购物车,若存在则继续查询，否则直接返回null
             val conn = ConnectionSqlServer.getConnection("BookSalesdb")
             //查询该用户的购物车
-            conn?.prepareStatement(queryCartSql).use { stmt ->
+            conn?.prepareStatement(queryCartFunctionSQL).use { stmt ->
                 stmt?.setString(1, userName)
                 val rs = stmt?.executeQuery() // 使用 executeQuery 方法来执行查询操作
 

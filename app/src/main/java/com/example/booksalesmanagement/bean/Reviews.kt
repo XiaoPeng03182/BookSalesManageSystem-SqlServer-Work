@@ -2,6 +2,7 @@ package com.example.booksalesmanagement.bean
 
 import java.io.Serializable
 import java.time.LocalDate
+import java.time.LocalDateTime
 
 /**
  *  书评实体类
@@ -18,6 +19,6 @@ data class Reviews(
     var comment:String,
     var userId:Int,
     var bookId:Int,
-    var createdAt:LocalDate = LocalDate.of(2003, 10, 24),
+    var createdAt: LocalDateTime = LocalDateTime.of(2003, 10, 24, 0, 0, 0),
     var userName :String = ""
 ) :Serializable

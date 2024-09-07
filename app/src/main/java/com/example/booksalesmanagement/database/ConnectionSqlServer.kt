@@ -16,7 +16,8 @@ object ConnectionSqlServer {
         try {
             //Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver") //加载驱动
             Class.forName("net.sourceforge.jtds.jdbc.Driver") //加载驱动
-            val ip = "10.203.132.6"
+           // val ip = "10.203.132.6"
+            val ip = "10.203.17.59"
 
             // 使用 DriverManager 建立数据库连接
             conn = DriverManager.getConnection(
@@ -43,7 +44,8 @@ object ConnectionSqlServer {
         try {
             //Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver") //加载驱动
             Class.forName("net.sourceforge.jtds.jdbc.Driver") //加载驱动
-            val ip = "10.203.132.6"
+            //val ip = "10.203.132.6"
+            val ip = "10.203.17.59"
 
             // 使用 DriverManager 建立数据库连接
             conn = DriverManager.getConnection(

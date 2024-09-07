@@ -7,7 +7,8 @@ object BackupRecoveryDBDao {
     //备份数据库
     fun backupDB(): Boolean {
         val backupDBSQL =
-            "BACKUP DATABASE [BookSalesdb] TO DISK = 'E:\\大二学习\\大二SQL数据库学习\\Backups\\your_database_name.bak' "
+            "BACKUP DATABASE [BookSalesdb] TO DISK = " +
+                    "'E:\\大二学习\\大二SQL数据库学习\\Backups\\your_database_name.bak' "
         return try {
             val conn = ConnectionSqlServer.getConnectionAdmin("BookSalesdb")
             conn?.prepareStatement(backupDBSQL).use { stmt ->
@@ -30,7 +31,8 @@ object BackupRecoveryDBDao {
         //将数据库设置为单用户模式
         val setSingleUserSQL = "ALTER DATABASE [BookSalesdb] SET SINGLE_USER WITH ROLLBACK IMMEDIATE;"
         //恢复数据库:确定日志尾部的数据可以被覆盖，可以使用WITH REPLACE选项强制覆盖现有数据库。
-        val restoreDBSQL = "RESTORE DATABASE [BookSalesdb] FROM DISK = 'E:\\大二学习\\大二SQL数据库学习\\Backups\\your_database_name.bak' WITH REPLACE;"
+        val restoreDBSQL = "RESTORE DATABASE [BookSalesdb] FROM DISK = " +
+                "'E:\\大二学习\\大二SQL数据库学习\\Backups\\your_database_name.bak' WITH REPLACE;"
         //将数据库恢复为多用户模式
         val setMultiUserSQL = "ALTER DATABASE [BookSalesdb] SET MULTI_USER;"
 

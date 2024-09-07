@@ -6,6 +6,7 @@ import com.example.booksalesmanagement.bean.User
 import com.example.booksalesmanagement.database.ConnectionSqlServer
 import java.sql.SQLException
 import java.time.LocalDate
+import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
 
 object ReviewsDao {
@@ -47,10 +48,12 @@ object ReviewsDao {
                 "from Reviews as r,Users as u,Book as b\n" +
                 "where r.userId = u.userId and r.bookId = b.book_id " +
                 "and r.bookId = ?"
+        //利用视图简化操作
+        val queryReviewsByViewSQL = "select * from dbo.View_QueryReviews where book_id = ?"
 
         try {
             val conn = ConnectionSqlServer.getConnection("BookSalesdb")
-            conn?.prepareStatement(queryReviewSQL).use { stmt ->
+            conn?.prepareStatement(queryReviewsByViewSQL).use { stmt ->
                 stmt?.setInt(1, bookId)
                 val rs = stmt?.executeQuery() // 使用 executeQuery 方法来执行查询操作
 
@@ -59,15 +62,17 @@ object ReviewsDao {
 
                 while (rs?.next() == true) { // 表示有结果
                     val dateString = rs.getString("createdAt")
-                    val formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss.SSS")
-                    val createdAtTime = LocalDate.parse(dateString, formatter)
+                    val formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")
+                    val truncatedDateString = dateString.substring(0, 19)
+                    val createdAtTime =
+                        LocalDateTime.parse(truncatedDateString, formatter)
 
                     val review = Reviews(
                         userName = rs.getString("userName"),
                         rating = rs.getInt("rating"),
                         createdAt = createdAtTime,
                         comment = rs.getString("comment"),
-                        bookId = rs.getInt("bookId"),
+                        bookId = rs.getInt("book_Id"),
                         userId = rs.getInt("userId")
                     )
                     reviewList.add(review)

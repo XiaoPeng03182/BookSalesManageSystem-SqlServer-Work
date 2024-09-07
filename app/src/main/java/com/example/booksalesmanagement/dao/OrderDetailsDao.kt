@@ -99,6 +99,9 @@ object OrderDetailsDao {
                     "where o.orderId = od.orderId and o.userId = ? \n" +
                     "and b.book_id = od.bookId and u.userId = od.userId"
 
+        //使用存储过程简化操作
+        val queryOrderDetailsProceSql ="exec GetOrderDetailsByUserId ?"
+
         try {
             //检查是否已经存在用户的订单,若存在则继续查询，否则直接返回null
             val conn = ConnectionSqlServer.getConnection("BookSalesdb")
@@ -112,7 +115,7 @@ object OrderDetailsDao {
                 }
             }
             //查询该用户的购物车
-            conn?.prepareStatement(queryOrderDetailsSql).use { stmt ->
+            conn?.prepareStatement(queryOrderDetailsProceSql).use { stmt ->
                 stmt?.setInt(1, userId)
                 val rs = stmt?.executeQuery() // 使用 executeQuery 方法来执行查询操作
 
@@ -191,12 +194,14 @@ object OrderDetailsDao {
                     "where o.orderId = od.orderId and o.userId = u.userId\n" +
                     "and b.book_id = od.bookId and u.userId = od.userId\n" +
                     "and u.userName = ?"
+        //存储过程优化
+        val queryOrderDetailsProceSQL = "exec GetOrderDetailsByUserName ? "
 
         try {
             //检查是否已经存在用户的订单,若存在则继续查询，否则直接返回null
             val conn = ConnectionSqlServer.getConnection("BookSalesdb")
             //查询该用户的订单
-            conn?.prepareStatement(queryOrderDetailsSql).use { stmt ->
+            conn?.prepareStatement(queryOrderDetailsProceSQL).use { stmt ->
                 stmt?.setString(1, userName)
                 val rs = stmt?.executeQuery() // 使用 executeQuery 方法来执行查询操作
 
