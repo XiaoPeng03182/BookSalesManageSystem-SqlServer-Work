@@ -6,24 +6,27 @@
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/iconImage"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
+        android:layout_width="117dp"
+        android:layout_height="97dp"
         android:layout_centerInParent="true"
         android:src="@drawable/nav_icon" />
+
     <TextView
-        android:id="@+id/mailText"
+        android:id="@+id/tv_navUsername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/tv_navEmail"
+        android:text="@string/tony_green"
+        android:textColor="#FFF"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tv_navEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:text="@string/tonygreendev_gmail_com"
         android:textColor="#FFF"
         android:textSize="14sp" />
-    <TextView
-        android:id="@+id/userText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@id/mailText"
-        android:text="@string/tony_green"
-        android:textColor="#FFF"
-        android:textSize="14sp" />
+
 </RelativeLayout>

@@ -38,6 +38,8 @@
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/32634af62315ad7d674ad1108fefd70c/transformed/navigation-ui-ktx-2.7.7-api.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/87c7c07437e2be8cd092d47fe5b465bb/transformed/navigation-ui-2.7.7-api.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/701cdbe5e596f9ee789431a2b0d16202/transformed/material-1.12.0-api.jar</arg>
+                <arg>$USER_HOME$/.gradle/caches/transforms-3/65ff90d455928bb39fa3929a614b01c6/transformed/legacy-support-v4-1.0.0-api.jar</arg>
+                <arg>$USER_HOME$/.gradle/caches/transforms-3/1bb6a512cbae6cb012287ad8ddf44258/transformed/legacy-support-core-ui-1.0.0-api.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/178f723024442cf2d5dc3b1cacb9469d/transformed/swiperefreshlayout-1.1.0-api.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/d518c44732166370cb4b3811ea275f00/transformed/jetified-glide-4.9.0-api.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/5521a5539f086f2e97cc5b8f36064345/transformed/appcompat-1.6.1-api.jar</arg>
@@ -64,9 +66,11 @@
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/5ab3256a78156eff2b88d694520790fd/transformed/transition-1.5.0-api.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/e2e0443d52f4ccb299c27a8a81e97842/transformed/vectordrawable-animated-1.1.0-api.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/9c3a54d6c11775a8a2dd80331e3930dc/transformed/vectordrawable-1.1.0-api.jar</arg>
+                <arg>$USER_HOME$/.gradle/caches/transforms-3/eba2effcab56a8b9ba56ea791d49b5a5/transformed/media-1.0.0-api.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/c9d211bad0f0e6ccd31dd489ea33c9f3/transformed/viewpager-1.0.0-api.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/ef2350e4a4c8015d35862b1b90a0ff00/transformed/slidingpanelayout-1.2.0-api.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/6c7754aaa2662d79fbbfcb3657039c6c/transformed/customview-1.1.0-api.jar</arg>
+                <arg>$USER_HOME$/.gradle/caches/transforms-3/23ad6b76af1816f164296bea1b5da95e/transformed/asynclayoutinflater-1.0.0-api.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/da012eefaa5596096dd36dad0db9160d/transformed/core-1.13.0-api.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/f87cd107be9d8a1250c867878c3a9862/transformed/lifecycle-runtime-2.7.0-api.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/d5e017988b7f9a9686fc1f9cf04e23d4/transformed/jetified-lifecycle-livedata-ktx-2.7.0-api.jar</arg>

@@ -22,11 +22,18 @@ import com.alibaba.sdk.android.oss.model.PutObjectRequest
 import com.alibaba.sdk.android.oss.model.PutObjectResult
 import com.example.booksalesmanagement.R
 import com.example.booksalesmanagement.bean.Book
-import com.example.booksalesmanagement.bean.SC
 import com.example.booksalesmanagement.dao.BookDao
-import com.example.booksalesmanagement.database.ConnectionSqlServer
 import com.example.booksalesmanagement.databinding.ActivityConnectAlibabaBucketBinding
+import com.example.booksalesmanagement.utils.ConnectAlibabaOssToImage
+import com.example.booksalesmanagement.utils.FileUtils
+import com.example.booksalesmanagement.utils.ImageUtils
+import com.example.booksalesmanagement.utils.OssManager
 import java.lang.StringBuilder
+import java.math.BigDecimal
+import java.text.SimpleDateFormat
+import java.time.LocalDate
+import java.util.Date
+import java.util.Locale
 import kotlin.concurrent.thread
 
 class ConnectAlibabaBucketActivity : AppCompatActivity() {
@@ -41,7 +48,6 @@ class ConnectAlibabaBucketActivity : AppCompatActivity() {
     private lateinit var cropImageLauncher: ActivityResultLauncher<Intent>
 
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         _binding = ActivityConnectAlibabaBucketBinding.inflate(layoutInflater)
@@ -52,6 +58,52 @@ class ConnectAlibabaBucketActivity : AppCompatActivity() {
 
         // 初始化ActivityResultLauncher来启动裁剪应用
         initCropImageLauncher()
+
+        binding.btnInsertBook.setOnClickListener {
+            // 将Uri转换为文件路径
+            //val imageFilePath = ImageUtils.getPathFromUri(this, imageUri)
+
+            val imageFilePath =
+                FileUtils.saveDrawableToInternalStorage(this, R.drawable.banana, "pear.jpg")
+            if (imageFilePath != null) {
+                // 图片保存成功，filePath 是保存的文件路径
+            } else {
+                // 图片保存失败
+            }
+            ConnectAlibabaOssToImage.sendImage(
+                this,
+                "6百年孤独",
+                imageFilePath,
+                object : ConnectAlibabaOssToImage.UploadCallback {
+                    override fun onUploadSuccess() {
+                        val book = Book(
+                            211,
+                            "百年孤独",
+                            "武汉大学出版社",
+                            BigDecimal("857.99"),
+                            "马尔克斯",
+                            "小说",
+                            500,
+                            LocalDate.parse("System.currentTimeMillis()"),
+                            "这个百年孤独的简洁！",
+                            "1234567890123"
+                        )
+                        if (BookDao.insertBook(book)) {
+                            runOnUiThread {
+                                Toast.makeText(
+                                    this@ConnectAlibabaBucketActivity,
+                                    "图书上传并插入成功",
+                                    Toast.LENGTH_SHORT
+                                ).show()
+                            }
+                        }
+                    }
+
+                    override fun onUploadFailure() {
+                        TODO("Not yet implemented")
+                    }
+                })
+        }
 
         binding.button.setOnClickListener {
             getBookAllMsg()
@@ -133,11 +185,15 @@ class ConnectAlibabaBucketActivity : AppCompatActivity() {
             for (book in bookList) {
                 sb.append("图书编号：" + book.bookId)
                 sb.append("图书名称：" + book.bookName)
-                sb.append("出版社编号：" + book.publisherId)
+                sb.append("类别：" + book.category)
+                sb.append("出版社：" + book.publisher)
                 sb.append("作者：" + book.author)
                 sb.append("价格：" + book.price)
-                sb.append("库存：" + book.inventory)
+                sb.append("库存：" + book.stock)
                 sb.append("出版日期：" + book.publicationDate)
+                sb.append("图书信息：" + book.bookInfo)
+                sb.append("图书ISBN：" + book.isbn)
+                sb.append("创建时间：" + book.creationTime)
                 sb.append("\n")
             }
 
@@ -200,8 +256,9 @@ class ConnectAlibabaBucketActivity : AppCompatActivity() {
         }
         val resolver = context.contentResolver
         val contentValues = ContentValues().apply {
-            put(MediaStore.Images.Media.DISPLAY_NAME, "cropped_image.jpg")
-            put(MediaStore.Images.Media.MIME_TYPE, "image/jpeg")
+            val timeStamp = SimpleDateFormat("yyyyMMdd_HHmmss", Locale.getDefault()).format(Date())
+            put(MediaStore.Images.Media.DISPLAY_NAME, "image_$timeStamp.jpg")
+            put(MediaStore.Images.Media.MIME_TYPE, "image/jpeg") //指定一个 JPEG 图像文件。
         }
         val imageUri = resolver.insert(imagesDir, contentValues)!!
         imageUri?.let {
@@ -279,7 +336,7 @@ class ConnectAlibabaBucketActivity : AppCompatActivity() {
     @SuppressLint("ResourceType")
     private fun sendImage() {
         // 获取资源 ID
-        val resourceId = R.drawable._pear
+       // val resourceId = R.drawable._pear
 
         /*        // 将资源转换为 InputStream
                 val inputStream = resources.openRawResource(resourceId).toString()

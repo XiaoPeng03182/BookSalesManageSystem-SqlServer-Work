@@ -1,24 +1,25 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/navCall"
+            android:id="@+id/navPhoneNumber"
             android:icon="@drawable/nav_call"
-            android:title="Call" />
-        <item
-            android:id="@+id/navFriends"
-            android:icon="@drawable/nav_friends"
-            android:title="Friends" />
+            android:title="联系电话" />
+
         <item
             android:id="@+id/navLocation"
             android:icon="@drawable/nav_location"
-            android:title="Location" />
+            android:title="收货地址" />
         <item
             android:id="@+id/navMail"
             android:icon="@drawable/nav_mail"
-            android:title="Mail" />
+            android:title="邮箱" />
         <item
-            android:id="@+id/navTask"
-            android:icon="@drawable/nav_task"
-            android:title="Tasks" />
+            android:id="@+id/navUpdatePassword"
+            android:icon="@drawable/nav_update_password"
+            android:title="修改密码" />
+        <item
+            android:id="@+id/navLogOut"
+            android:icon="@drawable/nav_logout"
+            android:title="退出登录" />
     </group>
 </menu>

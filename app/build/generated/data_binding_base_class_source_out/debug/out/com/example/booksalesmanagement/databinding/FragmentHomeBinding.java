@@ -4,6 +4,8 @@ package com.example.booksalesmanagement.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.LinearLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.Toolbar;
@@ -15,6 +17,7 @@ import androidx.viewbinding.ViewBindings;
 import com.example.booksalesmanagement.R;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationView;
+import com.google.android.material.textfield.TextInputEditText;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
@@ -24,7 +27,19 @@ public final class FragmentHomeBinding implements ViewBinding {
   private final DrawerLayout rootView;
 
   @NonNull
+  public final LinearLayout SearchBookLineLayout;
+
+  @NonNull
+  public final Button btnCancelSearch;
+
+  @NonNull
+  public final Button btnSearchBookByName;
+
+  @NonNull
   public final DrawerLayout drawLayout;
+
+  @NonNull
+  public final TextInputEditText etSearchBookByName;
 
   @NonNull
   public final FloatingActionButton fab;
@@ -41,12 +56,18 @@ public final class FragmentHomeBinding implements ViewBinding {
   @NonNull
   public final Toolbar toolbar;
 
-  private FragmentHomeBinding(@NonNull DrawerLayout rootView, @NonNull DrawerLayout drawLayout,
-      @NonNull FloatingActionButton fab, @NonNull NavigationView navView,
-      @NonNull RecyclerView recyclerView, @NonNull SwipeRefreshLayout swipeRefreshLayout,
-      @NonNull Toolbar toolbar) {
+  private FragmentHomeBinding(@NonNull DrawerLayout rootView,
+      @NonNull LinearLayout SearchBookLineLayout, @NonNull Button btnCancelSearch,
+      @NonNull Button btnSearchBookByName, @NonNull DrawerLayout drawLayout,
+      @NonNull TextInputEditText etSearchBookByName, @NonNull FloatingActionButton fab,
+      @NonNull NavigationView navView, @NonNull RecyclerView recyclerView,
+      @NonNull SwipeRefreshLayout swipeRefreshLayout, @NonNull Toolbar toolbar) {
     this.rootView = rootView;
+    this.SearchBookLineLayout = SearchBookLineLayout;
+    this.btnCancelSearch = btnCancelSearch;
+    this.btnSearchBookByName = btnSearchBookByName;
     this.drawLayout = drawLayout;
+    this.etSearchBookByName = etSearchBookByName;
     this.fab = fab;
     this.navView = navView;
     this.recyclerView = recyclerView;
@@ -81,7 +102,31 @@ public final class FragmentHomeBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.SearchBookLineLayout;
+      LinearLayout SearchBookLineLayout = ViewBindings.findChildViewById(rootView, id);
+      if (SearchBookLineLayout == null) {
+        break missingId;
+      }
+
+      id = R.id.btn_cancel_search;
+      Button btnCancelSearch = ViewBindings.findChildViewById(rootView, id);
+      if (btnCancelSearch == null) {
+        break missingId;
+      }
+
+      id = R.id.btn_searchBookByName;
+      Button btnSearchBookByName = ViewBindings.findChildViewById(rootView, id);
+      if (btnSearchBookByName == null) {
+        break missingId;
+      }
+
       DrawerLayout drawLayout = (DrawerLayout) rootView;
+
+      id = R.id.et_searchBookByName;
+      TextInputEditText etSearchBookByName = ViewBindings.findChildViewById(rootView, id);
+      if (etSearchBookByName == null) {
+        break missingId;
+      }
 
       id = R.id.fab;
       FloatingActionButton fab = ViewBindings.findChildViewById(rootView, id);
@@ -113,8 +158,9 @@ public final class FragmentHomeBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentHomeBinding((DrawerLayout) rootView, drawLayout, fab, navView,
-          recyclerView, swipeRefreshLayout, toolbar);
+      return new FragmentHomeBinding((DrawerLayout) rootView, SearchBookLineLayout, btnCancelSearch,
+          btnSearchBookByName, drawLayout, etSearchBookByName, fab, navView, recyclerView,
+          swipeRefreshLayout, toolbar);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

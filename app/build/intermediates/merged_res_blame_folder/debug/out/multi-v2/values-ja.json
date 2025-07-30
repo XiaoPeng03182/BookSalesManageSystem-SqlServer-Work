@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.booksalesmanagement.app-mergeDebugResources-50:/values-ja/values-ja.xml",
+            "outputFile": "com.example.booksalesmanagement.app-mergeDebugResources-51:/values-ja/values-ja.xml",
             "map": [
                 {
                     "source": "C:\\Users\\小鹏\\.gradle\\caches\\transforms-3\\d31dfce54dca98da96c850d8ad76b0ee\\transformed\\core-1.13.0\\res\\values-ja\\values-ja.xml",
