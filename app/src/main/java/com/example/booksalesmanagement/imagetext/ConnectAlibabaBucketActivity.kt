@@ -293,9 +293,9 @@ class ConnectAlibabaBucketActivity : AppCompatActivity() {
 
     private fun getImage(bookImage: String) {
         ossManager = OssManager.Builder(this)
-            .bucketName("bookcoverimage")
-            .accessKeyId("LTAI5tShWwnv8iwW6fYpXaUg")
-            .accessKeySecret("aCdE7DpKSm9fiHTmqgKw3F28T6hHuo")
+            .bucketName("xx")
+            .accessKeyId("xx")
+            .accessKeySecret("xx")
             .endPoint("http://oss-cn-chengdu.aliyuncs.com")
             .objectKey("images/$bookImage")
             .build()
