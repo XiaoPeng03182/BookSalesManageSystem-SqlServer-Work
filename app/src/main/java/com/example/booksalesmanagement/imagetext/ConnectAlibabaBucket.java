@@ -18,7 +18,7 @@ import com.alibaba.sdk.android.oss.model.PutObjectResult;
 public class ConnectAlibabaBucket {
     // 第一个参数：在【RAM访问控制】创建用户时分配的accessKeyId
 // 第二个参数：在【RAM访问控制】创建用户时分配的accessKeySecret
-    OSSCredentialProvider ossCredentialProvider = new OSSPlainTextAKSKCredentialProvider("LT7SHiiyuJd8saHJsdscjkesd8dekkh", "aPKvkjshkSHuw43Lkswd8JKjdsklajaJlWc");
+    OSSCredentialProvider ossCredentialProvider = new OSSPlainTextAKSKCredentialProvider("xxx", "xxx");
     private Context mContext;
     // 第一个参数：上下文
     // 第二个参数：在OSS控制台创建好Bucket后，会有一个EndPoint(地域节点)，比如我这里的节点是：http://oss-cn-shanghai.aliyuncs.com
